@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="zh-TW" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>道具資料庫 — SoulLine Wiki</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a href="../index.html" class="site-logo">SoulLine Wiki</a>
+    <nav class="site-nav">
+      <a href="locations.html">地點</a>
+      <a href="items.html">道具</a>
+      <a href="jobs.html">職業</a>
+      <a href="monsters.html">怪物</a>
+      <a href="guide.html">攻略</a>
+    </nav>
+    <button class="theme-toggle" id="theme-toggle">☀ 亮色</button>
+  </header>
+
+  <main>
+    <div class="page-title">道具資料庫</div>
+    <div class="page-desc">裝備、補給品、生活素材</div>
+
+    <input type="text" class="search-bar" id="search" placeholder="搜尋道具名稱…">
+
+    <hr class="divider">
+
+    <section style="margin-bottom:2rem;">
+      <h2 style="color:var(--accent);font-size:1rem;margin-bottom:1rem;">⚔ 裝備</h2>
+      <div class="card-grid" id="list-equip">
+        <div class="card item-card" data-name="舊布披肩">
+          <p style="font-weight:600;">舊布披肩</p>
+          <span class="tag">防具</span>
+          <p style="color:var(--text-secondary);font-size:0.85rem;margin-top:0.5rem;">初始裝備。基礎防禦用。</p>
+        </div>
+        <div class="card item-card" data-name="舊木盾">
+          <p style="font-weight:600;">舊木盾</p>
+          <span class="tag">防具</span>
+          <p style="color:var(--text-secondary);font-size:0.85rem;margin-top:0.5rem;">初始裝備。</p>
+        </div>
+        <div class="card item-card" data-name="練習木劍">
+          <p style="font-weight:600;">練習木劍</p>
+          <span class="tag">武器</span>
+          <p style="color:var(--text-secondary);font-size:0.85rem;margin-top:0.5rem;">
+            初始武器。⚠ 已知bug：物品ID與「練習用木劍」不統一，可能導致裝備異常，待修復。
+          </p>
+        </div>
+        <div class="card item-card" data-name="旅人短靴">
+          <p style="font-weight:600;">旅人短靴</p>
+          <span class="tag">防具</span>
+          <span class="tag">商店</span>
+          <p style="color:var(--text-secondary);font-size:0.85rem;margin-top:0.5rem;">
+            商店購買　<strong style="color:var(--text-primary)">70 魂晶</strong>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section style="margin-bottom:2rem;">
+      <h2 style="color:var(--accent);font-size:1rem;margin-bottom:1rem;">🧪 補給品</h2>
+      <div class="card-grid" id="list-supply">
+        <div class="card item-card" data-name="小型回復藥">
+          <p style="font-weight:600;">小型回復藥</p>
+          <span class="tag">消耗</span>
+          <p style="color:var(--text-secondary);font-size:0.85rem;margin-top:0.5rem;">回復HP。具體數值補充中。</p>
+        </div>
+        <div class="card item-card" data-name="簡易繃帶">
+          <p style="font-weight:600;">簡易繃帶</p>
+          <span class="tag">消耗</span>
+          <p style="color:var(--text-secondary);font-size:0.85rem;margin-top:0.5rem;">止血/回復用。具體效果補充中。</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2 style="color:var(--accent);font-size:1rem;margin-bottom:1rem;">🌿 生活素材</h2>
+      <div class="card-grid" id="list-material">
+        <div class="card item-card" data-name="乾淨空瓶">
+          <p style="font-weight:600;">乾淨空瓶</p>
+          <span class="tag">素材</span>
+          <p style="color:var(--text-secondary);font-size:0.85rem;margin-top:0.5rem;">用途補充中。</p>
+        </div>
+        <div class="card item-card" data-name="乾糧">
+          <p style="font-weight:600;">乾糧</p>
+          <span class="tag">素材</span>
+          <p style="color:var(--text-secondary);font-size:0.85rem;margin-top:0.5rem;">用途補充中。</p>
+        </div>
+        <div class="card item-card" data-name="羽毛">
+          <p style="font-weight:600;">羽毛</p>
+          <span class="tag">素材</span>
+          <span class="tag">掉落</span>
+          <p style="color:var(--text-secondary);font-size:0.85rem;margin-top:0.5rem;">可從悠悠草原獲得。</p>
+        </div>
+        <div class="card item-card" data-name="獸毛">
+          <p style="font-weight:600;">獸毛</p>
+          <span class="tag">素材</span>
+          <span class="tag">掉落</span>
+          <p style="color:var(--text-secondary);font-size:0.85rem;margin-top:0.5rem;">可從悠悠草原獲得。</p>
+        </div>
+      </div>
+    </section>
+
+    <p style="color:var(--text-secondary);font-size:0.85rem;margin-top:2rem;">※ 道具數值、取得方式持續補充中</p>
+  </main>
+
+  <footer class="site-footer">
+    SoulLine Wiki — 非官方玩家Wiki　|　資料來源：玩家實測　|　遊戲開發：皊鴉
+  </footer>
+
+  <script src="../js/theme.js"></script>
+  <script>
+    document.getElementById('search').addEventListener('input', function() {
+      const q = this.value.trim().toLowerCase();
+      document.querySelectorAll('.item-card').forEach(card => {
+        const name = card.getAttribute('data-name') || '';
+        card.style.display = name.toLowerCase().includes(q) ? '' : 'none';
+      });
+    });
+  </script>
+</body>
+</html>

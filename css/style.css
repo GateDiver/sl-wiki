@@ -1,0 +1,221 @@
+/* SoulLine Wiki — Design System */
+
+:root {
+  --bg-primary: #0d1b2a;
+  --bg-secondary: #112233;
+  --bg-card: #162a3d;
+  --text-primary: #e8f0f7;
+  --text-secondary: #9ab4cc;
+  --accent: #4fc3f7;
+  --accent-dim: #2a7fa8;
+  --border: #1e3a52;
+  --font-main: 'Noto Sans TC', sans-serif;
+}
+
+[data-theme="light"] {
+  --bg-primary: #f0f4f8;
+  --bg-secondary: #e0e8f0;
+  --bg-card: #ffffff;
+  --text-primary: #0d1b2a;
+  --text-secondary: #3a5a7a;
+  --accent: #1a7fbf;
+  --accent-dim: #d0e8f8;
+  --border: #b0c8e0;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-main);
+  font-size: 16px;
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+/* Layout */
+.site-header {
+  background: var(--bg-secondary);
+  border-bottom: 1px solid var(--border);
+  padding: 0 2rem;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  height: 60px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.site-nav {
+  justify-self: center;
+}
+
+.site-header .theme-toggle {
+  justify-self: end;
+}
+
+.site-logo {
+  color: var(--accent);
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-decoration: none;
+  letter-spacing: 0.05em;
+}
+
+.site-nav a {
+  color: var(--text-secondary);
+  text-decoration: none;
+  margin-left: 1.5rem;
+  font-size: 0.9rem;
+  transition: color 0.2s;
+}
+
+.site-nav a:hover { color: var(--accent); }
+
+.theme-toggle {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  color: var(--text-secondary);
+  padding: 0.3rem 0.8rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  margin-left: 1.5rem;
+  transition: border-color 0.2s, color 0.2s;
+}
+
+.theme-toggle:hover { border-color: var(--accent); color: var(--accent); }
+
+main {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+}
+
+/* Cards */
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 1.25rem;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+/* Hero */
+.hero {
+  text-align: center;
+  padding: 4rem 1rem 3rem;
+}
+
+.hero-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--accent);
+  letter-spacing: 0.1em;
+  margin-bottom: 0.5rem;
+}
+
+.hero-sub {
+  color: var(--text-secondary);
+  font-size: 1rem;
+  margin-bottom: 2.5rem;
+}
+
+/* Nav cards on homepage */
+.nav-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.nav-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 1.5rem 1rem;
+  text-align: center;
+  text-decoration: none;
+  color: var(--text-primary);
+  transition: border-color 0.2s, background 0.2s;
+}
+
+.nav-card:hover { border-color: var(--accent); background: var(--bg-secondary); }
+
+.nav-card-icon { font-size: 2rem; margin-bottom: 0.5rem; }
+.nav-card-label { font-size: 0.95rem; color: var(--text-secondary); }
+
+/* Page headings */
+.page-title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--accent);
+  margin-bottom: 0.25rem;
+}
+
+.page-desc {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  margin-bottom: 1.5rem;
+}
+
+.divider {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 1.5rem 0;
+}
+
+/* Tags */
+.tag {
+  display: inline-block;
+  background: var(--accent-dim);
+  color: var(--accent);
+  font-size: 0.75rem;
+  padding: 0.15rem 0.5rem;
+  border-radius: 3px;
+  margin-right: 0.3rem;
+}
+
+[data-theme="light"] .tag { background: var(--accent-dim); color: var(--accent); }
+
+/* Search */
+.search-bar {
+  width: 100%;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  color: var(--text-primary);
+  padding: 0.6rem 1rem;
+  border-radius: 4px;
+  font-size: 0.95rem;
+  margin-bottom: 1.5rem;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.search-bar:focus { border-color: var(--accent); }
+
+/* Footer */
+.site-footer {
+  border-top: 1px solid var(--border);
+  text-align: center;
+  padding: 1.5rem;
+  color: var(--text-secondary);
+  font-size: 0.8rem;
+  margin-top: 4rem;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .site-header { padding: 0 1rem; }
+  .site-nav { display: none; }
+  .hero-title { font-size: 1.8rem; }
+}
