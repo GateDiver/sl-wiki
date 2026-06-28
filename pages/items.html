@@ -27,84 +27,271 @@
 
     <input type="text" class="search-bar" id="search" placeholder="搜尋道具名稱…">
 
+    <nav style="background:var(--bg-secondary);border-radius:8px;padding:0.75rem 1rem;margin-bottom:1.5rem;font-size:0.88rem;">
+      <span style="color:var(--text-secondary);margin-right:0.75rem;">跳到：</span>
+      <a href="#equip" style="color:var(--accent);margin-right:1rem;text-decoration:none;">⚔ 裝備</a>
+      <a href="#supply" style="color:var(--accent);margin-right:1rem;text-decoration:none;">🧪 補給品</a>
+      <a href="#material" style="color:var(--accent);text-decoration:none;">🌿 生活素材</a>
+    </nav>
+
     <hr class="divider">
 
-    <section style="margin-bottom:2rem;">
+    <section id="equip" style="margin-bottom:2rem;">
       <h2 style="color:var(--accent);font-size:1rem;margin-bottom:1rem;">⚔ 裝備</h2>
       <div class="card-grid" id="list-equip">
         <div class="card item-card" data-name="舊布披肩">
           <p style="font-weight:600;">舊布披肩</p>
-          <span class="tag">防具</span>
-          <p style="color:var(--text-secondary);font-size:0.85rem;margin-top:0.5rem;">初始裝備。基礎防禦用。</p>
+          <span class="tag">防具</span><span class="tag">披風</span>
+          <p style="color:var(--text-secondary);font-size:0.85rem;margin-top:0.5rem;">耐性 +1。初始裝備。</p>
         </div>
         <div class="card item-card" data-name="舊木盾">
           <p style="font-weight:600;">舊木盾</p>
-          <span class="tag">防具</span>
-          <p style="color:var(--text-secondary);font-size:0.85rem;margin-top:0.5rem;">初始裝備。</p>
+          <span class="tag">防具</span><span class="tag">副手</span>
+          <p style="color:var(--text-secondary);font-size:0.85rem;margin-top:0.5rem;">防禦 +1、HP +8。初始裝備。</p>
         </div>
-        <div class="card item-card" data-name="練習木劍">
-          <p style="font-weight:600;">練習木劍 / 練習用木劍</p>
-          <span class="tag">武器</span>
+        <div class="card item-card" data-name="練習木劍 練習用木劍">
+          <p style="font-weight:600;">練習用木劍</p>
+          <span class="tag">武器</span><span class="tag">商店</span>
           <p style="color:var(--text-secondary);font-size:0.85rem;margin-top:0.5rem;">
-            初始武器。名稱不統一問題已修復（2026-06-28）。
+            攻擊 +2。商店購買　<strong style="color:var(--text-primary)">80 魂晶</strong>
           </p>
         </div>
         <div class="card item-card" data-name="旅人短靴">
           <p style="font-weight:600;">旅人短靴</p>
-          <span class="tag">防具</span>
-          <span class="tag">商店</span>
+          <span class="tag">防具</span><span class="tag">鞋子</span><span class="tag">商店</span>
           <p style="color:var(--text-secondary);font-size:0.85rem;margin-top:0.5rem;">
-            商店購買　<strong style="color:var(--text-primary)">70 魂晶</strong>
+            敏捷 +1。商店購買　<strong style="color:var(--text-primary)">70 魂晶</strong>
+          </p>
+        </div>
+        <div class="card item-card" data-name="布質護腕">
+          <p style="font-weight:600;">布質護腕</p>
+          <span class="tag">防具</span><span class="tag">手部</span><span class="tag">探索</span>
+          <p style="color:var(--text-secondary);font-size:0.85rem;margin-top:0.5rem;">
+            HP +10。稚匯之城舊物攤探索撿取。
+          </p>
+        </div>
+        <div class="card item-card" data-name="一般衣服">
+          <p style="font-weight:600;">一般衣服</p>
+          <span class="tag">防具</span><span class="tag">衣服</span>
+          <p style="color:var(--text-secondary);font-size:0.85rem;margin-top:0.5rem;">
+            無能力加成。預設裝備，商店目前未上架衣物，只能靠探索取得。
+          </p>
+        </div>
+        <div class="card item-card" data-name="紅線小鈴鐺">
+          <p style="font-weight:600;">紅線小鈴鐺</p>
+          <span class="tag">飾品</span><span class="tag">探索</span>
+          <p style="color:var(--text-secondary);font-size:0.85rem;margin-top:0.5rem;">
+            幸運 +1。愛神神殿探索低機率掉落。
           </p>
         </div>
       </div>
     </section>
 
-    <section style="margin-bottom:2rem;">
+    <section id="supply" style="margin-bottom:2rem;">
       <h2 style="color:var(--accent);font-size:1rem;margin-bottom:1rem;">🧪 補給品</h2>
+      <p style="color:var(--text-secondary);font-size:0.85rem;margin-bottom:1rem;">※ 戰鬥中無法使用道具（功能尚未實裝）</p>
       <div class="card-grid" id="list-supply">
+        <div class="card item-card" data-name="乾糧">
+          <p style="font-weight:600;">乾糧</p>
+          <span class="tag">消耗</span><span class="tag">商店</span><span class="tag">掉落</span>
+          <p style="color:var(--text-secondary);font-size:0.85rem;margin-top:0.5rem;">
+            回復 HP 15。商店　<strong style="color:var(--text-primary)">15 魂晶</strong><br>
+            掉落來源：悠悠草原探索（舊布包內）、「風滾史萊姆」戰鬥。
+          </p>
+        </div>
+        <div class="card item-card" data-name="小瓶溫泉水">
+          <p style="font-weight:600;">小瓶溫泉水</p>
+          <span class="tag">消耗</span><span class="tag">商店</span>
+          <p style="color:var(--text-secondary);font-size:0.85rem;margin-top:0.5rem;">
+            戰鬥外回復 HP 20、MP 20。商店　<strong style="color:var(--text-primary)">20 魂晶</strong>
+          </p>
+        </div>
         <div class="card item-card" data-name="小型回復藥">
           <p style="font-weight:600;">小型回復藥</p>
-          <span class="tag">消耗</span>
-          <p style="color:var(--text-secondary);font-size:0.85rem;margin-top:0.5rem;">回復HP。具體數值補充中。</p>
+          <span class="tag">消耗</span><span class="tag">商店</span>
+          <p style="color:var(--text-secondary);font-size:0.85rem;margin-top:0.5rem;">
+            回復 HP 30。商店　<strong style="color:var(--text-primary)">25 魂晶</strong>
+          </p>
+        </div>
+        <div class="card item-card" data-name="蜂蜜麵包">
+          <p style="font-weight:600;">蜂蜜麵包</p>
+          <span class="tag">消耗</span><span class="tag">商店</span>
+          <p style="color:var(--text-secondary);font-size:0.85rem;margin-top:0.5rem;">
+            回復 HP 20、行動力 +1。商店　<strong style="color:var(--text-primary)">30 魂晶</strong><br>
+            建議每日使用上限 1 次。
+          </p>
         </div>
         <div class="card item-card" data-name="簡易繃帶">
           <p style="font-weight:600;">簡易繃帶</p>
-          <span class="tag">消耗</span>
-          <p style="color:var(--text-secondary);font-size:0.85rem;margin-top:0.5rem;">止血/回復用。具體效果補充中。</p>
+          <span class="tag">消耗</span><span class="tag">商店</span>
+          <p style="color:var(--text-secondary);font-size:0.85rem;margin-top:0.5rem;">
+            戰鬥外回復 HP 20、MP 20。商店　<strong style="color:var(--text-primary)">35 魂晶</strong>
+          </p>
+        </div>
+        <div class="card item-card" data-name="清涼薄荷水">
+          <p style="font-weight:600;">清涼薄荷水</p>
+          <span class="tag">消耗</span><span class="tag">商店</span>
+          <p style="color:var(--text-secondary);font-size:0.85rem;margin-top:0.5rem;">
+            回復 MP 10、移除輕微炎熱／灼燒狀態。商店　<strong style="color:var(--text-primary)">45 魂晶</strong><br>
+            後期龍息幽谷、炎熱地圖備用。
+          </p>
+        </div>
+        <div class="card item-card" data-name="解毒草丸">
+          <p style="font-weight:600;">解毒草丸</p>
+          <span class="tag">消耗</span><span class="tag">商店</span>
+          <p style="color:var(--text-secondary);font-size:0.85rem;margin-top:0.5rem;">
+            移除輕微中毒狀態。商店　<strong style="color:var(--text-primary)">45 魂晶</strong><br>
+            後期迷霧沼澤、毒系怪物備用。
+          </p>
         </div>
       </div>
     </section>
 
-    <section>
+    <section id="material">
       <h2 style="color:var(--accent);font-size:1rem;margin-bottom:1rem;">🌿 生活素材</h2>
       <div class="card-grid" id="list-material">
         <div class="card item-card" data-name="乾淨空瓶">
           <p style="font-weight:600;">乾淨空瓶</p>
           <span class="tag">素材</span>
-          <p style="color:var(--text-secondary);font-size:0.85rem;margin-top:0.5rem;">用途補充中。</p>
+          <p style="color:var(--text-secondary);font-size:0.85rem;margin-top:0.5rem;">商店可賣 10 魂晶，或用來裝水/藥（製作系統，待開放）。</p>
         </div>
-        <div class="card item-card" data-name="乾糧">
-          <p style="font-weight:600;">乾糧</p>
-          <span class="tag">素材</span>
-          <p style="color:var(--text-secondary);font-size:0.85rem;margin-top:0.5rem;">用途補充中。</p>
+        <div class="card item-card" data-name="舊布包">
+          <p style="font-weight:600;">舊布包</p>
+          <span class="tag">素材</span><span class="tag">掉落</span>
+          <p style="color:var(--text-secondary);font-size:0.85rem;margin-top:0.5rem;">
+            悠悠草原高頻掉落。標價 5 魂晶，收購功能待開放。
+          </p>
         </div>
-        <div class="card item-card" data-name="羽毛">
-          <p style="font-weight:600;">羽毛</p>
-          <span class="tag">素材</span>
-          <span class="tag">掉落</span>
-          <p style="color:var(--text-secondary);font-size:0.85rem;margin-top:0.5rem;">可從悠悠草原獲得。</p>
+        <div class="card item-card" data-name="普通種籽">
+          <p style="font-weight:600;">普通種籽</p>
+          <span class="tag">素材</span><span class="tag">掉落</span>
+          <p style="color:var(--text-secondary);font-size:0.85rem;margin-top:0.5rem;">
+            用途待確認。掉落來源：悠悠草原探索（常見）。
+          </p>
+        </div>
+        <div class="card item-card" data-name="小幸運草">
+          <p style="font-weight:600;">小幸運草</p>
+          <span class="tag">素材</span><span class="tag">掉落</span>
+          <p style="color:var(--text-secondary);font-size:0.85rem;margin-top:0.5rem;">
+            用途待確認。掉落來源：悠悠草原探索。
+          </p>
+        </div>
+        <div class="card item-card" data-name="柔軟羽毛">
+          <p style="font-weight:600;">柔軟羽毛</p>
+          <span class="tag">素材</span><span class="tag">掉落</span>
+          <p style="color:var(--text-secondary);font-size:0.85rem;margin-top:0.5rem;">
+            製作素材。掉落來源：悠悠草原「遇見迷路的小動物」事件。
+          </p>
         </div>
         <div class="card item-card" data-name="獸毛">
           <p style="font-weight:600;">獸毛</p>
-          <span class="tag">素材</span>
-          <span class="tag">掉落</span>
-          <p style="color:var(--text-secondary);font-size:0.85rem;margin-top:0.5rem;">可從悠悠草原獲得。</p>
+          <span class="tag">素材</span><span class="tag">掉落</span>
+          <p style="color:var(--text-secondary);font-size:0.85rem;margin-top:0.5rem;">
+            製作素材。掉落來源：悠悠草原「遇見迷路的小動物」事件。
+          </p>
+        </div>
+        <div class="card item-card" data-name="史萊姆膠">
+          <p style="font-weight:600;">史萊姆膠</p>
+          <span class="tag">素材</span><span class="tag">掉落</span>
+          <p style="color:var(--text-secondary);font-size:0.85rem;margin-top:0.5rem;">
+            製作素材。掉落來源：悠悠草原「史萊姆滑痕」事件、「風滾史萊姆」戰鬥。
+          </p>
+        </div>
+        <div class="card item-card" data-name="風滾草">
+          <p style="font-weight:600;">風滾草</p>
+          <span class="tag">素材</span><span class="tag">掉落</span>
+          <p style="color:var(--text-secondary);font-size:0.85rem;margin-top:0.5rem;">
+            掉落來源：悠悠草原「風滾史萊姆」戰鬥（隨機）。
+          </p>
+        </div>
+        <div class="card item-card" data-name="透明膠核">
+          <p style="font-weight:600;">透明膠核</p>
+          <span class="tag">素材</span><span class="tag">掉落</span>
+          <p style="color:var(--text-secondary);font-size:0.85rem;margin-top:0.5rem;">
+            掉落來源：悠悠草原「風滾史萊姆」戰鬥（隨機）。
+          </p>
+        </div>
+        <div class="card item-card" data-name="夜光孢子">
+          <p style="font-weight:600;">夜光孢子</p>
+          <span class="tag">素材</span><span class="tag">掉落</span>
+          <p style="color:var(--text-secondary);font-size:0.85rem;margin-top:0.5rem;">
+            掉落來源：初始之森夜光菇怪。
+          </p>
+        </div>
+        <div class="card item-card" data-name="蟲殼 蟲殼碎片">
+          <p style="font-weight:600;">蟲殼 / 蟲殼碎片</p>
+          <span class="tag">素材</span><span class="tag">掉落</span>
+          <p style="color:var(--text-secondary);font-size:0.85rem;margin-top:0.5rem;">
+            掉落來源：悠悠草原。
+          </p>
+        </div>
+        <div class="card item-card" data-name="藤蔓纖維">
+          <p style="font-weight:600;">藤蔓纖維</p>
+          <span class="tag">素材</span><span class="tag">掉落</span>
+          <p style="color:var(--text-secondary);font-size:0.85rem;margin-top:0.5rem;">
+            掉落來源：悠悠草原。
+          </p>
+        </div>
+        <div class="card item-card" data-name="小魚鱗 湖畔魚肉">
+          <p style="font-weight:600;">小魚鱗 / 湖畔魚肉</p>
+          <span class="tag">素材</span><span class="tag">掉落</span>
+          <p style="color:var(--text-secondary);font-size:0.85rem;margin-top:0.5rem;">
+            掉落來源：星露湖畔。
+          </p>
+        </div>
+        <div class="card item-card" data-name="星露粉 螢光翅粉">
+          <p style="font-weight:600;">星露粉 / 螢光翅粉</p>
+          <span class="tag">素材</span><span class="tag">掉落</span>
+          <p style="color:var(--text-secondary);font-size:0.85rem;margin-top:0.5rem;">
+            掉落來源：星露湖畔。
+          </p>
+        </div>
+        <div class="card item-card" data-name="湖草">
+          <p style="font-weight:600;">湖草</p>
+          <span class="tag">素材</span><span class="tag">掉落</span>
+          <p style="color:var(--text-secondary);font-size:0.85rem;margin-top:0.5rem;">
+            掉落來源：星露湖畔。
+          </p>
+        </div>
+        <div class="card item-card" data-name="發光石">
+          <p style="font-weight:600;">發光石</p>
+          <span class="tag">素材</span><span class="tag">掉落</span>
+          <p style="color:var(--text-secondary);font-size:0.85rem;margin-top:0.5rem;">
+            掉落來源：靈礦洞穴（礦晶蝙蝠）。
+          </p>
+        </div>
+        <div class="card item-card" data-name="羽紋礦片 微光礦砂">
+          <p style="font-weight:600;">羽紋礦片 / 微光礦砂</p>
+          <span class="tag">素材</span><span class="tag">掉落</span>
+          <p style="color:var(--text-secondary);font-size:0.85rem;margin-top:0.5rem;">
+            掉落來源：靈礦洞穴。
+          </p>
+        </div>
+        <div class="card item-card" data-name="空鳴岩心 岩靈碎片">
+          <p style="font-weight:600;">空鳴岩心 / 岩靈碎片</p>
+          <span class="tag">素材</span><span class="tag">掉落</span>
+          <p style="color:var(--text-secondary);font-size:0.85rem;margin-top:0.5rem;">
+            掉落來源：靈礦洞穴（迴聲岩靈）。
+          </p>
+        </div>
+        <div class="card item-card" data-name="晨光芽">
+          <p style="font-weight:600;">晨光芽</p>
+          <span class="tag">素材</span><span class="tag">種植</span>
+          <p style="color:var(--text-secondary);font-size:0.85rem;margin-top:0.5rem;">
+            每日神秘種籽收成可得。用途待確認。
+          </p>
+        </div>
+        <div class="card item-card" data-name="樹皮碎片">
+          <p style="font-weight:600;">樹皮碎片</p>
+          <span class="tag">素材</span><span class="tag">掉落</span>
+          <p style="color:var(--text-secondary);font-size:0.85rem;margin-top:0.5rem;">
+            掉落來源：悠悠草原。
+          </p>
         </div>
       </div>
     </section>
 
-    <p style="color:var(--text-secondary);font-size:0.85rem;margin-top:2rem;">※ 道具數值、取得方式持續補充中</p>
+    <p style="color:var(--text-secondary);font-size:0.85rem;margin-top:2rem;">※ 道具數值、取得方式持續補充中　|　最後更新：2026-06-28</p>
   </main>
 
   <footer class="site-footer">
