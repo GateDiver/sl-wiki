@@ -26,6 +26,12 @@
     <div class="page-desc">轉職條件、能力特性、推薦路線</div>
     <hr class="divider">
 
+    <nav style="background:var(--bg-secondary);border-radius:8px;padding:0.75rem 1rem;margin-bottom:1.5rem;font-size:0.88rem;">
+      <span style="color:var(--text-secondary);margin-right:0.75rem;">跳到：</span>
+      <a href="#battle" style="color:var(--accent);margin-right:1rem;text-decoration:none;">⚔️ 戰鬥職業</a>
+      <a href="#life" style="color:var(--accent);text-decoration:none;">🌿 生活職業</a>
+    </nav>
+
     <div class="card" style="margin-bottom:1.5rem;">
       <p style="color:var(--text-secondary);font-size:0.9rem;">
         達到 <strong style="color:var(--text-primary);">LV10</strong> 後可進行轉職。轉職後可解鎖新能力與打工選項。
@@ -34,62 +40,116 @@
         ⚠ 能力點分配前請先確認目標職業需求——一旦把點數亂配，可能無法達到轉職門檻。
       </p>
       <p style="color:var(--text-secondary);font-size:0.85rem;margin-top:0.4rem;">
-        起始各屬性為 5，每升一級可獲得 1 點能力點（LV2 起至 LV10 共 +9 點）。
+        起始各屬性為 5，每升一級可獲得 1 點能力點（LV2 起至 LV10 共 +9 點）。目前已知共 10 個職業，8 個有公開資料。
       </p>
     </div>
 
-    <div class="page-title" style="font-size:1.1rem;margin-bottom:1rem;">⚔️ 戰鬥職業</div>
+    <div id="battle" class="page-title" style="font-size:1.1rem;margin-bottom:1rem;">⚔️ 戰鬥職業</div>
 
     <div class="card-grid">
       <div class="card">
         <p style="font-weight:700;font-size:1.05rem;margin-bottom:0.4rem;">🗡️ 劍道家</p>
-        <span class="tag">戰鬥系</span>
+        <span class="tag">戰鬥系</span><span class="tag" style="background:#e74c3c33;color:#e74c3c;">輸出</span>
         <p style="color:var(--text-secondary);font-size:0.9rem;margin-top:0.6rem;">
-          以劍為道，在每一次揮擊中尋找最純粹的力量。<br>
-          近戰輸出型，擅長穩定單體傷害、破防與反擊。
+          攻守均衡的近戰輸出職業，擅長穩定單體傷害、破防與反擊。適合正面突破，也能處理破損武器、鐵片與劍類素材。
         </p>
         <p style="color:var(--text-secondary);font-size:0.85rem;margin-top:0.5rem;">
           <strong style="color:var(--text-primary);">轉職條件：</strong>力量 10、完成木劍試煉
         </p>
-      </div>
-
-      <div class="card">
-        <p style="font-weight:700;font-size:1.05rem;margin-bottom:0.4rem;">🔮 靈媒</p>
-        <span class="tag">戰鬥系</span>
-        <p style="color:var(--text-secondary);font-size:0.9rem;margin-top:0.6rem;">
-          站在生與靈之間的橋樑上，聆聽兩側的聲音。<br>
-          輔助型，擅長解咒、護身、安魂。具備艾人共鳴被動——與艾人相關事件的成功率提高。
+        <p style="color:var(--text-secondary);font-size:0.85rem;margin-top:0.4rem;">
+          <strong style="color:var(--text-primary);">被動：</strong>擊敗怪物時較容易獲得「破損武器、硬殼、鱗片」類素材
         </p>
-        <p style="color:var(--text-secondary);font-size:0.85rem;margin-top:0.5rem;">
-          <strong style="color:var(--text-primary);">轉職條件：</strong>知識 9、耐性 8、完成靈魂低語事件
+        <p style="color:var(--text-secondary);font-size:0.85rem;margin-top:0.4rem;">
+          <strong style="color:var(--text-primary);">技能：</strong>一文字斬、居合反擊、破甲斬、劍心專注、斷鋼連斬
         </p>
       </div>
 
       <div class="card">
         <p style="font-weight:700;font-size:1.05rem;margin-bottom:0.4rem;">🌀 巫師</p>
-        <span class="tag">戰鬥系</span>
+        <span class="tag">戰鬥系</span><span class="tag" style="background:#e74c3c33;color:#e74c3c;">高攻擊</span>
         <p style="color:var(--text-secondary);font-size:0.9rem;margin-top:0.6rem;">
-          將知識化為力量，讓元素在指間燃燒或凝結。<br>
-          高攻擊型，擅長元素攻擊與群體傷害。
+          知識與 MP 最高的魔法輸出職業，擅長元素攻擊、群體傷害與弱化敵人。耐打能力低，但適合遠距離清場與解讀魔法線索。
         </p>
         <p style="color:var(--text-secondary);font-size:0.85rem;margin-top:0.5rem;">
           <strong style="color:var(--text-primary);">轉職條件：</strong>知識 10、完成基礎法術試煉
         </p>
+        <p style="color:var(--text-secondary);font-size:0.85rem;margin-top:0.4rem;">
+          <strong style="color:var(--text-primary);">被動：</strong>戰鬥或探索後額外獲得少量靈思，或取得魔法粉塵、符文碎片
+        </p>
+        <p style="color:var(--text-secondary);font-size:0.85rem;margin-top:0.4rem;">
+          <strong style="color:var(--text-primary);">技能：</strong>魔力彈、元素火花、魔法結界、元素弱化、符文爆裂
+        </p>
+      </div>
+
+      <div class="card">
+        <p style="font-weight:700;font-size:1.05rem;margin-bottom:0.4rem;">🏹 獵手</p>
+        <span class="tag">戰鬥系</span><span class="tag" style="background:#e74c3c33;color:#e74c3c;">高攻擊</span>
+        <p style="color:var(--text-secondary);font-size:0.9rem;margin-top:0.6rem;">
+          敏捷與幸運較高的職業，擅長標記、陷阱、暴擊、追蹤與野外素材取得。身板較薄，但打得快、拿東西也靈活。
+        </p>
+        <p style="color:var(--text-secondary);font-size:0.85rem;margin-top:0.5rem;">
+          <strong style="color:var(--text-primary);">轉職條件：</strong>敏捷 9、力量 7、完成追蹤試煉
+        </p>
+        <p style="color:var(--text-secondary);font-size:0.85rem;margin-top:0.4rem;">
+          <strong style="color:var(--text-primary);">被動：</strong>擊敗獸類怪時額外獲得獸毛、羽毛、獸骨、皮革
+        </p>
+        <p style="color:var(--text-secondary);font-size:0.85rem;margin-top:0.4rem;">
+          <strong style="color:var(--text-primary);">技能：</strong>精準射擊、追蹤標記、陷阱布置、連射、野性剝取
+        </p>
+      </div>
+
+      <div class="card">
+        <p style="font-weight:700;font-size:1.05rem;margin-bottom:0.4rem;">👊 武鬥家</p>
+        <span class="tag">戰鬥系</span><span class="tag" style="background:#2980b933;color:#3498db;">坦</span>
+        <p style="color:var(--text-secondary);font-size:0.9rem;margin-top:0.6rem;">
+          高血量與高耐性的前排職業，擅長承傷、暈眩、牽制與保護隊伍。輸出不如純攻擊職，但續戰力很強。
+        </p>
+        <p style="color:var(--text-secondary);font-size:0.85rem;margin-top:0.5rem;">
+          <strong style="color:var(--text-primary);">轉職條件：</strong>體魄 9、耐性 8、完成基礎格鬥試煉
+        </p>
+        <p style="color:var(--text-secondary);font-size:0.85rem;margin-top:0.4rem;">
+          <strong style="color:var(--text-primary);">被動：</strong>低機率在戰鬥後回復少量體力，或減少受傷懲罰
+        </p>
+        <p style="color:var(--text-secondary);font-size:0.85rem;margin-top:0.4rem;">
+          <strong style="color:var(--text-primary);">技能：</strong>崩拳、鐵身架勢、連環踢、氣息調整、震地掌
+        </p>
+      </div>
+
+      <div class="card">
+        <p style="font-weight:700;font-size:1.05rem;margin-bottom:0.4rem;">🔮 靈媒</p>
+        <span class="tag">戰鬥系</span><span class="tag" style="background:#9b59b633;color:#9b59b6;">輔助</span>
+        <p style="color:var(--text-secondary);font-size:0.9rem;margin-top:0.6rem;">
+          偏特殊輔助與靈性探索的職業，擅長解咒、護身、引路、讀取殘響與對亡魂類敵人特攻。輸出不如巫師直接，但事件功能最多。
+        </p>
+        <p style="color:var(--text-secondary);font-size:0.85rem;margin-top:0.5rem;">
+          <strong style="color:var(--text-primary);">轉職條件：</strong>知識 9、耐性 8、完成靈魂低語事件
+        </p>
+        <p style="color:var(--text-secondary);font-size:0.85rem;margin-top:0.4rem;">
+          <strong style="color:var(--text-primary);">被動：</strong>靈魂低語（探索低機率獲額外提示）／殘響感知（更容易發現隱藏任務）／艾人共鳴（艾人相關事件成功率提高）／夢境觸發（休息後低機率取得線索或祝福）／安魂（亡魂、殘念、詛咒事件有額外選項）
+        </p>
+        <p style="color:var(--text-secondary);font-size:0.85rem;margin-top:0.4rem;">
+          <strong style="color:var(--text-primary);">技能：</strong>靈息打擊、安魂咒、護身咒、破邪靈光、問靈咒
+        </p>
       </div>
     </div>
 
-    <div class="page-title" style="font-size:1.1rem;margin:2rem 0 1rem;">🌿 生活職業</div>
+    <div id="life" class="page-title" style="font-size:1.1rem;margin:2rem 0 1rem;">🌿 生活職業</div>
 
     <div class="card-grid">
       <div class="card">
         <p style="font-weight:700;font-size:1.05rem;margin-bottom:0.4rem;">🔧 工匠</p>
         <span class="tag">生活系</span>
         <p style="color:var(--text-secondary);font-size:0.9rem;margin-top:0.6rem;">
-          用雙手把散落的素材變成能用的東西，把損壞的東西修回原樣。<br>
-          擅長製作、修補、拆解回收。
+          擅長修補裝備、處理金屬與木材素材，能提高製作品質。用雙手把散落的素材變成能用的東西，把損壞的東西修回原樣。
         </p>
         <p style="color:var(--text-secondary);font-size:0.85rem;margin-top:0.5rem;">
           <strong style="color:var(--text-primary);">轉職條件：</strong>體魄 8、知識 8
+        </p>
+        <p style="color:var(--text-secondary);font-size:0.85rem;margin-top:0.4rem;">
+          <strong style="color:var(--text-primary);">被動：</strong>製作時低機率不消耗部分素材，或做出品質較好的物品
+        </p>
+        <p style="color:var(--text-secondary);font-size:0.85rem;margin-top:0.4rem;">
+          <strong style="color:var(--text-primary);">技能：</strong>臨時修補、拆解回收、加固處理、精準製作
         </p>
       </div>
 
@@ -97,16 +157,72 @@
         <p style="font-weight:700;font-size:1.05rem;margin-bottom:0.4rem;">🌱 園丁</p>
         <span class="tag">生活系</span>
         <p style="color:var(--text-secondary);font-size:0.9rem;margin-top:0.6rem;">
-          與植物共處，學習它們按自己節奏生長的方式。<br>
-          擅長植物照料、採集加成。
+          擅長植物照料、花材處理與園藝任務，能支援種植與植物系事件。與植物共處，學習它們按自己節奏生長的方式。
         </p>
         <p style="color:var(--text-secondary);font-size:0.85rem;margin-top:0.5rem;">
           <strong style="color:var(--text-primary);">轉職條件：</strong>知識 8、耐性 8
         </p>
+        <p style="color:var(--text-secondary);font-size:0.85rem;margin-top:0.4rem;">
+          <strong style="color:var(--text-primary);">被動：</strong>採集花材、種子、枝條時有機率多拿 1 份；植物相關事件判定小幅加成
+        </p>
+        <p style="color:var(--text-secondary);font-size:0.85rem;margin-top:0.4rem;">
+          <strong style="color:var(--text-primary);">技能：</strong>植物辨識、快速修枝、藤蔓牽制、生命澆灌、花圃照料
+        </p>
+      </div>
+
+      <div class="card">
+        <p style="font-weight:700;font-size:1.05rem;margin-bottom:0.4rem;">🍳 廚師</p>
+        <span class="tag">生活系</span>
+        <p style="color:var(--text-secondary);font-size:0.9rem;margin-top:0.6rem;">
+          擅長製作料理、處理食材，能讓補給品效果更穩定。
+        </p>
+        <p style="color:var(--text-secondary);font-size:0.85rem;margin-top:0.5rem;">
+          <strong style="color:var(--text-primary);">轉職條件：</strong>知識 8、耐性 8
+        </p>
+        <p style="color:var(--text-secondary);font-size:0.85rem;margin-top:0.4rem;">
+          <strong style="color:var(--text-primary);">被動：</strong>做出的料理持續次數 +1，或有機率產生額外效果
+        </p>
+        <p style="color:var(--text-secondary);font-size:0.85rem;margin-top:0.4rem;">
+          <strong style="color:var(--text-primary);">技能：</strong>料理處理、熱湯補給、食材活用、飽足加成
+        </p>
+      </div>
+
+      <div class="card">
+        <p style="font-weight:700;font-size:1.05rem;margin-bottom:0.4rem;">🌿 採集者</p>
+        <span class="tag">生活系</span>
+        <p style="color:var(--text-secondary);font-size:0.9rem;margin-top:0.6rem;">
+          擅長採集草藥、花朵、礦物與野外素材，適合支援製作與任務。
+        </p>
+        <p style="color:var(--text-secondary);font-size:0.85rem;margin-top:0.5rem;">
+          <strong style="color:var(--text-primary);">轉職條件：</strong>敏捷 8、體魄 8
+        </p>
+        <p style="color:var(--text-secondary);font-size:0.85rem;margin-top:0.4rem;">
+          <strong style="color:var(--text-primary);">被動：</strong>採集草藥、花朵、礦物時有機率多拿 1 份
+        </p>
+        <p style="color:var(--text-secondary);font-size:0.85rem;margin-top:0.4rem;">
+          <strong style="color:var(--text-primary);">技能：</strong>素材辨識、快速採集、避險路線、自然嗅覺
+        </p>
+      </div>
+
+      <div class="card">
+        <p style="font-weight:700;font-size:1.05rem;margin-bottom:0.4rem;">🎣 釣手</p>
+        <span class="tag">生活系</span>
+        <p style="color:var(--text-secondary);font-size:0.9rem;margin-top:0.6rem;">
+          擅長水域行動、釣魚與水生素材取得。
+        </p>
+        <p style="color:var(--text-secondary);font-size:0.85rem;margin-top:0.5rem;">
+          <strong style="color:var(--text-primary);">轉職條件：</strong>敏捷 8、耐性 8
+        </p>
+        <p style="color:var(--text-secondary);font-size:0.85rem;margin-top:0.4rem;">
+          <strong style="color:var(--text-primary);">被動：</strong>釣魚時較容易取得稀有魚、水草、湖水珍珠
+        </p>
+        <p style="color:var(--text-secondary);font-size:0.85rem;margin-top:0.4rem;">
+          <strong style="color:var(--text-primary);">技能：</strong>拋竿、穩線、水域觀察、魚群感知
+        </p>
       </div>
     </div>
 
-    <p style="color:var(--text-secondary);font-size:0.85rem;margin-top:2rem;">※ 轉職地點、職業技能詳細說明補充中</p>
+    <p style="color:var(--text-secondary);font-size:0.85rem;margin-top:2rem;">※ 資料來源：職業諮詢公開面板（10 個職業已全數收錄）　|　資料來源：職業諮詢公開面板</p>
   </main>
 
   <footer class="site-footer">
