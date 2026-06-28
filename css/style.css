@@ -1,5 +1,7 @@
 /* SoulLine Wiki — Design System */
 
+@import url("https://fontsapi.zeoseven.com/101/main/result.css");
+
 :root {
   --bg-primary: #0d1b2a;
   --bg-secondary: #112233;
@@ -10,6 +12,7 @@
   --accent-dim: #2a7fa8;
   --border: #1e3a52;
   --font-main: 'Noto Sans TC', sans-serif;
+  --font-display: 'Cubic 11', 'Noto Sans TC', sans-serif;
 }
 
 [data-theme="light"] {
@@ -60,6 +63,7 @@ body {
   color: var(--accent);
   font-size: 1.2rem;
   font-weight: 700;
+  font-family: var(--font-display);
   text-decoration: none;
   letter-spacing: 0.05em;
 }
@@ -118,6 +122,7 @@ main {
 .hero-title {
   font-size: 2.5rem;
   font-weight: 700;
+  font-family: var(--font-display);
   color: var(--accent);
   letter-spacing: 0.1em;
   margin-bottom: 0.5rem;
@@ -158,6 +163,7 @@ main {
 .page-title {
   font-size: 1.6rem;
   font-weight: 700;
+  font-family: var(--font-display);
   color: var(--accent);
   margin-bottom: 0.25rem;
 }
