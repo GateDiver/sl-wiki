@@ -244,6 +244,38 @@ main {
 
 .search-bar:focus { border-color: var(--accent); }
 
+/* Data tables (monsters, locations) — structured rows instead of icon cards */
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.88rem;
+  margin: 1rem 0;
+}
+
+.data-table th {
+  background: var(--bg-secondary);
+  color: var(--text-secondary);
+  text-align: left;
+  padding: 0.5rem 0.75rem;
+  border-bottom: 1px solid var(--border);
+  font-weight: 600;
+}
+
+.data-table td {
+  padding: 0.6rem 0.75rem;
+  border-bottom: 1px solid var(--border);
+  vertical-align: top;
+}
+
+.data-table tr:last-child td { border-bottom: none; }
+
+.data-table .name-cell { font-weight: 600; color: var(--text-primary); white-space: nowrap; }
+.data-table .num-cell { text-align: center; white-space: nowrap; }
+.data-table .desc-cell { color: var(--text-secondary); font-size: 0.85rem; }
+
+.risk-warn { color: #e74c3c; font-weight: 600; }
+.risk-caution { color: #d68910; font-weight: 600; }
+
 /* Quick-jump nav (replaces the rounded pill-box that read as generic AI chrome) */
 .quick-jump {
   display: flex;

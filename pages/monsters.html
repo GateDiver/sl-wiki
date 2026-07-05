@@ -31,186 +31,72 @@
 
     <section style="margin-bottom:2rem;">
       <h2 style="color:var(--accent);font-size:1rem;margin-bottom:1rem;">🌲 初始之森</h2>
-      <div class="card-grid">
-        <div class="card">
-          <p style="font-weight:700;font-size:1.05rem;margin-bottom:0.4rem;">🐦 草籽雀</p>
-          <span class="tag">初始之森</span>
-          <span class="tag">低階</span>
-          <p style="color:var(--text-secondary);font-size:0.9rem;margin-top:0.6rem;">
-            初學者的練習對象。低階怪物。
-          </p>
-          <p style="color:var(--text-secondary);font-size:0.85rem;margin-top:0.5rem;">掉落：羽毛（確認）</p>
-        </div>
-        <div class="card">
-          <p style="font-weight:700;font-size:1.05rem;margin-bottom:0.4rem;">🌿 小葉蟲</p>
-          <span class="tag">初始之森</span>
-          <p style="color:var(--text-secondary);font-size:0.9rem;margin-top:0.6rem;">
-            2回合擊敗，每回合反擊2傷。靈思2 + 魂晶1。
-          </p>
-          <p style="color:var(--text-secondary);font-size:0.85rem;margin-top:0.5rem;">掉落：蟲殼碎片</p>
-        </div>
-        <div class="card">
-          <p style="font-weight:700;font-size:1.05rem;margin-bottom:0.4rem;">🌿 林間史萊姆</p>
-          <span class="tag">初始之森</span>
-          <p style="color:var(--text-secondary);font-size:0.9rem;margin-top:0.6rem;">
-            2回合擊敗，每回合反擊2傷。靈思3 + 魂晶2。
-          </p>
-          <p style="color:var(--text-secondary);font-size:0.85rem;margin-top:0.5rem;">掉落：無</p>
-        </div>
-        <div class="card">
-          <p style="font-weight:700;font-size:1.05rem;margin-bottom:0.4rem;">🪵 樹皮蟲</p>
-          <span class="tag">初始之森</span>
-          <p style="color:var(--text-secondary);font-size:0.9rem;margin-top:0.6rem;">
-            2回合擊敗，每回合反擊2傷。靈思3 + 魂晶2。
-          </p>
-          <p style="color:var(--text-secondary);font-size:0.85rem;margin-top:0.5rem;">掉落：樹皮碎片、蟲殼</p>
-        </div>
-        <div class="card">
-          <p style="font-weight:700;font-size:1.05rem;margin-bottom:0.4rem;">🐀 藤蔓鼠</p>
-          <span class="tag">初始之森</span>
-          <p style="color:var(--text-secondary);font-size:0.9rem;margin-top:0.6rem;">
-            2回合擊敗，每回合反擊3傷。靈思4 + 魂晶2。
-          </p>
-          <p style="color:var(--text-secondary);font-size:0.85rem;margin-top:0.5rem;">掉落：藤蔓纖維</p>
-        </div>
-        <div class="card">
-          <p style="font-weight:700;font-size:1.05rem;margin-bottom:0.4rem;">🐺 迷路小狼</p>
-          <span class="tag">初始之森</span>
-          <span class="tag" style="background:#c0392b33;color:#e74c3c;">⚠ 注意</span>
-          <p style="color:var(--text-secondary);font-size:0.9rem;margin-top:0.6rem;">
-            3回合擊敗，每回合反擊4傷（共8傷）。靈思5 + 魂晶3。低等玩家注意血量。
-          </p>
-          <p style="color:var(--text-secondary);font-size:0.85rem;margin-top:0.5rem;">掉落：無</p>
-        </div>
-        <div class="card">
-          <p style="font-weight:700;font-size:1.05rem;margin-bottom:0.4rem;">🍄 夜光菇怪</p>
-          <span class="tag">初始之森</span>
-          <p style="color:var(--text-secondary);font-size:0.9rem;margin-top:0.6rem;">
-            2回合擊敗，每回合反擊3傷。靈思5 + 魂晶3。
-          </p>
-          <p style="color:var(--text-secondary);font-size:0.85rem;margin-top:0.5rem;">掉落：夜光孢子（隨機）</p>
-        </div>
+      <div style="overflow-x:auto;">
+        <table class="data-table">
+          <thead>
+            <tr><th>怪物</th><th class="num-cell">回合</th><th class="num-cell">反擊傷害</th><th class="num-cell">靈思/魂晶</th><th>掉落</th></tr>
+          </thead>
+          <tbody>
+            <tr><td class="name-cell">🐦 草籽雀</td><td class="num-cell">—</td><td class="num-cell">—</td><td class="num-cell">—</td><td class="desc-cell">羽毛（確認）　<span style="opacity:0.7;">低階，初學者練習對象</span></td></tr>
+            <tr><td class="name-cell">🌿 小葉蟲</td><td class="num-cell">2</td><td class="num-cell">每回合2</td><td class="num-cell">2 / 1</td><td class="desc-cell">蟲殼碎片</td></tr>
+            <tr><td class="name-cell">🌿 林間史萊姆</td><td class="num-cell">2</td><td class="num-cell">每回合2</td><td class="num-cell">3 / 2</td><td class="desc-cell">無</td></tr>
+            <tr><td class="name-cell">🪵 樹皮蟲</td><td class="num-cell">2</td><td class="num-cell">每回合2</td><td class="num-cell">3 / 2</td><td class="desc-cell">樹皮碎片、蟲殼</td></tr>
+            <tr><td class="name-cell">🐀 藤蔓鼠</td><td class="num-cell">2</td><td class="num-cell">每回合3</td><td class="num-cell">4 / 2</td><td class="desc-cell">藤蔓纖維</td></tr>
+            <tr><td class="name-cell">🐺 迷路小狼<br><span class="risk-caution" style="font-size:0.75rem;">⚠ 注意</span></td><td class="num-cell">3</td><td class="num-cell">每回合4（共8）</td><td class="num-cell">5 / 3</td><td class="desc-cell">無　<span style="opacity:0.7;">低等玩家注意血量</span></td></tr>
+            <tr><td class="name-cell">🍄 夜光菇怪</td><td class="num-cell">2</td><td class="num-cell">每回合3</td><td class="num-cell">5 / 3</td><td class="desc-cell">夜光孢子（隨機）</td></tr>
+          </tbody>
+        </table>
       </div>
     </section>
 
     <section style="margin-bottom:2rem;">
       <h2 style="color:var(--accent);font-size:1rem;margin-bottom:1rem;">🌿 悠悠草原</h2>
-      <div class="card-grid">
-        <div class="card">
-          <p style="font-weight:700;font-size:1.05rem;margin-bottom:0.4rem;">🌿 小葉蟲</p>
-          <span class="tag">悠悠草原</span>
-          <p style="color:var(--text-secondary);font-size:0.9rem;margin-top:0.6rem;">
-            2回合打死（攻擊力9），扣1血。靈思2 + 魂晶1。
-          </p>
-          <p style="color:var(--text-secondary);font-size:0.85rem;margin-top:0.5rem;">掉落：無</p>
-        </div>
-        <div class="card">
-          <p style="font-weight:700;font-size:1.05rem;margin-bottom:0.4rem;">💨 風滾史萊姆</p>
-          <span class="tag">悠悠草原</span>
-          <p style="color:var(--text-secondary);font-size:0.9rem;margin-top:0.6rem;">
-            靈思2 + 魂晶1，打怪價值在素材不在練等。
-          </p>
-          <p style="color:var(--text-secondary);font-size:0.85rem;margin-top:0.5rem;">掉落：風滾草、乾糧、史萊姆膠、透明膠核（隨機）</p>
-        </div>
-        <div class="card">
-          <p style="font-weight:700;font-size:1.05rem;margin-bottom:0.4rem;">🐦 草籽雀（三級）</p>
-          <span class="tag">悠悠草原</span>
-          <span class="tag">中階</span>
-          <p style="color:var(--text-secondary);font-size:0.9rem;margin-top:0.6rem;">
-            比初始之森的草籽雀更硬，注意血量。
-          </p>
-          <p style="color:var(--text-secondary);font-size:0.85rem;margin-top:0.5rem;">掉落：待確認</p>
-        </div>
-        <div class="card">
-          <p style="font-weight:700;font-size:1.05rem;margin-bottom:0.4rem;">🐇 草原角兔</p>
-          <span class="tag">悠悠草原</span>
-          <p style="color:var(--text-secondary);font-size:0.9rem;margin-top:0.6rem;">
-            2回合擊敗，每回合反擊2傷。靈思3 + 魂晶1。
-          </p>
-          <p style="color:var(--text-secondary);font-size:0.85rem;margin-top:0.5rem;">掉落：無</p>
-        </div>
+      <div style="overflow-x:auto;">
+        <table class="data-table">
+          <thead>
+            <tr><th>怪物</th><th class="num-cell">回合</th><th class="num-cell">反擊傷害</th><th class="num-cell">靈思/魂晶</th><th>掉落</th></tr>
+          </thead>
+          <tbody>
+            <tr><td class="name-cell">🌿 小葉蟲</td><td class="num-cell">2</td><td class="num-cell">共1</td><td class="num-cell">2 / 1</td><td class="desc-cell">無</td></tr>
+            <tr><td class="name-cell">💨 風滾史萊姆</td><td class="num-cell">—</td><td class="num-cell">—</td><td class="num-cell">2 / 1</td><td class="desc-cell">風滾草、乾糧、史萊姆膠、透明膠核（隨機）　<span style="opacity:0.7;">打怪價值在素材不在練等</span></td></tr>
+            <tr><td class="name-cell">🐦 草籽雀（三級）</td><td class="num-cell">—</td><td class="num-cell">—</td><td class="num-cell">—</td><td class="desc-cell">待確認　<span style="opacity:0.7;">比初始之森的更硬，注意血量</span></td></tr>
+            <tr><td class="name-cell">🐇 草原角兔</td><td class="num-cell">2</td><td class="num-cell">每回合2</td><td class="num-cell">3 / 1</td><td class="desc-cell">無</td></tr>
+          </tbody>
+        </table>
       </div>
     </section>
 
     <section style="margin-bottom:2rem;">
       <h2 style="color:var(--accent);font-size:1rem;margin-bottom:1rem;">🌊 星露湖畔 <span style="font-size:0.8rem;color:var(--text-secondary);">（建議LV6-9）</span></h2>
-      <div class="card-grid">
-        <div class="card">
-          <p style="font-weight:700;font-size:1.05rem;margin-bottom:0.4rem;">💧 水泡史萊姆</p>
-          <span class="tag">星露湖畔</span>
-          <p style="color:var(--text-secondary);font-size:0.9rem;margin-top:0.6rem;">
-            4回合擊敗，每回合反擊9傷（共27傷）。靈思7 + 魂晶3。
-          </p>
-          <p style="color:var(--text-secondary);font-size:0.85rem;margin-top:0.5rem;">掉落：湖水露珠（低機率）</p>
-        </div>
-        <div class="card">
-          <p style="font-weight:700;font-size:1.05rem;margin-bottom:0.4rem;">🐟 湖畔小怪魚</p>
-          <span class="tag">星露湖畔</span>
-          <p style="color:var(--text-secondary);font-size:0.9rem;margin-top:0.6rem;">
-            3回合擊敗，每回合反擊6傷（共12傷）。靈思7 + 魂晶3。
-          </p>
-          <p style="color:var(--text-secondary);font-size:0.85rem;margin-top:0.5rem;">掉落：小魚鱗、湖畔魚肉</p>
-        </div>
-        <div class="card" style="border-color:#c0392b44;">
-          <p style="font-weight:700;font-size:1.05rem;margin-bottom:0.4rem;">🐍 湖影水蛇</p>
-          <span class="tag">星露湖畔</span>
-          <span class="tag" style="background:#c0392b33;color:#e74c3c;">⚠ 高危</span>
-          <p style="color:var(--text-secondary);font-size:0.9rem;margin-top:0.6rem;">
-            6回合，每回合反擊9傷（共45傷）。靈思11 + 魂晶5。<br>
-            <em style="color:#e74c3c;font-size:0.85rem;">LV4 HP115打完後剩5，極度危險。建議LV8+再挑戰。</em>
-          </p>
-          <p style="color:var(--text-secondary);font-size:0.85rem;margin-top:0.5rem;">掉落：無</p>
-        </div>
-        <div class="card">
-          <p style="font-weight:700;font-size:1.05rem;margin-bottom:0.4rem;">✨ 星露螢群</p>
-          <span class="tag">星露湖畔</span>
-          <p style="color:var(--text-secondary);font-size:0.9rem;margin-top:0.6rem;">
-            4回合擊敗，每回合反擊5傷（共15傷）。靈思9 + 魂晶4。
-          </p>
-          <p style="color:var(--text-secondary);font-size:0.85rem;margin-top:0.5rem;">掉落：星露粉、螢光翅粉</p>
-        </div>
-        <div class="card" style="border-color:#c0392b44;">
-          <p style="font-weight:700;font-size:1.05rem;margin-bottom:0.4rem;">🦀 湖草蟹</p>
-          <span class="tag">星露湖畔</span>
-          <span class="tag" style="background:#c0392b33;color:#e74c3c;">⚠ 注意</span>
-          <p style="color:var(--text-secondary);font-size:0.9rem;margin-top:0.6rem;">
-            6回合擊敗，每回合反擊13傷（共65傷）。靈思9 + 魂晶4。
-          </p>
-          <p style="color:var(--text-secondary);font-size:0.85rem;margin-top:0.5rem;">掉落：蟹殼、湖草（低機率）</p>
-        </div>
+      <div style="overflow-x:auto;">
+        <table class="data-table">
+          <thead>
+            <tr><th>怪物</th><th class="num-cell">回合</th><th class="num-cell">反擊傷害</th><th class="num-cell">靈思/魂晶</th><th>掉落</th></tr>
+          </thead>
+          <tbody>
+            <tr><td class="name-cell">💧 水泡史萊姆</td><td class="num-cell">4</td><td class="num-cell">每回合9（共27）</td><td class="num-cell">7 / 3</td><td class="desc-cell">湖水露珠（低機率）</td></tr>
+            <tr><td class="name-cell">🐟 湖畔小怪魚</td><td class="num-cell">3</td><td class="num-cell">每回合6（共12）</td><td class="num-cell">7 / 3</td><td class="desc-cell">小魚鱗、湖畔魚肉</td></tr>
+            <tr><td class="name-cell">🐍 湖影水蛇<br><span class="risk-warn" style="font-size:0.75rem;">⚠ 高危</span></td><td class="num-cell">6</td><td class="num-cell">每回合9（共45）</td><td class="num-cell">11 / 5</td><td class="desc-cell">無　<span class="risk-warn" style="font-size:0.78rem;">LV4 HP115打完僅剩5，建議LV8+挑戰</span></td></tr>
+            <tr><td class="name-cell">✨ 星露螢群</td><td class="num-cell">4</td><td class="num-cell">每回合5（共15）</td><td class="num-cell">9 / 4</td><td class="desc-cell">星露粉、螢光翅粉</td></tr>
+            <tr><td class="name-cell">🦀 湖草蟹<br><span class="risk-caution" style="font-size:0.75rem;">⚠ 注意</span></td><td class="num-cell">6</td><td class="num-cell">每回合13（共65）</td><td class="num-cell">9 / 4</td><td class="desc-cell">蟹殼、湖草（低機率）</td></tr>
+          </tbody>
+        </table>
       </div>
     </section>
 
     <section>
       <h2 style="color:var(--accent);font-size:1rem;margin-bottom:1rem;">💎 靈礦洞穴 <span style="font-size:0.8rem;color:var(--text-secondary);">（建議LV9+，高危高收益）</span></h2>
-      <div class="card-grid">
-        <div class="card" style="border-color:#c0392b44;">
-          <p style="font-weight:700;font-size:1.05rem;margin-bottom:0.4rem;">🦇 礦晶蝙蝠</p>
-          <span class="tag">靈礦洞穴</span>
-          <span class="tag" style="background:#c0392b33;color:#e74c3c;">⚠ 危險</span>
-          <p style="color:var(--text-secondary);font-size:0.9rem;margin-top:0.6rem;">
-            7回合，每回合反擊19傷（6次反擊合計114傷）。靈思14 + 魂晶6。
-          </p>
-          <p style="color:var(--text-secondary);font-size:0.85rem;margin-top:0.5rem;">掉落：發光石、蝙蝠翼膜</p>
-        </div>
-        <div class="card" style="border-color:#c0392b44;opacity:0.75;">
-          <p style="font-weight:700;font-size:1.05rem;margin-bottom:0.4rem;">🪨 迴聲岩靈</p>
-          <span class="tag">靈礦洞穴</span>
-          <span class="tag" style="background:#c0392b33;color:#e74c3c;">⚠ 高危</span>
-          <p style="color:var(--text-secondary);font-size:0.9rem;margin-top:0.6rem;font-style:italic;">
-            資料更新中（洞穴數值已調整）
-          </p>
-          <p style="color:var(--text-secondary);font-size:0.85rem;margin-top:0.5rem;">掉落：待確認</p>
-        </div>
-        <div class="card" style="border-color:#c0392b44;opacity:0.75;">
-          <p style="font-weight:700;font-size:1.05rem;margin-bottom:0.4rem;">💠 晶簇守衛</p>
-          <span class="tag">靈礦洞穴</span>
-          <span class="tag" style="background:#c0392b33;color:#e74c3c;">⚠ 高危</span>
-          <p style="color:var(--text-secondary);font-size:0.9rem;margin-top:0.6rem;font-style:italic;">
-            資料更新中（洞穴數值已調整）
-          </p>
-          <p style="color:var(--text-secondary);font-size:0.85rem;margin-top:0.5rem;">掉落：晶簇碎片</p>
-        </div>
+      <div style="overflow-x:auto;">
+        <table class="data-table">
+          <thead>
+            <tr><th>怪物</th><th class="num-cell">回合</th><th class="num-cell">反擊傷害</th><th class="num-cell">靈思/魂晶</th><th>掉落</th></tr>
+          </thead>
+          <tbody>
+            <tr><td class="name-cell">🦇 礦晶蝙蝠<br><span class="risk-warn" style="font-size:0.75rem;">⚠ 危險</span></td><td class="num-cell">7</td><td class="num-cell">每回合19（6次共114）</td><td class="num-cell">14 / 6</td><td class="desc-cell">發光石、蝙蝠翼膜</td></tr>
+            <tr style="opacity:0.7;"><td class="name-cell">🪨 迴聲岩靈<br><span class="risk-warn" style="font-size:0.75rem;">⚠ 高危</span></td><td class="num-cell" colspan="3"><em>資料更新中（洞穴數值已調整）</em></td><td class="desc-cell">待確認</td></tr>
+            <tr style="opacity:0.7;"><td class="name-cell">💠 晶簇守衛<br><span class="risk-warn" style="font-size:0.75rem;">⚠ 高危</span></td><td class="num-cell" colspan="3"><em>資料更新中（洞穴數值已調整）</em></td><td class="desc-cell">晶簇碎片</td></tr>
+          </tbody>
+        </table>
       </div>
       <p style="color:var(--text-secondary);font-size:0.82rem;margin-top:0.75rem;">※ 洞穴怪物數值近期調整，部分資料待更新</p>
     </section>

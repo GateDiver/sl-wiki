@@ -38,348 +38,123 @@
 
     <section id="equip" style="margin-bottom:2rem;">
       <h2 style="color:var(--accent);font-size:1rem;margin-bottom:1rem;">⚔ 裝備</h2>
-      <div class="card-grid" id="list-equip">
-        <div class="card item-card" data-name="舊布披肩">
-          <p style="font-weight:600;">舊布披肩</p>
-          <span class="tag">防具</span><span class="tag">披風</span>
-          <p style="color:var(--text-secondary);font-size:0.85rem;margin-top:0.5rem;">耐性 +1。初始裝備。</p>
-        </div>
-        <div class="card item-card" data-name="舊木盾">
-          <p style="font-weight:600;">舊木盾</p>
-          <span class="tag">防具</span><span class="tag">副手</span>
-          <p style="color:var(--text-secondary);font-size:0.85rem;margin-top:0.5rem;">防禦 +1、HP +8。初始裝備。</p>
-        </div>
-        <div class="card item-card" data-name="練習木劍 練習用木劍">
-          <p style="font-weight:600;">練習用木劍</p>
-          <span class="tag">武器</span><span class="tag">商店</span>
-          <p style="color:var(--text-secondary);font-size:0.85rem;margin-top:0.5rem;">
-            攻擊 +2。商店購買　<strong style="color:var(--text-primary)">80 魂晶</strong>
-          </p>
-        </div>
-        <div class="card item-card" data-name="旅人短靴">
-          <p style="font-weight:600;">旅人短靴</p>
-          <span class="tag">防具</span><span class="tag">鞋子</span><span class="tag">商店</span>
-          <p style="color:var(--text-secondary);font-size:0.85rem;margin-top:0.5rem;">
-            敏捷 +1。商店購買　<strong style="color:var(--text-primary)">70 魂晶</strong>
-          </p>
-        </div>
-        <div class="card item-card" data-name="布質護腕">
-          <p style="font-weight:600;">布質護腕</p>
-          <span class="tag">防具</span><span class="tag">手部</span><span class="tag">探索</span>
-          <p style="color:var(--text-secondary);font-size:0.85rem;margin-top:0.5rem;">
-            HP +10。稚匯之城舊物攤探索撿取。
-          </p>
-        </div>
-        <div class="card item-card" data-name="一般衣服">
-          <p style="font-weight:600;">一般衣服</p>
-          <span class="tag">防具</span><span class="tag">衣服</span>
-          <p style="color:var(--text-secondary);font-size:0.85rem;margin-top:0.5rem;">
-            無能力加成。預設裝備，商店目前未上架衣物，只能靠探索取得。
-          </p>
-        </div>
-        <div class="card item-card" data-name="紅線小鈴鐺">
-          <p style="font-weight:600;">紅線小鈴鐺</p>
-          <span class="tag">飾品</span><span class="tag">探索</span>
-          <p style="color:var(--text-secondary);font-size:0.85rem;margin-top:0.5rem;">
-            幸運 +1。愛神神殿探索低機率掉落。
-          </p>
-        </div>
+      <div style="overflow-x:auto;">
+        <table class="data-table" id="list-equip">
+          <thead>
+            <tr><th>名稱</th><th class="num-cell">需求LV</th><th class="num-cell">價格</th><th>效果</th></tr>
+          </thead>
+          <tbody>
+            <tr class="item-row" data-name="布質護腕"><td class="name-cell">布質護腕</td><td class="num-cell">1</td><td class="num-cell">60</td><td class="desc-cell">HP +10</td></tr>
+            <tr class="item-row" data-name="旅人短靴"><td class="name-cell">旅人短靴</td><td class="num-cell">1</td><td class="num-cell">70</td><td class="desc-cell">敏捷 +1</td></tr>
+            <tr class="item-row" data-name="舊木盾"><td class="name-cell">舊木盾</td><td class="num-cell">1</td><td class="num-cell">70</td><td class="desc-cell">防禦 +1、HP +8</td></tr>
+            <tr class="item-row" data-name="練習木劍 練習用木劍"><td class="name-cell">練習用木劍</td><td class="num-cell">1</td><td class="num-cell">80</td><td class="desc-cell">攻擊 +2</td></tr>
+            <tr class="item-row" data-name="新手短刃"><td class="name-cell">新手短刃</td><td class="num-cell">1</td><td class="num-cell">85</td><td class="desc-cell">攻擊 +2、敏捷 +1</td></tr>
+            <tr class="item-row" data-name="粗製短弓"><td class="name-cell">粗製短弓</td><td class="num-cell">2</td><td class="num-cell">110</td><td class="desc-cell">攻擊 +3、敏捷 +1</td></tr>
+            <tr class="item-row" data-name="練習木杖"><td class="name-cell">練習木杖</td><td class="num-cell">2</td><td class="num-cell">120</td><td class="desc-cell">攻擊 +2、HP +8、力量 +1</td></tr>
+            <tr class="item-row" data-name="練習護手"><td class="name-cell">練習護手</td><td class="num-cell">2</td><td class="num-cell">120</td><td class="desc-cell">攻擊 +3、防禦 +1、HP +8、力量 +1、體魄 +1</td></tr>
+            <tr class="item-row" data-name="厚布上衣"><td class="name-cell">厚布上衣</td><td class="num-cell">3</td><td class="num-cell">120</td><td class="desc-cell">防禦 +2、HP +18、體魄 +1、耐性 +1</td></tr>
+            <tr class="item-row" data-name="皮革護腕"><td class="name-cell">皮革護腕</td><td class="num-cell">8</td><td class="num-cell">290</td><td class="desc-cell">攻擊 +1、防禦 +1</td></tr>
+            <tr class="item-row" data-name="調藥手套"><td class="name-cell">調藥手套</td><td class="num-cell">8</td><td class="num-cell">290</td><td class="desc-cell">知識 +1</td></tr>
+            <tr class="item-row" data-name="厚布旅衣"><td class="name-cell">厚布旅衣</td><td class="num-cell">8</td><td class="num-cell">300</td><td class="desc-cell">防禦 +2、HP +12</td></tr>
+            <tr class="item-row" data-name="採集手套"><td class="name-cell">採集手套</td><td class="num-cell">10</td><td class="num-cell">300</td><td class="desc-cell">敏捷 +1、體魄 +1</td></tr>
+            <tr class="item-row" data-name="旅人披風"><td class="name-cell">旅人披風</td><td class="num-cell">8</td><td class="num-cell">300</td><td class="desc-cell">披風裝備</td></tr>
+            <tr class="item-row" data-name="磨舊鐵劍"><td class="name-cell">磨舊鐵劍</td><td class="num-cell">8</td><td class="num-cell">300</td><td class="desc-cell">攻擊 +5</td></tr>
+            <tr class="item-row" data-name="舊圓盾"><td class="name-cell">舊圓盾</td><td class="num-cell">8</td><td class="num-cell">320</td><td class="desc-cell">防禦 +2、HP +10</td></tr>
+            <tr class="item-row" data-name="見習長袍"><td class="name-cell">見習長袍</td><td class="num-cell">8</td><td class="num-cell">320</td><td class="desc-cell">MP +15、知識 +1</td></tr>
+            <tr class="item-row" data-name="夜露披肩"><td class="name-cell">夜露披肩</td><td class="num-cell">10</td><td class="num-cell">350</td><td class="desc-cell">防禦 +1、HP +8</td></tr>
+            <tr class="item-row" data-name="平衡木劍"><td class="name-cell">平衡木劍</td><td class="num-cell">8</td><td class="num-cell">350</td><td class="desc-cell">攻擊 +4、敏捷 +1</td></tr>
+            <tr class="item-row" data-name="狩獵背心"><td class="name-cell">狩獵背心</td><td class="num-cell">10</td><td class="num-cell">350</td><td class="desc-cell">防禦 +1、敏捷 +1</td></tr>
+            <tr class="item-row" data-name="草籽耳飾"><td class="name-cell">草籽耳飾</td><td class="num-cell">10</td><td class="num-cell">350</td><td class="desc-cell">敏捷 +1、幸運 +1</td></tr>
+            <tr class="item-row" data-name="防滑短靴"><td class="name-cell">防滑短靴</td><td class="num-cell">8</td><td class="num-cell">350</td><td class="desc-cell">敏捷 +1、耐性 +1</td></tr>
+            <tr class="item-row" data-name="皮革護符"><td class="name-cell">皮革護符</td><td class="num-cell">8</td><td class="num-cell">360</td><td class="desc-cell">MP +8、耐性 +1</td></tr>
+            <tr class="item-row" data-name="見習劍士長劍"><td class="name-cell">見習劍士長劍</td><td class="num-cell">10</td><td class="num-cell">360</td><td class="desc-cell">攻擊 +8、力量 +2</td></tr>
+            <tr class="item-row" data-name="見習武鬥護手"><td class="name-cell">見習武鬥護手</td><td class="num-cell">10</td><td class="num-cell">360</td><td class="desc-cell">攻擊 +7、防禦 +2、HP +25、力量 +1、體魄 +2、耐性 +1</td></tr>
+            <tr class="item-row" data-name="一般衣服"><td class="name-cell">一般衣服</td><td class="num-cell">—</td><td class="num-cell">—</td><td class="desc-cell">無能力加成。預設裝備，商店未上架，只能靠探索取得</td></tr>
+            <tr class="item-row" data-name="紅線小鈴鐺"><td class="name-cell">紅線小鈴鐺</td><td class="num-cell">—</td><td class="num-cell">—</td><td class="desc-cell">幸運 +1。愛神神殿探索低機率掉落</td></tr>
+          </tbody>
+        </table>
+        <p style="color:var(--text-secondary);font-size:0.8rem;margin-top:0.5rem;">※ 商店裝備需求LV為「可購買/裝備」門檻；重開測試後角色等級不足時已購裝備會暫時失效，等級補足即恢復</p>
       </div>
     </section>
 
     <section id="supply" style="margin-bottom:2rem;">
       <h2 style="color:var(--accent);font-size:1rem;margin-bottom:1rem;">🧪 補給品</h2>
       <p style="color:var(--text-secondary);font-size:0.85rem;margin-bottom:1rem;">※ 戰鬥中無法使用道具（功能尚未實裝）</p>
-      <div class="card-grid" id="list-supply">
-        <div class="card item-card" data-name="乾糧">
-          <p style="font-weight:600;">乾糧</p>
-          <span class="tag">消耗</span><span class="tag">商店</span><span class="tag">掉落</span>
-          <p style="color:var(--text-secondary);font-size:0.85rem;margin-top:0.5rem;">
-            回復 HP 15。商店　<strong style="color:var(--text-primary)">15 魂晶</strong><br>
-            掉落來源：悠悠草原探索（舊布包內）、「風滾史萊姆」戰鬥。
-          </p>
-        </div>
-        <div class="card item-card" data-name="小瓶溫泉水">
-          <p style="font-weight:600;">小瓶溫泉水</p>
-          <span class="tag">消耗</span><span class="tag">商店</span>
-          <p style="color:var(--text-secondary);font-size:0.85rem;margin-top:0.5rem;">
-            戰鬥外回復 HP 20、MP 20。商店　<strong style="color:var(--text-primary)">20 魂晶</strong>
-          </p>
-        </div>
-        <div class="card item-card" data-name="小型回復藥">
-          <p style="font-weight:600;">小型回復藥</p>
-          <span class="tag">消耗</span><span class="tag">商店</span>
-          <p style="color:var(--text-secondary);font-size:0.85rem;margin-top:0.5rem;">
-            回復 HP 30。商店　<strong style="color:var(--text-primary)">25 魂晶</strong>
-          </p>
-        </div>
-        <div class="card item-card" data-name="蜂蜜麵包">
-          <p style="font-weight:600;">蜂蜜麵包</p>
-          <span class="tag">消耗</span><span class="tag">商店</span>
-          <p style="color:var(--text-secondary);font-size:0.85rem;margin-top:0.5rem;">
-            回復 HP 20、行動力 +1。商店　<strong style="color:var(--text-primary)">30 魂晶</strong><br>
-            建議每日使用上限 1 次。
-          </p>
-        </div>
-        <div class="card item-card" data-name="簡易繃帶">
-          <p style="font-weight:600;">簡易繃帶</p>
-          <span class="tag">消耗</span><span class="tag">商店</span>
-          <p style="color:var(--text-secondary);font-size:0.85rem;margin-top:0.5rem;">
-            戰鬥外回復 HP 20、MP 20。商店　<strong style="color:var(--text-primary)">35 魂晶</strong>
-          </p>
-        </div>
-        <div class="card item-card" data-name="清涼薄荷水">
-          <p style="font-weight:600;">清涼薄荷水</p>
-          <span class="tag">消耗</span><span class="tag">商店</span>
-          <p style="color:var(--text-secondary);font-size:0.85rem;margin-top:0.5rem;">
-            回復 MP 10、移除輕微炎熱／灼燒狀態。商店　<strong style="color:var(--text-primary)">45 魂晶</strong><br>
-            後期龍息幽谷、炎熱地圖備用。
-          </p>
-        </div>
-        <div class="card item-card" data-name="解毒草丸">
-          <p style="font-weight:600;">解毒草丸</p>
-          <span class="tag">消耗</span><span class="tag">商店</span>
-          <p style="color:var(--text-secondary);font-size:0.85rem;margin-top:0.5rem;">
-            移除輕微中毒狀態。商店　<strong style="color:var(--text-primary)">45 魂晶</strong><br>
-            後期迷霧沼澤、毒系怪物備用。
-          </p>
-        </div>
-        <div class="card item-card" data-name="野莓乾">
-          <p style="font-weight:600;">野莓乾</p>
-          <span class="tag">消耗</span><span class="tag">商店</span><span class="tag">料理素材</span>
-          <p style="color:var(--text-secondary);font-size:0.85rem;margin-top:0.5rem;">
-            回復 HP 12。商店　<strong style="color:var(--text-primary)">10 魂晶</strong><br>
-            曬乾的野莓，酸酸甜甜，適合路上含著吃。
-          </p>
-        </div>
-        <div class="card item-card" data-name="小飯糰">
-          <p style="font-weight:600;">小飯糰</p>
-          <span class="tag">消耗</span><span class="tag">商店</span>
-          <p style="color:var(--text-secondary);font-size:0.85rem;margin-top:0.5rem;">
-            回復 HP 18。商店　<strong style="color:var(--text-primary)">12 魂晶</strong><br>
-            用海苔包起來的小飯糰，吃起來很安心。
-          </p>
-        </div>
-        <div class="card item-card" data-name="靜心薄荷糖">
-          <p style="font-weight:600;">靜心薄荷糖</p>
-          <span class="tag">消耗</span><span class="tag">商店</span><span class="tag">精神干擾預備</span>
-          <p style="color:var(--text-secondary);font-size:0.85rem;margin-top:0.5rem;">
-            回復 MP 10、降低輕微混亂影響。商店　<strong style="color:var(--text-primary)">18 魂晶</strong><br>
-            含在嘴裡會有涼涼的薄荷味，讓腦袋清醒一點。
-          </p>
-        </div>
-        <div class="card item-card" data-name="清水壺">
-          <p style="font-weight:600;">清水壺</p>
-          <span class="tag">消耗</span><span class="tag">商店</span><span class="tag">野外探索基礎</span>
-          <p style="color:var(--text-secondary);font-size:0.85rem;margin-top:0.5rem;">
-            回復 MP 5、移除輕微口渴／炎熱。商店　<strong style="color:var(--text-primary)">20 魂晶</strong><br>
-            裝著乾淨飲水的小壺，比空瓶可靠。
-          </p>
-        </div>
-        <div class="card item-card" data-name="溫熱湯杯">
-          <p style="font-weight:600;">溫熱湯杯</p>
-          <span class="tag">消耗</span><span class="tag">商店</span><span class="tag">寒冷地圖預備</span>
-          <p style="color:var(--text-secondary);font-size:0.85rem;margin-top:0.5rem;">
-            回復 HP 25、移除輕微寒冷。商店　<strong style="color:var(--text-primary)">22 魂晶</strong><br>
-            裝在木杯裡的溫熱湯，喝下去會讓手指回暖。
-          </p>
-        </div>
-        <div class="card item-card" data-name="旅人能量餅">
-          <p style="font-weight:600;">旅人能量餅</p>
-          <span class="tag">消耗</span><span class="tag">商店</span>
-          <p style="color:var(--text-secondary);font-size:0.85rem;margin-top:0.5rem;">
-            回復 HP 15、MP 10。商店　<strong style="color:var(--text-primary)">28 魂晶</strong><br>
-            壓得很紮實的能量餅，味道普通但很耐放。
-          </p>
-        </div>
-        <div class="card item-card" data-name="簡易止血粉">
-          <p style="font-weight:600;">簡易止血粉</p>
-          <span class="tag">消耗</span><span class="tag">商店</span><span class="tag">外傷處理</span>
-          <p style="color:var(--text-secondary);font-size:0.85rem;margin-top:0.5rem;">
-            移除輕微流血、戰鬥外回復 HP 10。商店　<strong style="color:var(--text-primary)">30 魂晶</strong><br>
-            撒在傷口上會有點刺痛，但能快速止血。
-          </p>
-        </div>
-        <div class="card item-card" data-name="驅蟲香包">
-          <p style="font-weight:600;">驅蟲香包</p>
-          <span class="tag">消耗</span><span class="tag">商店</span><span class="tag">探索輔助</span>
-          <p style="color:var(--text-secondary);font-size:0.85rem;margin-top:0.5rem;">
-            下一次森林／草叢探索中降低蟲類騷擾事件機率。商店　<strong style="color:var(--text-primary)">32 魂晶</strong><br>
-            帶著草藥味的小香包，蟲子不太喜歡。
-          </p>
-        </div>
-        <div class="card item-card" data-name="小瓶魔力水">
-          <p style="font-weight:600;">小瓶魔力水</p>
-          <span class="tag">消耗</span><span class="tag">商店</span>
-          <p style="color:var(--text-secondary);font-size:0.85rem;margin-top:0.5rem;">
-            回復 MP 25。商店　<strong style="color:var(--text-primary)">35 魂晶</strong><br>
-            顏色很淡的小瓶魔力水，初學者也能安全飲用。
-          </p>
-        </div>
-        <div class="card item-card" data-name="安神香包">
-          <p style="font-weight:600;">安神香包</p>
-          <span class="tag">消耗</span><span class="tag">商店</span><span class="tag">靈媒/神殿事件輔助</span>
-          <p style="color:var(--text-secondary);font-size:0.85rem;margin-top:0.5rem;">
-            降低輕微害怕／混亂影響。商店　<strong style="color:var(--text-primary)">40 魂晶</strong><br>
-            小小的布香包，味道很淡，能讓呼吸慢下來。
-          </p>
-        </div>
-        <div class="card item-card" data-name="基礎料理包">
-          <p style="font-weight:600;">基礎料理包</p>
-          <span class="tag">消耗</span><span class="tag">商店</span><span class="tag">料理/露宿補給</span>
-          <p style="color:var(--text-secondary);font-size:0.85rem;margin-top:0.5rem;">
-            戰鬥外回復 HP 35、MP 15。商店　<strong style="color:var(--text-primary)">55 魂晶</strong><br>
-            簡單但完整的一份餐包，適合出城前帶著。
-          </p>
-        </div>
+      <div style="overflow-x:auto;">
+        <table class="data-table" id="list-supply">
+          <thead>
+            <tr><th>名稱</th><th>效果</th><th class="num-cell">價格</th><th>備註</th></tr>
+          </thead>
+          <tbody>
+            <tr class="item-row" data-name="乾糧"><td class="name-cell">乾糧</td><td class="desc-cell">回復 HP 15</td><td class="num-cell">15</td><td class="desc-cell">悠悠草原探索（舊布包）／風滾史萊姆戰鬥也會掉落</td></tr>
+            <tr class="item-row" data-name="小瓶溫泉水"><td class="name-cell">小瓶溫泉水</td><td class="desc-cell">戰鬥外回復 HP 20、MP 20</td><td class="num-cell">20</td><td class="desc-cell">—</td></tr>
+            <tr class="item-row" data-name="小型回復藥"><td class="name-cell">小型回復藥</td><td class="desc-cell">回復 HP 30</td><td class="num-cell">25</td><td class="desc-cell">—</td></tr>
+            <tr class="item-row" data-name="蜂蜜麵包"><td class="name-cell">蜂蜜麵包</td><td class="desc-cell">回復 HP 20、行動力 +1</td><td class="num-cell">30</td><td class="desc-cell">建議每日使用上限 1 次</td></tr>
+            <tr class="item-row" data-name="簡易繃帶"><td class="name-cell">簡易繃帶</td><td class="desc-cell">戰鬥外回復 HP 20、MP 20</td><td class="num-cell">35</td><td class="desc-cell">—</td></tr>
+            <tr class="item-row" data-name="清涼薄荷水"><td class="name-cell">清涼薄荷水</td><td class="desc-cell">回復 MP 10、移除輕微炎熱／灼燒</td><td class="num-cell">45</td><td class="desc-cell">後期龍息幽谷、炎熱地圖備用</td></tr>
+            <tr class="item-row" data-name="解毒草丸"><td class="name-cell">解毒草丸</td><td class="desc-cell">移除輕微中毒狀態</td><td class="num-cell">45</td><td class="desc-cell">後期迷霧沼澤、毒系怪物備用</td></tr>
+            <tr class="item-row" data-name="野莓乾"><td class="name-cell">野莓乾</td><td class="desc-cell">回復 HP 12</td><td class="num-cell">10</td><td class="desc-cell">曬乾的野莓，酸酸甜甜，適合路上含著吃</td></tr>
+            <tr class="item-row" data-name="小飯糰"><td class="name-cell">小飯糰</td><td class="desc-cell">回復 HP 18</td><td class="num-cell">12</td><td class="desc-cell">用海苔包起來的小飯糰，吃起來很安心</td></tr>
+            <tr class="item-row" data-name="靜心薄荷糖"><td class="name-cell">靜心薄荷糖</td><td class="desc-cell">回復 MP 10、降低輕微混亂影響</td><td class="num-cell">18</td><td class="desc-cell">含在嘴裡涼涼的，讓腦袋清醒一點</td></tr>
+            <tr class="item-row" data-name="清水壺"><td class="name-cell">清水壺</td><td class="desc-cell">回復 MP 5、移除輕微口渴／炎熱</td><td class="num-cell">20</td><td class="desc-cell">裝著乾淨飲水的小壺，比空瓶可靠</td></tr>
+            <tr class="item-row" data-name="溫熱湯杯"><td class="name-cell">溫熱湯杯</td><td class="desc-cell">回復 HP 25、移除輕微寒冷</td><td class="num-cell">22</td><td class="desc-cell">裝在木杯裡的溫熱湯，喝下去手指會回暖</td></tr>
+            <tr class="item-row" data-name="旅人能量餅"><td class="name-cell">旅人能量餅</td><td class="desc-cell">回復 HP 15、MP 10</td><td class="num-cell">28</td><td class="desc-cell">壓得很紮實，味道普通但很耐放</td></tr>
+            <tr class="item-row" data-name="簡易止血粉"><td class="name-cell">簡易止血粉</td><td class="desc-cell">移除輕微流血、戰鬥外回復 HP 10</td><td class="num-cell">30</td><td class="desc-cell">撒在傷口上會有點刺痛，但能快速止血</td></tr>
+            <tr class="item-row" data-name="驅蟲香包"><td class="name-cell">驅蟲香包</td><td class="desc-cell">下次森林／草叢探索降低蟲類騷擾機率</td><td class="num-cell">32</td><td class="desc-cell">帶著草藥味，蟲子不太喜歡</td></tr>
+            <tr class="item-row" data-name="小瓶魔力水"><td class="name-cell">小瓶魔力水</td><td class="desc-cell">回復 MP 25</td><td class="num-cell">35</td><td class="desc-cell">顏色很淡，初學者也能安全飲用</td></tr>
+            <tr class="item-row" data-name="安神香包"><td class="name-cell">安神香包</td><td class="desc-cell">降低輕微害怕／混亂影響</td><td class="num-cell">40</td><td class="desc-cell">小小的布香包，能讓呼吸慢下來</td></tr>
+            <tr class="item-row" data-name="基礎料理包"><td class="name-cell">基礎料理包</td><td class="desc-cell">戰鬥外回復 HP 35、MP 15</td><td class="num-cell">55</td><td class="desc-cell">簡單但完整的一份餐包，適合出城前帶著</td></tr>
+          </tbody>
+        </table>
+        <p style="color:var(--text-secondary);font-size:0.8rem;margin-top:0.5rem;">※ 戰鬥中無法使用道具（功能尚未實裝）；價格單位皆為魂晶，全部來源皆為商店除另有標註</p>
       </div>
     </section>
 
     <section id="material">
       <h2 style="color:var(--accent);font-size:1rem;margin-bottom:1rem;">🌿 生活素材</h2>
-      <div class="card-grid" id="list-material">
-        <div class="card item-card" data-name="乾淨空瓶">
-          <p style="font-weight:600;">乾淨空瓶</p>
-          <span class="tag">素材</span>
-          <p style="color:var(--text-secondary);font-size:0.85rem;margin-top:0.5rem;">商店可賣 10 魂晶，或用來裝水/藥（製作系統，待開放）。</p>
-        </div>
-        <div class="card item-card" data-name="舊布包">
-          <p style="font-weight:600;">舊布包</p>
-          <span class="tag">素材</span><span class="tag">掉落</span>
-          <p style="color:var(--text-secondary);font-size:0.85rem;margin-top:0.5rem;">
-            悠悠草原高頻掉落。標價 5 魂晶，收購功能待開放。
-          </p>
-        </div>
-        <div class="card item-card" data-name="普通種籽">
-          <p style="font-weight:600;">普通種籽</p>
-          <span class="tag">素材</span><span class="tag">掉落</span>
-          <p style="color:var(--text-secondary);font-size:0.85rem;margin-top:0.5rem;">
-            用途待確認。掉落來源：悠悠草原探索（常見）。
-          </p>
-        </div>
-        <div class="card item-card" data-name="小幸運草">
-          <p style="font-weight:600;">小幸運草</p>
-          <span class="tag">素材</span><span class="tag">掉落</span>
-          <p style="color:var(--text-secondary);font-size:0.85rem;margin-top:0.5rem;">
-            用途待確認。掉落來源：悠悠草原探索。
-          </p>
-        </div>
-        <div class="card item-card" data-name="柔軟羽毛">
-          <p style="font-weight:600;">柔軟羽毛</p>
-          <span class="tag">素材</span><span class="tag">掉落</span>
-          <p style="color:var(--text-secondary);font-size:0.85rem;margin-top:0.5rem;">
-            製作素材。掉落來源：悠悠草原「遇見迷路的小動物」事件。
-          </p>
-        </div>
-        <div class="card item-card" data-name="獸毛">
-          <p style="font-weight:600;">獸毛</p>
-          <span class="tag">素材</span><span class="tag">掉落</span>
-          <p style="color:var(--text-secondary);font-size:0.85rem;margin-top:0.5rem;">
-            製作素材。掉落來源：悠悠草原「遇見迷路的小動物」事件。
-          </p>
-        </div>
-        <div class="card item-card" data-name="史萊姆膠">
-          <p style="font-weight:600;">史萊姆膠</p>
-          <span class="tag">素材</span><span class="tag">掉落</span>
-          <p style="color:var(--text-secondary);font-size:0.85rem;margin-top:0.5rem;">
-            製作素材。掉落來源：悠悠草原「史萊姆滑痕」事件、「風滾史萊姆」戰鬥。
-          </p>
-        </div>
-        <div class="card item-card" data-name="風滾草">
-          <p style="font-weight:600;">風滾草</p>
-          <span class="tag">素材</span><span class="tag">掉落</span>
-          <p style="color:var(--text-secondary);font-size:0.85rem;margin-top:0.5rem;">
-            掉落來源：悠悠草原「風滾史萊姆」戰鬥（隨機）。
-          </p>
-        </div>
-        <div class="card item-card" data-name="透明膠核">
-          <p style="font-weight:600;">透明膠核</p>
-          <span class="tag">素材</span><span class="tag">掉落</span>
-          <p style="color:var(--text-secondary);font-size:0.85rem;margin-top:0.5rem;">
-            掉落來源：悠悠草原「風滾史萊姆」戰鬥（隨機）。
-          </p>
-        </div>
-        <div class="card item-card" data-name="夜光孢子">
-          <p style="font-weight:600;">夜光孢子</p>
-          <span class="tag">素材</span><span class="tag">掉落</span>
-          <p style="color:var(--text-secondary);font-size:0.85rem;margin-top:0.5rem;">
-            掉落來源：初始之森夜光菇怪。
-          </p>
-        </div>
-        <div class="card item-card" data-name="蟲殼 蟲殼碎片">
-          <p style="font-weight:600;">蟲殼 / 蟲殼碎片</p>
-          <span class="tag">素材</span><span class="tag">掉落</span>
-          <p style="color:var(--text-secondary);font-size:0.85rem;margin-top:0.5rem;">
-            掉落來源：悠悠草原。
-          </p>
-        </div>
-        <div class="card item-card" data-name="藤蔓纖維">
-          <p style="font-weight:600;">藤蔓纖維</p>
-          <span class="tag">素材</span><span class="tag">掉落</span>
-          <p style="color:var(--text-secondary);font-size:0.85rem;margin-top:0.5rem;">
-            掉落來源：悠悠草原。
-          </p>
-        </div>
-        <div class="card item-card" data-name="小魚鱗 湖畔魚肉">
-          <p style="font-weight:600;">小魚鱗 / 湖畔魚肉</p>
-          <span class="tag">素材</span><span class="tag">掉落</span>
-          <p style="color:var(--text-secondary);font-size:0.85rem;margin-top:0.5rem;">
-            掉落來源：星露湖畔。
-          </p>
-        </div>
-        <div class="card item-card" data-name="星露粉 螢光翅粉">
-          <p style="font-weight:600;">星露粉 / 螢光翅粉</p>
-          <span class="tag">素材</span><span class="tag">掉落</span>
-          <p style="color:var(--text-secondary);font-size:0.85rem;margin-top:0.5rem;">
-            掉落來源：星露湖畔。
-          </p>
-        </div>
-        <div class="card item-card" data-name="湖草">
-          <p style="font-weight:600;">湖草</p>
-          <span class="tag">素材</span><span class="tag">掉落</span>
-          <p style="color:var(--text-secondary);font-size:0.85rem;margin-top:0.5rem;">
-            掉落來源：星露湖畔。
-          </p>
-        </div>
-        <div class="card item-card" data-name="發光石">
-          <p style="font-weight:600;">發光石</p>
-          <span class="tag">素材</span><span class="tag">掉落</span>
-          <p style="color:var(--text-secondary);font-size:0.85rem;margin-top:0.5rem;">
-            掉落來源：靈礦洞穴（礦晶蝙蝠）。
-          </p>
-        </div>
-        <div class="card item-card" data-name="羽紋礦片 微光礦砂">
-          <p style="font-weight:600;">羽紋礦片 / 微光礦砂</p>
-          <span class="tag">素材</span><span class="tag">掉落</span>
-          <p style="color:var(--text-secondary);font-size:0.85rem;margin-top:0.5rem;">
-            掉落來源：靈礦洞穴。
-          </p>
-        </div>
-        <div class="card item-card" data-name="空鳴岩心 岩靈碎片">
-          <p style="font-weight:600;">空鳴岩心 / 岩靈碎片</p>
-          <span class="tag">素材</span><span class="tag">掉落</span>
-          <p style="color:var(--text-secondary);font-size:0.85rem;margin-top:0.5rem;">
-            掉落來源：靈礦洞穴（迴聲岩靈）。
-          </p>
-        </div>
-        <div class="card item-card" data-name="晨光芽">
-          <p style="font-weight:600;">晨光芽</p>
-          <span class="tag">素材</span><span class="tag">種植</span>
-          <p style="color:var(--text-secondary);font-size:0.85rem;margin-top:0.5rem;">
-            每日神秘種籽收成可得。用途待確認。
-          </p>
-        </div>
-        <div class="card item-card" data-name="樹皮碎片">
-          <p style="font-weight:600;">樹皮碎片</p>
-          <span class="tag">素材</span><span class="tag">掉落</span>
-          <p style="color:var(--text-secondary);font-size:0.85rem;margin-top:0.5rem;">
-            掉落來源：悠悠草原。
-          </p>
-        </div>
+      <div style="overflow-x:auto;">
+        <table class="data-table" id="list-material">
+          <thead>
+            <tr><th>名稱</th><th>取得方式 / 用途</th></tr>
+          </thead>
+          <tbody>
+            <tr class="item-row" data-name="乾淨空瓶"><td class="name-cell">乾淨空瓶</td><td class="desc-cell">商店可賣 10 魂晶，或用來裝水/藥（製作系統待開放）</td></tr>
+            <tr class="item-row" data-name="舊布包"><td class="name-cell">舊布包</td><td class="desc-cell">悠悠草原高頻掉落，標價 5 魂晶，收購功能待開放</td></tr>
+            <tr class="item-row" data-name="普通種籽"><td class="name-cell">普通種籽</td><td class="desc-cell">悠悠草原探索常見掉落，用途待確認</td></tr>
+            <tr class="item-row" data-name="小幸運草"><td class="name-cell">小幸運草</td><td class="desc-cell">悠悠草原探索掉落，用途待確認</td></tr>
+            <tr class="item-row" data-name="柔軟羽毛"><td class="name-cell">柔軟羽毛</td><td class="desc-cell">悠悠草原「遇見迷路的小動物」事件，製作素材</td></tr>
+            <tr class="item-row" data-name="獸毛"><td class="name-cell">獸毛</td><td class="desc-cell">悠悠草原「遇見迷路的小動物」事件，製作素材</td></tr>
+            <tr class="item-row" data-name="史萊姆膠"><td class="name-cell">史萊姆膠</td><td class="desc-cell">悠悠草原「史萊姆滑痕」事件、風滾史萊姆戰鬥，製作素材</td></tr>
+            <tr class="item-row" data-name="風滾草"><td class="name-cell">風滾草</td><td class="desc-cell">悠悠草原風滾史萊姆戰鬥（隨機）</td></tr>
+            <tr class="item-row" data-name="透明膠核"><td class="name-cell">透明膠核</td><td class="desc-cell">悠悠草原風滾史萊姆戰鬥（隨機）</td></tr>
+            <tr class="item-row" data-name="夜光孢子"><td class="name-cell">夜光孢子</td><td class="desc-cell">初始之森夜光菇怪</td></tr>
+            <tr class="item-row" data-name="蟲殼 蟲殼碎片"><td class="name-cell">蟲殼 / 蟲殼碎片</td><td class="desc-cell">悠悠草原</td></tr>
+            <tr class="item-row" data-name="藤蔓纖維"><td class="name-cell">藤蔓纖維</td><td class="desc-cell">悠悠草原</td></tr>
+            <tr class="item-row" data-name="小魚鱗 湖畔魚肉"><td class="name-cell">小魚鱗 / 湖畔魚肉</td><td class="desc-cell">星露湖畔</td></tr>
+            <tr class="item-row" data-name="星露粉 螢光翅粉"><td class="name-cell">星露粉 / 螢光翅粉</td><td class="desc-cell">星露湖畔</td></tr>
+            <tr class="item-row" data-name="湖草 蟹殼"><td class="name-cell">湖草 / 蟹殼</td><td class="desc-cell">星露湖畔（湖草蟹，低機率）</td></tr>
+            <tr class="item-row" data-name="水蛇鱗"><td class="name-cell">水蛇鱗</td><td class="desc-cell">星露湖畔探索「霧裡的蛇鱗」事件</td></tr>
+            <tr class="item-row" data-name="湖水露珠 湖水珍珠"><td class="name-cell">湖水露珠</td><td class="desc-cell">星露湖畔（水泡史萊姆，低機率）</td></tr>
+            <tr class="item-row" data-name="發光石"><td class="name-cell">發光石</td><td class="desc-cell">靈礦洞穴（礦晶蝙蝠、探索）</td></tr>
+            <tr class="item-row" data-name="羽紋礦片 微光礦砂"><td class="name-cell">羽紋礦片 / 微光礦砂</td><td class="desc-cell">靈礦洞穴</td></tr>
+            <tr class="item-row" data-name="空鳴岩心 岩靈碎片"><td class="name-cell">空鳴岩心 / 岩靈碎片</td><td class="desc-cell">靈礦洞穴（迴聲岩靈）</td></tr>
+            <tr class="item-row" data-name="晶簇碎片 晶殼碎片"><td class="name-cell">晶簇碎片 / 晶殼碎片</td><td class="desc-cell">靈礦洞穴</td></tr>
+            <tr class="item-row" data-name="守衛石片 守護晶砂"><td class="name-cell">守衛石片 / 守護晶砂</td><td class="desc-cell">靈礦洞穴</td></tr>
+            <tr class="item-row" data-name="裂石碎片 蝙蝠翼膜"><td class="name-cell">裂石碎片 / 蝙蝠翼膜</td><td class="desc-cell">靈礦洞穴</td></tr>
+            <tr class="item-row" data-name="琥星珀礦 琥星珀粉"><td class="name-cell">琥星珀礦 / 琥星珀粉</td><td class="desc-cell">靈礦洞穴（琥星礦光事件）</td></tr>
+            <tr class="item-row" data-name="失光礦片 暗淡羽光"><td class="name-cell">失光礦片 / 暗淡羽光</td><td class="desc-cell">靈礦洞穴（失光礦影事件）</td></tr>
+            <tr class="item-row" data-name="記憶礦核"><td class="name-cell">記憶礦核 / 低機率記憶礦核</td><td class="desc-cell">靈礦洞穴（礦壁映出選擇／羽光開啟隱藏支路事件）</td></tr>
+            <tr class="item-row" data-name="沉眠石核"><td class="name-cell">沉眠石核</td><td class="desc-cell">靈礦洞穴（沉眠石靈低鳴事件）</td></tr>
+            <tr class="item-row" data-name="洞穴黏液"><td class="name-cell">洞穴黏液</td><td class="desc-cell">靈礦洞穴探索</td></tr>
+            <tr class="item-row" data-name="紅線繩結 紅線小餅乾 紅線小鈴鐺"><td class="name-cell">紅線繩結 / 紅線小餅乾</td><td class="desc-cell">愛神神殿探索（紅線主題事件）</td></tr>
+            <tr class="item-row" data-name="晨光芽 銀葉花 月息花 霧光藤"><td class="name-cell">晨光芽 / 銀葉花 / 月息花 / 霧光藤</td><td class="desc-cell">每日神秘種籽收成可得，稀有度影響結果，用途待確認</td></tr>
+            <tr class="item-row" data-name="樹皮碎片"><td class="name-cell">樹皮碎片</td><td class="desc-cell">初始之森／悠悠草原</td></tr>
+          </tbody>
+        </table>
       </div>
     </section>
 
-    <p style="color:var(--text-secondary);font-size:0.85rem;margin-top:2rem;">※ 道具數值、取得方式持續補充中　|　最後更新：2026-07-01</p>
+    <p style="color:var(--text-secondary);font-size:0.85rem;margin-top:2rem;">※ 道具數值、取得方式持續補充中　|　最後更新：2026-07-05</p>
   </main>
 
   <footer class="site-footer">
@@ -390,9 +165,9 @@
   <script>
     document.getElementById('search').addEventListener('input', function() {
       const q = this.value.trim().toLowerCase();
-      document.querySelectorAll('.item-card').forEach(card => {
-        const name = card.getAttribute('data-name') || '';
-        card.style.display = name.toLowerCase().includes(q) ? '' : 'none';
+      document.querySelectorAll('.item-row').forEach(row => {
+        const name = row.getAttribute('data-name') || '';
+        row.style.display = name.toLowerCase().includes(q) ? '' : 'none';
       });
     });
   </script>
