@@ -244,6 +244,33 @@ main {
 
 .search-bar:focus { border-color: var(--accent); }
 
+/* Quick-jump nav (replaces the rounded pill-box that read as generic AI chrome) */
+.quick-jump {
+  display: flex;
+  gap: 0;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 1.5rem;
+  font-size: 0.9rem;
+  overflow-x: auto;
+}
+
+.quick-jump-label {
+  color: var(--text-secondary);
+  padding: 0.6rem 1rem 0.6rem 0;
+  white-space: nowrap;
+}
+
+.quick-jump a {
+  color: var(--text-secondary);
+  text-decoration: none;
+  padding: 0.6rem 1rem;
+  border-bottom: 2px solid transparent;
+  white-space: nowrap;
+  transition: color 0.15s, border-color 0.15s;
+}
+
+.quick-jump a:hover { color: var(--accent); border-color: var(--accent-dim); }
+
 /* Footer */
 .site-footer {
   border-top: 1px solid var(--border);

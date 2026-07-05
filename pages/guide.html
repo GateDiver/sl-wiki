@@ -24,12 +24,13 @@
   <main>
     <div class="page-title">攻略指南</div>
     <div class="page-desc">新手教學、打工系統、刷魂晶路線</div>
-    <nav style="background:var(--bg-secondary);border-radius:8px;padding:0.75rem 1rem;margin-bottom:1.5rem;font-size:0.88rem;">
-      <span style="color:var(--text-secondary);margin-right:0.75rem;">跳到：</span>
-      <a href="#intro" style="color:var(--accent);margin-right:1rem;text-decoration:none;">🌱 新手入門</a>
-      <a href="#jobs" style="color:var(--accent);margin-right:1rem;text-decoration:none;">💼 打工系統</a>
-      <a href="#farming" style="color:var(--accent);margin-right:1rem;text-decoration:none;">💎 刷魂晶</a>
-      <a href="#shop" style="color:var(--accent);text-decoration:none;">🛒 商店分類</a>
+    <nav class="quick-jump">
+      <span class="quick-jump-label">跳到</span>
+      <a href="#intro">新手入門</a>
+      <a href="#jobs">打工系統</a>
+      <a href="#quests">懸賞公會</a>
+      <a href="#farming">刷魂晶</a>
+      <a href="#shop">商店分類</a>
     </nav>
 
     <hr class="divider">
@@ -39,7 +40,7 @@
       <div class="card" style="margin-bottom:1rem;">
         <p style="font-weight:600;margin-bottom:0.5rem;">基本行動力</p>
         <ul style="color:var(--text-secondary);font-size:0.9rem;padding-left:1.2rem;line-height:2;">
-          <li>每位玩家每天有 <strong style="color:var(--text-primary)">10點行動力</strong></li>
+          <li>初始行動力上限為 <strong style="color:var(--text-primary)">10點</strong>，隨等級提升（LV4起11點、LV7起12點）</li>
           <li>行動力於每日 <strong style="color:var(--text-primary)">凌晨5:00</strong> 重置</li>
           <li>打工、探索、戰鬥都會消耗行動力</li>
         </ul>
@@ -47,9 +48,9 @@
       <div class="card">
         <p style="font-weight:600;margin-bottom:0.5rem;">每日種籽（簽到）</p>
         <ul style="color:var(--text-secondary);font-size:0.9rem;padding-left:1.2rem;line-height:2;">
-          <li>每日可領取一次，指令：<code style="background:var(--bg-secondary);padding:0.1rem 0.4rem;border-radius:3px;">/領取種籽</code>（待確認）</li>
-          <li><strong style="color:var(--text-primary)">不需要購買肥料</strong>，直接簽到即可</li>
-          <li>種植系統目前尚未開發</li>
+          <li>每日可領取一次，指令：<code style="background:var(--bg-secondary);padding:0.1rem 0.4rem;border-radius:3px;">SL 領種籽</code></li>
+          <li>領取後每日用 <code style="background:var(--bg-secondary);padding:0.1rem 0.4rem;border-radius:3px;">SL 澆水</code> 照顧，成長階段滿了即可 <code style="background:var(--bg-secondary);padding:0.1rem 0.4rem;border-radius:3px;">SL 收成</code></li>
+          <li>種籽稀有度不同，收成結果也不同（已知：晨光芽、銀葉花、月息花、霧光藤等）</li>
         </ul>
       </div>
     </section>
@@ -140,7 +141,7 @@
           <li>凌晨 <strong style="color:var(--text-primary)">5:00</strong> 自動回滿</li>
           <li>旅館 <strong style="color:var(--text-primary)">50 魂晶</strong> 即時回滿 HP/MP/行動力（含裝備加成，每日最多 3 次）</li>
           <li>升級時行動力直接回滿</li>
-          <li>LV4 起行動力上限從 10 → 11</li>
+          <li>LV4 起行動力上限從 10 → 11；LV7 起再升至 12</li>
           <li>移動地圖 <strong style="color:var(--text-primary)">不耗</strong> 行動力</li>
         </ul>
       </div>
@@ -148,6 +149,21 @@
       <div class="card" style="margin-top:1rem;">
         <p style="font-weight:600;margin-bottom:0.5rem;">📈 靈思上限</p>
         <p style="color:var(--text-secondary);font-size:0.9rem;">LV1: 300　LV2: 380　LV3: 470　LV4: 570</p>
+      </div>
+    </section>
+
+    <section id="quests" style="margin-bottom:2rem;">
+      <h2 style="color:var(--accent);font-size:1.1rem;margin-bottom:1rem;">📜 懸賞公會（任務系統，測試中）</h2>
+      <div class="card">
+        <p style="color:var(--text-secondary);font-size:0.9rem;line-height:2;">
+          稚匯之城的懸賞公會提供各類委託，可同時接取多個任務，完成後回公會回報領取獎勵（魂晶、靈思、道具）。
+        </p>
+        <ul style="color:var(--text-secondary);font-size:0.9rem;padding-left:1.2rem;line-height:2;margin-top:0.5rem;">
+          <li>已知類型：尋物委託、採集委託、收集委託、新手委託、巡邏懸賞、追蹤委託、神殿委託、生活體驗、職業體驗</li>
+          <li>「生活體驗／職業體驗」類任務完成後會記錄一次職業體驗，<strong style="color:var(--text-primary)">不會變更目前正式職業</strong></li>
+          <li>部分任務需要達成特定探索事件才能觸發進度（不是單純擊殺或撿取即可），系統仍在調整中</li>
+        </ul>
+        <p style="color:var(--text-secondary);font-size:0.82rem;margin-top:0.8rem;">※ 這套系統剛上線，仍有已知bug（部分任務判定不穩定），資料會持續更新</p>
       </div>
     </section>
 
