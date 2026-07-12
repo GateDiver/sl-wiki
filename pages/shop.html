@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="zh-TW" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>商店目錄 — SoulLine Wiki</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💎</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a href="../index.html" class="site-logo">SoulLine Wiki</a>
+    <nav class="site-nav">
+      <a href="locations.html">地點</a>
+      <a href="shop.html" aria-current="page">商店</a>
+      <a href="items.html">道具</a>
+      <a href="jobs.html">職業</a>
+      <a href="monsters.html">怪物</a>
+      <a href="guide.html">攻略</a>
+      <a href="commands.html">指令</a>
+    </nav>
+    <button class="theme-toggle" id="theme-toggle">☀ 亮色</button>
+  </header>
+
+  <main>
+    <div class="page-title">商店目錄</div>
+    <div class="page-desc">稚匯之城商店完整價目表——分類與順序依遊戲內商店介面（2026-07-12 版本）</div>
+
+    <input type="text" class="search-bar" id="search" placeholder="搜尋商品名稱…">
+
+    <nav class="quick-jump">
+      <span class="quick-jump-label">跳到</span>
+      <a href="#equip">裝備（31）</a>
+      <a href="#tools">道具（2）</a>
+      <a href="#supply">補給品（18）</a>
+      <a href="#material">生活素材（1）</a>
+    </nav>
+
+    <hr class="divider">
+
+    <div class="callout">
+      <strong>購買須知：</strong>商店位於 🏰 稚匯之城。裝備的需求 LV 是購買／裝備門檻——等級不足時已購裝備會暫時失效，補足等級即恢復。
+      販售指令 <span class="cmd">/販售</span>；收購功能部分待開放。探索、戰鬥、任務取得的非賣品見<a href="items.html" style="color:var(--accent);">道具圖鑑</a>。
+    </div>
+
+    <section id="equip">
+      <h2 class="section-h">⚔ 裝備<span class="section-sub">31 件・依價格排序</span></h2>
+      <div class="table-wrap">
+        <table class="data-table">
+          <thead>
+            <tr><th>名稱</th><th class="num-cell">需求LV</th><th class="num-cell">價格</th><th>效果</th></tr>
+          </thead>
+          <tbody>
+            <tr class="item-row" data-name="布質護腕"><td class="name-cell">布質護腕</td><td class="num-cell">1</td><td class="num-cell">60</td><td class="desc-cell">HP +10</td></tr>
+            <tr class="item-row" data-name="旅人短靴"><td class="name-cell">旅人短靴</td><td class="num-cell">1</td><td class="num-cell">70</td><td class="desc-cell">敏捷 +1</td></tr>
+            <tr class="item-row" data-name="舊木盾"><td class="name-cell">舊木盾</td><td class="num-cell">1</td><td class="num-cell">70</td><td class="desc-cell">防禦 +1、HP +8</td></tr>
+            <tr class="item-row" data-name="練習木劍 練習用木劍"><td class="name-cell">練習用木劍</td><td class="num-cell">1</td><td class="num-cell">80</td><td class="desc-cell">攻擊 +2</td></tr>
+            <tr class="item-row" data-name="新手短刃"><td class="name-cell">新手短刃</td><td class="num-cell">1</td><td class="num-cell">85</td><td class="desc-cell">攻擊 +2、敏捷 +1</td></tr>
+            <tr class="item-row" data-name="粗製短弓"><td class="name-cell">粗製短弓</td><td class="num-cell">2</td><td class="num-cell">110</td><td class="desc-cell">攻擊 +3、敏捷 +1</td></tr>
+            <tr class="item-row" data-name="厚布上衣"><td class="name-cell">厚布上衣</td><td class="num-cell">3</td><td class="num-cell">120</td><td class="desc-cell">防禦 +2、HP +18、體魄 +1、耐性 +1</td></tr>
+            <tr class="item-row" data-name="練習木杖"><td class="name-cell">練習木杖</td><td class="num-cell">2</td><td class="num-cell">120</td><td class="desc-cell">攻擊 +2、HP +8、力量 +1</td></tr>
+            <tr class="item-row" data-name="練習護手"><td class="name-cell">練習護手</td><td class="num-cell">2</td><td class="num-cell">120</td><td class="desc-cell">攻擊 +3、防禦 +1、HP +8、力量 +1、體魄 +1</td></tr>
+            <tr class="item-row" data-name="皮革護腕"><td class="name-cell">皮革護腕</td><td class="num-cell">8</td><td class="num-cell">290</td><td class="desc-cell">攻擊 +1、防禦 +1</td></tr>
+            <tr class="item-row" data-name="調藥手套"><td class="name-cell">調藥手套</td><td class="num-cell">8</td><td class="num-cell">290</td><td class="desc-cell">知識 +1</td></tr>
+            <tr class="item-row" data-name="厚布旅衣"><td class="name-cell">厚布旅衣</td><td class="num-cell">8</td><td class="num-cell">300</td><td class="desc-cell">防禦 +2、HP +12</td></tr>
+            <tr class="item-row" data-name="採集手套"><td class="name-cell">採集手套</td><td class="num-cell">10</td><td class="num-cell">300</td><td class="desc-cell">敏捷 +1、體魄 +1</td></tr>
+            <tr class="item-row" data-name="旅人披風"><td class="name-cell">旅人披風</td><td class="num-cell">8</td><td class="num-cell">300</td><td class="desc-cell">披風欄位裝備（無屬性加成標示）</td></tr>
+            <tr class="item-row" data-name="磨舊鐵劍"><td class="name-cell">磨舊鐵劍</td><td class="num-cell">8</td><td class="num-cell">300</td><td class="desc-cell">攻擊 +5</td></tr>
+            <tr class="item-row" data-name="舊圓盾"><td class="name-cell">舊圓盾</td><td class="num-cell">8</td><td class="num-cell">320</td><td class="desc-cell">防禦 +2、HP +10</td></tr>
+            <tr class="item-row" data-name="見習長袍"><td class="name-cell">見習長袍</td><td class="num-cell">8</td><td class="num-cell">320</td><td class="desc-cell">MP +15、知識 +1</td></tr>
+            <tr class="item-row" data-name="夜露披肩"><td class="name-cell">夜露披肩</td><td class="num-cell">10</td><td class="num-cell">350</td><td class="desc-cell">防禦 +1、HP +8</td></tr>
+            <tr class="item-row" data-name="平衡木劍"><td class="name-cell">平衡木劍</td><td class="num-cell">8</td><td class="num-cell">350</td><td class="desc-cell">攻擊 +4、敏捷 +1</td></tr>
+            <tr class="item-row" data-name="狩獵背心"><td class="name-cell">狩獵背心</td><td class="num-cell">10</td><td class="num-cell">350</td><td class="desc-cell">防禦 +1、敏捷 +1</td></tr>
+            <tr class="item-row" data-name="草籽耳飾"><td class="name-cell">草籽耳飾</td><td class="num-cell">10</td><td class="num-cell">350</td><td class="desc-cell">敏捷 +1、幸運 +1</td></tr>
+            <tr class="item-row" data-name="防滑短靴"><td class="name-cell">防滑短靴</td><td class="num-cell">8</td><td class="num-cell">350</td><td class="desc-cell">敏捷 +1、耐性 +1</td></tr>
+            <tr class="item-row" data-name="皮革護符"><td class="name-cell">皮革護符</td><td class="num-cell">8</td><td class="num-cell">360</td><td class="desc-cell">MP +8、耐性 +1</td></tr>
+            <tr class="item-row" data-name="見習劍士長劍"><td class="name-cell">見習劍士長劍</td><td class="num-cell">10</td><td class="num-cell">360</td><td class="desc-cell">攻擊 +8、力量 +2</td></tr>
+            <tr class="item-row" data-name="見習武鬥護手"><td class="name-cell">見習武鬥護手</td><td class="num-cell">10</td><td class="num-cell">360</td><td class="desc-cell">攻擊 +7、防禦 +2、HP +25、力量 +1、體魄 +2、耐性 +1</td></tr>
+            <tr class="item-row" data-name="木紋護符"><td class="name-cell">木紋護符</td><td class="num-cell">8</td><td class="num-cell">370</td><td class="desc-cell">HP +10、耐性 +1</td></tr>
+            <tr class="item-row" data-name="小玻璃藥瓶墜"><td class="name-cell">小玻璃藥瓶墜</td><td class="num-cell">10</td><td class="num-cell">380</td><td class="desc-cell">MP +8、知識 +1</td></tr>
+            <tr class="item-row" data-name="狩獵短弓"><td class="name-cell">狩獵短弓</td><td class="num-cell">10</td><td class="num-cell">380</td><td class="desc-cell">攻擊 +4、敏捷 +1</td></tr>
+            <tr class="item-row" data-name="學徒法杖"><td class="name-cell">學徒法杖</td><td class="num-cell">10</td><td class="num-cell">390</td><td class="desc-cell">攻擊 +2、MP +10、知識 +1</td></tr>
+            <tr class="item-row" data-name="藥師短杖"><td class="name-cell">藥師短杖</td><td class="num-cell">10</td><td class="num-cell">390</td><td class="desc-cell">MP +8、耐性 +1、知識 +1</td></tr>
+            <tr class="item-row" data-name="草原行靴"><td class="name-cell">草原行靴</td><td class="num-cell">10</td><td class="num-cell">400</td><td class="desc-cell">敏捷 +1</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="tools">
+      <h2 class="section-h">🎒 道具<span class="section-sub">2 件・露宿相關</span></h2>
+      <div class="table-wrap">
+        <table class="data-table">
+          <thead>
+            <tr><th>名稱</th><th class="num-cell">需求LV</th><th class="num-cell">價格</th><th>效果</th><th>備註</th></tr>
+          </thead>
+          <tbody>
+            <tr class="item-row" data-name="火種小包"><td class="name-cell">火種小包</td><td class="num-cell">3</td><td class="num-cell">25</td><td class="desc-cell">露宿或寒冷事件時使用，提高露宿成功率</td><td class="desc-cell">裝著乾燥火絨與小火石的布包</td></tr>
+            <tr class="item-row" data-name="破舊小帳篷 帳篷"><td class="name-cell">破舊小帳篷</td><td class="num-cell">1</td><td class="num-cell">80</td><td class="desc-cell">露宿時行動力 +10%、HP/MP +5%</td><td class="desc-cell">沒有帳篷不可露宿；耐久 10 次、每日限購 5 個（任務贈送版無耐久限制）</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="supply">
+      <h2 class="section-h">🧪 補給品<span class="section-sub">18 件・依價格排序</span></h2>
+      <p class="note" style="margin:0 0 0.75rem;">※ 戰鬥中無法使用道具（功能尚未實裝）</p>
+      <div class="table-wrap">
+        <table class="data-table">
+          <thead>
+            <tr><th>名稱</th><th class="num-cell">需求LV</th><th class="num-cell">價格</th><th>效果</th><th>備註</th></tr>
+          </thead>
+          <tbody>
+            <tr class="item-row" data-name="野莓乾"><td class="name-cell">野莓乾</td><td class="num-cell">1</td><td class="num-cell">10</td><td class="desc-cell">回復 HP 12</td><td class="desc-cell">料理素材；曬乾的野莓，酸酸甜甜</td></tr>
+            <tr class="item-row" data-name="小飯糰"><td class="name-cell">小飯糰</td><td class="num-cell">1</td><td class="num-cell">12</td><td class="desc-cell">回復 HP 18</td><td class="desc-cell">用海苔包起來的小飯糰，吃起來很安心</td></tr>
+            <tr class="item-row" data-name="乾糧"><td class="name-cell">乾糧</td><td class="num-cell">1</td><td class="num-cell">15</td><td class="desc-cell">回復 HP 15</td><td class="desc-cell">方便保存；探索與任務也常見掉落</td></tr>
+            <tr class="item-row" data-name="靜心薄荷糖"><td class="name-cell">靜心薄荷糖</td><td class="num-cell">1</td><td class="num-cell">18</td><td class="desc-cell">回復 MP 10、降低輕微混亂影響</td><td class="desc-cell">精神干擾預備道具</td></tr>
+            <tr class="item-row" data-name="小瓶溫泉水"><td class="name-cell">小瓶溫泉水</td><td class="num-cell">1</td><td class="num-cell">20</td><td class="desc-cell">戰鬥外回復 HP 20、MP 20</td><td class="desc-cell">—</td></tr>
+            <tr class="item-row" data-name="清水壺"><td class="name-cell">清水壺</td><td class="num-cell">1</td><td class="num-cell">20</td><td class="desc-cell">回復 MP 5、移除輕微口渴／炎熱</td><td class="desc-cell">野外探索基礎道具</td></tr>
+            <tr class="item-row" data-name="溫熱湯杯"><td class="name-cell">溫熱湯杯</td><td class="num-cell">1</td><td class="num-cell">22</td><td class="desc-cell">回復 HP 25、移除輕微寒冷</td><td class="desc-cell">寒冷地圖預備道具</td></tr>
+            <tr class="item-row" data-name="小型回復藥"><td class="name-cell">小型回復藥</td><td class="num-cell">1</td><td class="num-cell">25</td><td class="desc-cell">回復 HP 30</td><td class="desc-cell">新手最常用的保命道具</td></tr>
+            <tr class="item-row" data-name="旅人能量餅"><td class="name-cell">旅人能量餅</td><td class="num-cell">2</td><td class="num-cell">28</td><td class="desc-cell">回復 HP 15、MP 10</td><td class="desc-cell">壓得很紮實，味道普通但很耐放</td></tr>
+            <tr class="item-row" data-name="簡易止血粉"><td class="name-cell">簡易止血粉</td><td class="num-cell">2</td><td class="num-cell">30</td><td class="desc-cell">移除輕微流血、戰鬥外回復 HP 10</td><td class="desc-cell">外傷處理</td></tr>
+            <tr class="item-row" data-name="蜂蜜麵包"><td class="name-cell">蜂蜜麵包</td><td class="num-cell">1</td><td class="num-cell">30</td><td class="desc-cell">回復 HP 20、行動力 +1</td><td class="desc-cell">行動力回復類，建議每日 1 次</td></tr>
+            <tr class="item-row" data-name="驅蟲香包"><td class="name-cell">驅蟲香包</td><td class="num-cell">3</td><td class="num-cell">32</td><td class="desc-cell">下次森林／草叢探索降低蟲類騷擾機率</td><td class="desc-cell">探索輔助</td></tr>
+            <tr class="item-row" data-name="小瓶魔力水"><td class="name-cell">小瓶魔力水</td><td class="num-cell">1</td><td class="num-cell">35</td><td class="desc-cell">回復 MP 25</td><td class="desc-cell">顏色很淡，初學者也能安全飲用</td></tr>
+            <tr class="item-row" data-name="簡易繃帶"><td class="name-cell">簡易繃帶</td><td class="num-cell">1</td><td class="num-cell">35</td><td class="desc-cell">戰鬥外回復 HP 20、MP 20</td><td class="desc-cell">簡單處理擦傷用</td></tr>
+            <tr class="item-row" data-name="安神香包"><td class="name-cell">安神香包</td><td class="num-cell">2</td><td class="num-cell">40</td><td class="desc-cell">降低輕微害怕／混亂影響</td><td class="desc-cell">靈媒、神殿事件輔助</td></tr>
+            <tr class="item-row" data-name="清涼薄荷水"><td class="name-cell">清涼薄荷水</td><td class="num-cell">1</td><td class="num-cell">45</td><td class="desc-cell">回復 MP 10、移除輕微炎熱／灼燒</td><td class="desc-cell">後期龍息幽谷、炎熱地圖預備</td></tr>
+            <tr class="item-row" data-name="解毒草丸"><td class="name-cell">解毒草丸</td><td class="num-cell">1</td><td class="num-cell">45</td><td class="desc-cell">移除輕微中毒狀態</td><td class="desc-cell">後期迷霧沼澤、毒系怪物預備</td></tr>
+            <tr class="item-row" data-name="基礎料理包"><td class="name-cell">基礎料理包</td><td class="num-cell">4</td><td class="num-cell">55</td><td class="desc-cell">戰鬥外回復 HP 35、MP 15</td><td class="desc-cell">料理與露宿補給，出城前帶著</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="material">
+      <h2 class="section-h">🌿 生活素材<span class="section-sub">1 件</span></h2>
+      <div class="table-wrap">
+        <table class="data-table">
+          <thead>
+            <tr><th>名稱</th><th class="num-cell">需求LV</th><th class="num-cell">價格</th><th>用途</th></tr>
+          </thead>
+          <tbody>
+            <tr class="item-row" data-name="乾淨空瓶"><td class="name-cell">乾淨空瓶</td><td class="num-cell">1</td><td class="num-cell">10</td><td class="desc-cell">製作藥水、裝取泉水、草藥師任務素材</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <p class="note">※ 資料來源：遊戲內商店介面完整抄錄（2026-07-12）　|　探索／任務取得的非賣品見<a href="items.html" style="color:var(--accent);">道具圖鑑</a></p>
+  </main>
+
+  <footer class="site-footer">
+    SoulLine Wiki — 非官方玩家Wiki　|　資料來源：玩家實測　|　遊戲開發：皊鴉
+  </footer>
+
+  <script src="../js/theme.js"></script>
+  <script>
+    document.getElementById('search').addEventListener('input', function() {
+      const q = this.value.trim().toLowerCase();
+      document.querySelectorAll('.item-row').forEach(row => {
+        const name = row.getAttribute('data-name') || '';
+        row.style.display = name.toLowerCase().includes(q) ? '' : 'none';
+      });
+    });
+  </script>
+</body>
+</html>
