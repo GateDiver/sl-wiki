@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>攻略指南 — SoulLine Wiki</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💎</text></svg>">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/style.css">
@@ -16,17 +17,19 @@
       <a href="items.html">道具</a>
       <a href="jobs.html">職業</a>
       <a href="monsters.html">怪物</a>
-      <a href="guide.html">攻略</a>
+      <a href="guide.html" aria-current="page">攻略</a>
+      <a href="commands.html">指令</a>
     </nav>
     <button class="theme-toggle" id="theme-toggle">☀ 亮色</button>
   </header>
 
   <main>
     <div class="page-title">攻略指南</div>
-    <div class="page-desc">新手教學、打工系統、刷魂晶路線</div>
+    <div class="page-desc">新手教學、打工系統、每日祈禱、懸賞任務、刷魂晶路線</div>
     <nav class="quick-jump">
       <span class="quick-jump-label">跳到</span>
       <a href="#intro">新手入門</a>
+      <a href="#pray">每日祈禱</a>
       <a href="#jobs">打工系統</a>
       <a href="#quests">懸賞公會</a>
       <a href="#farming">刷魂晶</a>
@@ -35,173 +38,248 @@
 
     <hr class="divider">
 
-    <section id="intro" style="margin-bottom:2rem;">
-      <h2 style="color:var(--accent);font-size:1.1rem;margin-bottom:1rem;">🌱 新手入門</h2>
+    <section id="intro">
+      <h2 class="section-h">🌱 新手入門</h2>
       <div class="card" style="margin-bottom:1rem;">
         <p style="font-weight:600;margin-bottom:0.5rem;">基本行動力</p>
         <ul style="color:var(--text-secondary);font-size:0.9rem;padding-left:1.2rem;line-height:2;">
-          <li>初始行動力上限為 <strong style="color:var(--text-primary)">10點</strong>，隨等級提升（LV4起11點、LV7起12點）</li>
-          <li>行動力於每日 <strong style="color:var(--text-primary)">凌晨5:00</strong> 重置</li>
-          <li>打工、探索、戰鬥都會消耗行動力</li>
+          <li>初始行動力上限 <strong style="color:var(--text-primary)">10 點</strong>，隨等級提升：LV4 → 11、LV7 → 12、LV11 → 13（實測值）</li>
+          <li>行動力於每日 <strong style="color:var(--text-primary)">凌晨 5:00</strong> 重置</li>
+          <li>打工、探索、戰鬥、祈禱都會消耗行動力；<strong style="color:var(--text-primary)">移動地圖不消耗</strong></li>
         </ul>
       </div>
-      <div class="card">
+      <div class="card" style="margin-bottom:1rem;">
         <p style="font-weight:600;margin-bottom:0.5rem;">每日種籽（簽到）</p>
         <ul style="color:var(--text-secondary);font-size:0.9rem;padding-left:1.2rem;line-height:2;">
-          <li>每日可領取一次，指令：<code style="background:var(--bg-secondary);padding:0.1rem 0.4rem;border-radius:3px;">SL 領種籽</code></li>
-          <li>領取後每日用 <code style="background:var(--bg-secondary);padding:0.1rem 0.4rem;border-radius:3px;">SL 澆水</code> 照顧，成長階段滿了即可 <code style="background:var(--bg-secondary);padding:0.1rem 0.4rem;border-radius:3px;">SL 收成</code></li>
-          <li>種籽稀有度不同，收成結果也不同（已知：晨光芽、銀葉花、月息花、霧光藤等）</li>
+          <li>每日領取一次：<span class="cmd">SL 領種籽</span>，之後用 <span class="cmd">SL 澆水</span>／<span class="cmd">SL 施肥</span> 照顧，成長進度滿了就 <span class="cmd">SL 收成</span></li>
+          <li>種籽面板會顯示稀有度、成長階段（發芽 → 長出嫩葉 → …）、今日是否已照顧</li>
+          <li>稀有度影響收成結果——已知：晨光芽、銀葉花、月息花、霧光藤；<strong style="color:var(--text-primary)">傳說級種籽</strong>會開出「曙光白玫瑰」這種特殊植物</li>
+          <li>認真照顧種籽還會解鎖<a href="locations.html#lingyu" style="color:var(--accent);">翎雨靜森的隱藏區域</a>（「羽光入口」事件伏筆）</li>
         </ul>
+      </div>
+      <div class="callout">
+        <strong>💡 練等結論：打工遠優於打怪。</strong>圖書館 2 行動力可得 28-45 靈思；打怪 1 行動力僅 4-11 靈思還會扣血。打怪的價值在素材與地圖探索，不在練等。
       </div>
     </section>
 
-    <section id="jobs" style="margin-bottom:2rem;">
-      <h2 style="color:var(--accent);font-size:1.1rem;margin-bottom:1rem;">💼 打工系統</h2>
+    <section id="pray">
+      <h2 class="section-h">🌹 每日祈禱<span class="section-sub">2026-07-12 新功能</span></h2>
+      <div class="card">
+        <p style="color:var(--text-secondary);font-size:0.9rem;line-height:2;">
+          前往<a href="locations.html#temple" style="color:var(--accent);">愛神神殿-宸光分殿</a>使用 <span class="cmd">SL 祈禱</span>——
+          每日一次、消耗 1 行動力，隨機獲得當日 Buff 或 Debuff。<em style="color:var(--text-primary);">「請懷抱真心擲下命運之骰。」</em>
+        </p>
+        <div class="table-wrap">
+          <table class="data-table">
+            <thead>
+              <tr><th>已知祈禱結果</th><th class="num-cell">類型</th><th>效果（當日有效）</th></tr>
+            </thead>
+            <tbody>
+              <tr><td class="name-cell">🌹 玫瑰護佑</td><td class="num-cell"><span class="tag tag-buff">Buff</span></td><td class="desc-cell">防禦 +20%</td></tr>
+              <tr><td class="name-cell">💪 誠心勞作</td><td class="num-cell"><span class="tag tag-buff">Buff</span></td><td class="desc-cell">打工獲得的魂晶與靈思 +25%</td></tr>
+              <tr><td class="name-cell">✨ 星戀專注</td><td class="num-cell"><span class="tag tag-buff">Buff</span></td><td class="desc-cell">暴擊率 +12%</td></tr>
+              <tr><td class="name-cell desc-cell" colspan="3">Debuff 種類待實測補充——祈禱是擲骰，不保證都是好事</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="note">💡 順序很重要：抽到「誠心勞作」要在打工<strong style="color:var(--text-primary);">之前</strong>——打工次數用完才抽到加成就浪費了（本 Wiki 編輯群的血淚實測）。</p>
+      </div>
+    </section>
+
+    <section id="jobs">
+      <h2 class="section-h">💼 打工系統</h2>
       <p style="color:var(--text-secondary);font-size:0.9rem;margin-bottom:0.5rem;">
-        各屬性熟練度練到 <strong style="color:var(--text-primary)">1.00</strong> 後，永久獲得 +1 對應能力值。<br>
-        <span style="font-size:0.85rem;">打工遠優於打怪練等——圖書館 2 行動力得 28-45 靈思；打怪 1 行動力僅 4-11 靈思且扣血。</span>
+        熟練度為百分比制（0–100），每次打工提升約 +2.5～5，練滿 100 後永久 +1 對應能力值。
       </p>
 
-      <div style="overflow-x:auto;margin:1rem 0;">
-        <table style="width:100%;border-collapse:collapse;font-size:0.88rem;">
+      <div class="callout warn">
+        <strong>⚠ 每日上限：所有打工合計 3 次</strong>（不是每項各 3 次）。超過會觸發「過勞打工」——不獲得任何報酬還額外扣行動力。各打工另有冷卻時間，連刷要輪換工種。
+      </div>
+
+      <h3 style="font-size:0.95rem;color:var(--text-primary);margin:1.25rem 0 0.25rem;">新手打工（LV1 起，地點：🏰 稚匯之城）</h3>
+      <div class="table-wrap">
+        <table class="data-table">
           <thead>
-            <tr style="background:var(--bg-secondary);color:var(--text-secondary);">
-              <th style="padding:0.5rem 0.75rem;text-align:left;border-bottom:1px solid var(--border);">打工</th>
-              <th style="padding:0.5rem 0.75rem;text-align:center;border-bottom:1px solid var(--border);">行動力</th>
-              <th style="padding:0.5rem 0.75rem;text-align:center;border-bottom:1px solid var(--border);">冷卻</th>
-              <th style="padding:0.5rem 0.75rem;text-align:center;border-bottom:1px solid var(--border);">魂晶</th>
-              <th style="padding:0.5rem 0.75rem;text-align:center;border-bottom:1px solid var(--border);">靈思</th>
-              <th style="padding:0.5rem 0.75rem;text-align:left;border-bottom:1px solid var(--border);">加成屬性</th>
-              <th style="padding:0.5rem 0.75rem;text-align:left;border-bottom:1px solid var(--border);">特色</th>
+            <tr>
+              <th>打工</th>
+              <th class="num-cell">行動力</th>
+              <th class="num-cell">魂晶</th>
+              <th class="num-cell">靈思</th>
+              <th>加成屬性</th>
+              <th>特色</th>
             </tr>
           </thead>
           <tbody>
-            <tr style="border-bottom:1px solid var(--border);">
-              <td style="padding:0.5rem 0.75rem;font-weight:600;color:var(--accent);">★ 圖書館整理員</td>
-              <td style="padding:0.5rem 0.75rem;text-align:center;">2</td>
-              <td style="padding:0.5rem 0.75rem;text-align:center;color:var(--text-secondary);">120分</td>
-              <td style="padding:0.5rem 0.75rem;text-align:center;">20–35</td>
-              <td style="padding:0.5rem 0.75rem;text-align:center;">25–45</td>
-              <td style="padding:0.5rem 0.75rem;">知識</td>
-              <td style="padding:0.5rem 0.75rem;color:var(--text-secondary);font-size:0.82rem;">低風險穩定靈思；第5次觸發「古文明素養+1」。練等首選</td>
-            </tr>
-            <tr style="border-bottom:1px solid var(--border);">
-              <td style="padding:0.5rem 0.75rem;font-weight:600;">商店店員</td>
-              <td style="padding:0.5rem 0.75rem;text-align:center;">3</td>
-              <td style="padding:0.5rem 0.75rem;text-align:center;color:var(--text-secondary);">180分</td>
-              <td style="padding:0.5rem 0.75rem;text-align:center;">35–55</td>
-              <td style="padding:0.5rem 0.75rem;text-align:center;">20–35</td>
-              <td style="padding:0.5rem 0.75rem;">耐性</td>
-              <td style="padding:0.5rem 0.75rem;color:var(--text-secondary);font-size:0.82rem;">可能觸發奧客事件；收入穩定，賺魂晶首選</td>
-            </tr>
-            <tr style="border-bottom:1px solid var(--border);">
-              <td style="padding:0.5rem 0.75rem;font-weight:600;">廚房雜工</td>
-              <td style="padding:0.5rem 0.75rem;text-align:center;">3</td>
-              <td style="padding:0.5rem 0.75rem;text-align:center;color:var(--text-secondary);">180分</td>
-              <td style="padding:0.5rem 0.75rem;text-align:center;">35–55</td>
-              <td style="padding:0.5rem 0.75rem;text-align:center;">25–40</td>
-              <td style="padding:0.5rem 0.75rem;">耐性／知識</td>
-              <td style="padding:0.5rem 0.75rem;color:var(--text-secondary);font-size:0.82rem;">未來銜接廚師助手與烹飪功能</td>
-            </tr>
-            <tr style="border-bottom:1px solid var(--border);">
-              <td style="padding:0.5rem 0.75rem;font-weight:600;">農家幫手</td>
-              <td style="padding:0.5rem 0.75rem;text-align:center;">4</td>
-              <td style="padding:0.5rem 0.75rem;text-align:center;color:var(--text-secondary);">240分</td>
-              <td style="padding:0.5rem 0.75rem;text-align:center;">45–70</td>
-              <td style="padding:0.5rem 0.75rem;text-align:center;">25–40</td>
-              <td style="padding:0.5rem 0.75rem;">力量／體魄</td>
-              <td style="padding:0.5rem 0.75rem;color:var(--text-secondary);font-size:0.82rem;">可能取得作物素材；幸運觸發額外 +5 魂晶</td>
-            </tr>
-            <tr style="border-bottom:1px solid var(--border);">
-              <td style="padding:0.5rem 0.75rem;font-weight:600;">裁縫店學徒</td>
-              <td style="padding:0.5rem 0.75rem;text-align:center;">3</td>
-              <td style="padding:0.5rem 0.75rem;text-align:center;color:var(--text-secondary);">180分</td>
-              <td style="padding:0.5rem 0.75rem;text-align:center;">35–50</td>
-              <td style="padding:0.5rem 0.75rem;text-align:center;">25–40</td>
-              <td style="padding:0.5rem 0.75rem;">敏捷／知識</td>
-              <td style="padding:0.5rem 0.75rem;color:var(--text-secondary);font-size:0.82rem;">未來銜接裁縫助手，可能取得布料碎片</td>
+            <tr class="hl-row">
+              <td class="name-cell">★ 圖書館整理員</td>
+              <td class="num-cell">2</td>
+              <td class="num-cell">20–35</td>
+              <td class="num-cell">25–45</td>
+              <td>知識</td>
+              <td class="desc-cell">低風險穩定靈思；第5次觸發「古文明素養+1」。練等首選</td>
             </tr>
             <tr>
-              <td style="padding:0.5rem 0.75rem;font-weight:600;">工坊清潔員</td>
-              <td style="padding:0.5rem 0.75rem;text-align:center;">3</td>
-              <td style="padding:0.5rem 0.75rem;text-align:center;color:var(--text-secondary);">180分</td>
-              <td style="padding:0.5rem 0.75rem;text-align:center;">40–55</td>
-              <td style="padding:0.5rem 0.75rem;text-align:center;">20–35</td>
-              <td style="padding:0.5rem 0.75rem;">體魄／耐性</td>
-              <td style="padding:0.5rem 0.75rem;color:var(--text-secondary);font-size:0.82rem;">未來銜接工匠助手，可能取得基礎材料</td>
+              <td class="name-cell">商店店員</td>
+              <td class="num-cell">3</td>
+              <td class="num-cell">35–55</td>
+              <td class="num-cell">20–35</td>
+              <td>耐性</td>
+              <td class="desc-cell">可能觸發奧客事件；收入穩定，賺魂晶首選</td>
+            </tr>
+            <tr>
+              <td class="name-cell">廚房雜工</td>
+              <td class="num-cell">3</td>
+              <td class="num-cell">35–55</td>
+              <td class="num-cell">25–40</td>
+              <td>耐性／知識</td>
+              <td class="desc-cell">未來銜接廚師助手與烹飪功能</td>
+            </tr>
+            <tr>
+              <td class="name-cell">農家幫手</td>
+              <td class="num-cell">4</td>
+              <td class="num-cell">45–70</td>
+              <td class="num-cell">25–40</td>
+              <td>力量／體魄</td>
+              <td class="desc-cell">可能取得作物素材；幸運觸發額外 +5 魂晶</td>
+            </tr>
+            <tr>
+              <td class="name-cell">裁縫店學徒</td>
+              <td class="num-cell">3</td>
+              <td class="num-cell">35–50</td>
+              <td class="num-cell">25–40</td>
+              <td>敏捷／知識</td>
+              <td class="desc-cell">未來銜接裁縫助手，可能取得布料碎片</td>
+            </tr>
+            <tr>
+              <td class="name-cell">工坊清潔員</td>
+              <td class="num-cell">3</td>
+              <td class="num-cell">40–55</td>
+              <td class="num-cell">20–35</td>
+              <td>體魄／耐性</td>
+              <td class="desc-cell">未來銜接工匠助手，可能取得基礎材料</td>
             </tr>
           </tbody>
         </table>
-        <p style="color:var(--text-secondary);font-size:0.82rem;margin-top:0.5rem;">每日上限：各打工每日最多 3 次　|　所有打工地點：🏰 稚匯之城</p>
+      </div>
+
+      <h3 style="font-size:0.95rem;color:var(--text-primary);margin:1.25rem 0 0.25rem;">進階打工（LV10 解鎖）</h3>
+      <div class="table-wrap">
+        <table class="data-table">
+          <thead>
+            <tr><th>打工</th><th class="num-cell">行動力</th><th class="num-cell">魂晶</th><th class="num-cell">靈思</th><th>加成屬性</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="name-cell">馬場雜務</td>
+              <td class="num-cell">5</td>
+              <td class="num-cell">約 90</td>
+              <td class="num-cell">約 39</td>
+              <td class="desc-cell">敏捷／體魄（各 +3.5，實測）</td>
+            </tr>
+            <tr>
+              <td class="name-cell desc-cell" colspan="5">草藥師助手、獵戶助手、廚師助手、工匠助手、裁縫助手、家教——數值待實測補充</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
 
       <div class="card" style="margin-top:1rem;">
-        <p style="font-weight:600;margin-bottom:0.5rem;">⏰ 行動力管理</p>
-        <ul style="color:var(--text-secondary);font-size:0.9rem;padding-left:1.2rem;line-height:2;">
-          <li>凌晨 <strong style="color:var(--text-primary)">5:00</strong> 自動回滿</li>
-          <li>旅館 <strong style="color:var(--text-primary)">50 魂晶</strong> 即時回滿 HP/MP/行動力（含裝備加成，每日最多 3 次）</li>
-          <li>升級時行動力直接回滿</li>
-          <li>LV4 起行動力上限從 10 → 11；LV7 起再升至 12</li>
-          <li>移動地圖 <strong style="color:var(--text-primary)">不耗</strong> 行動力</li>
-        </ul>
+        <p style="font-weight:600;margin-bottom:0.5rem;">⏰ 行動力恢復手段</p>
+        <div class="table-wrap" style="margin:0.5rem 0 0;">
+          <table class="data-table">
+            <thead>
+              <tr><th>手段</th><th class="num-cell">費用</th><th class="num-cell">恢復量</th><th>限制</th></tr>
+            </thead>
+            <tbody>
+              <tr><td class="name-cell">每日重置</td><td class="num-cell">免費</td><td class="num-cell">全滿</td><td class="desc-cell">凌晨 5:00 自動</td></tr>
+              <tr><td class="name-cell">旅館</td><td class="num-cell">依等級 50–150</td><td class="num-cell">全滿（HP/MP/行動力，含裝備加成）</td><td class="desc-cell">每日 3 次；LV2 約 50、LV11 約 150 魂晶</td></tr>
+              <tr><td class="name-cell">帳篷露宿</td><td class="num-cell">帳篷 80／個</td><td class="num-cell">+1 行動力／次（小幅 HP/MP）</td><td class="desc-cell">僅野外地圖；商店版耐久 10 次、每日限購 5 個；任務贈送版無耐久限制</td></tr>
+              <tr><td class="name-cell">升級</td><td class="num-cell">—</td><td class="num-cell">全滿</td><td class="desc-cell">升級瞬間直接回滿</td></tr>
+              <tr><td class="name-cell">蜂蜜麵包</td><td class="num-cell">30</td><td class="num-cell">+1 行動力、HP20</td><td class="desc-cell">建議每日 1 次</td></tr>
+            </tbody>
+          </table>
+        </div>
       </div>
 
       <div class="card" style="margin-top:1rem;">
-        <p style="font-weight:600;margin-bottom:0.5rem;">📈 靈思上限</p>
-        <p style="color:var(--text-secondary);font-size:0.9rem;">LV1: 300　LV2: 380　LV3: 470　LV4: 570</p>
+        <p style="font-weight:600;margin-bottom:0.5rem;">📈 靈思上限（依等級）</p>
+        <p style="color:var(--text-secondary);font-size:0.9rem;">
+          LV1: 300　LV2: 380　LV3: 470　LV4: 570　…　LV8: 1170　…　LV11: 1850（LV5-7、9-10 待補）
+        </p>
       </div>
     </section>
 
-    <section id="quests" style="margin-bottom:2rem;">
-      <h2 style="color:var(--accent);font-size:1.1rem;margin-bottom:1rem;">📜 懸賞公會（任務系統，測試中）</h2>
-      <div class="card">
-        <p style="color:var(--text-secondary);font-size:0.9rem;line-height:2;">
-          稚匯之城的懸賞公會提供各類委託，可同時接取多個任務，完成後回公會回報領取獎勵（魂晶、靈思、道具）。
-        </p>
-        <ul style="color:var(--text-secondary);font-size:0.9rem;padding-left:1.2rem;line-height:2;margin-top:0.5rem;">
-          <li>已知類型：尋物委託、採集委託、收集委託、新手委託、巡邏懸賞、追蹤委託、神殿委託、生活體驗、職業體驗</li>
-          <li>「生活體驗／職業體驗」類任務完成後會記錄一次職業體驗，<strong style="color:var(--text-primary)">不會變更目前正式職業</strong></li>
-          <li>部分任務需要達成特定探索事件才能觸發進度（不是單純擊殺或撿取即可），系統仍在調整中</li>
-        </ul>
-        <p style="color:var(--text-secondary);font-size:0.82rem;margin-top:0.8rem;">※ 這套系統剛上線，仍有已知bug（部分任務判定不穩定），資料會持續更新</p>
+    <section id="quests">
+      <h2 class="section-h">📜 懸賞公會<span class="section-sub">任務系統</span></h2>
+      <p style="color:var(--text-secondary);font-size:0.9rem;margin-bottom:0.5rem;">
+        稚匯之城的懸賞公會提供各類委託，可<strong style="color:var(--text-primary);">同時接取多個任務</strong>，完成後回公會回報領取獎勵。完成任務另計「懸賞公會聲望 +1」（聲望系統待開放）。
+      </p>
+      <div class="table-wrap">
+        <table class="data-table">
+          <thead>
+            <tr><th>委託（LV1-2 實測樣本）</th><th class="num-cell">魂晶</th><th class="num-cell">靈思</th><th>額外獎勵</th></tr>
+          </thead>
+          <tbody>
+            <tr><td class="name-cell">新手委託：送乾糧到城門口</td><td class="num-cell">20</td><td class="num-cell">3</td><td class="desc-cell">—</td></tr>
+            <tr><td class="name-cell">收集委託：乾淨空瓶回收</td><td class="num-cell">20</td><td class="num-cell">3</td><td class="desc-cell">—</td></tr>
+            <tr><td class="name-cell">尋物委託：找回舊布包</td><td class="num-cell">25</td><td class="num-cell">4</td><td class="desc-cell">乾糧</td></tr>
+            <tr><td class="name-cell">採集委託：風滾草整理</td><td class="num-cell">25</td><td class="num-cell">4</td><td class="desc-cell">—</td></tr>
+            <tr><td class="name-cell">採集委託：露珠草樣本</td><td class="num-cell">30</td><td class="num-cell">5</td><td class="desc-cell">簡易繃帶</td></tr>
+            <tr><td class="name-cell">採集委託：草籽雀羽毛</td><td class="num-cell">35</td><td class="num-cell">6</td><td class="desc-cell">—</td></tr>
+            <tr><td class="name-cell">追蹤委託：草原角兔腳印</td><td class="num-cell">35</td><td class="num-cell">6</td><td class="desc-cell">觸發條件：草原探索「兔子跑過」事件</td></tr>
+            <tr><td class="name-cell">巡邏懸賞：風滾史萊姆</td><td class="num-cell">40</td><td class="num-cell">6</td><td class="desc-cell">小型回復藥</td></tr>
+            <tr><td class="name-cell">安全委託：檢查森林路標</td><td class="num-cell">45</td><td class="num-cell">6</td><td class="desc-cell">清涼薄荷水</td></tr>
+            <tr><td class="name-cell">生活體驗：修補舊工具／煮熱湯／照料種籽</td><td class="num-cell">45</td><td class="num-cell">8</td><td class="desc-cell">部分附道具（溫熱湯杯等）</td></tr>
+            <tr><td class="name-cell">神殿委託：紅線殘響記錄</td><td class="num-cell">45</td><td class="num-cell">12</td><td class="desc-cell">紅線小餅乾</td></tr>
+            <tr><td class="name-cell">職業體驗：訓練場守門</td><td class="num-cell">50</td><td class="num-cell">10</td><td class="desc-cell">溫熱湯杯</td></tr>
+            <tr><td class="name-cell">調查委託：夜光菇微光</td><td class="num-cell">55</td><td class="num-cell">10</td><td class="desc-cell">小瓶魔力水</td></tr>
+            <tr><td class="name-cell">生活體驗：湖畔拋竿練習</td><td class="num-cell">55</td><td class="num-cell">10</td><td class="desc-cell">—</td></tr>
+          </tbody>
+        </table>
       </div>
+      <ul style="color:var(--text-secondary);font-size:0.9rem;padding-left:1.2rem;line-height:2;">
+        <li>「生活體驗／職業體驗」完成後只記錄一次職業體驗，<strong style="color:var(--text-primary)">不會變更目前正式職業</strong></li>
+        <li>部分任務需觸發特定探索事件才計進度（例如角兔腳印要遇到「兔子跑過」），不是撿到對應道具就算</li>
+        <li>不同大陸的懸賞由各地分會管理，接取前確認自己所在大陸</li>
+      </ul>
     </section>
 
-    <section id="farming" style="margin-bottom:2rem;">
-      <h2 style="color:var(--accent);font-size:1.1rem;margin-bottom:1rem;">💎 刷魂晶路線</h2>
+    <section id="farming">
+      <h2 class="section-h">💎 刷魂晶路線</h2>
       <div class="card">
         <p style="color:var(--text-secondary);font-size:0.9rem;line-height:2;">
-          魂晶是SL的主要貨幣。取得方式：
+          魂晶是 SL 的主要貨幣。單日收入實測參考（LV8-11 帳號）：
         </p>
         <ul style="color:var(--text-secondary);font-size:0.9rem;padding-left:1.2rem;line-height:2;margin-top:0.5rem;">
-          <li>打工（每次可獲得一定量）</li>
-          <li>戰鬥掉落</li>
-          <li>每日種籽（簽到獎勵）</li>
+          <li><strong style="color:var(--text-primary)">打工 3 次</strong>：約 130–190 魂晶（進階打工更多；配合祈禱 Buff「誠心勞作」再 +25%）</li>
+          <li><strong style="color:var(--text-primary)">懸賞任務</strong>：LV1-2 委託每張 20–55，一天清 8–10 張約 300+ 魂晶——目前收入效率最高的活動</li>
+          <li><strong style="color:var(--text-primary)">探索</strong>：零星 5–10 魂晶事件＋素材</li>
+          <li><strong style="color:var(--text-primary)">每日種籽</strong>：簽到獎勵</li>
         </ul>
-        <p style="color:var(--text-secondary);font-size:0.85rem;margin-top:1rem;">※ 詳細數值補充中</p>
+        <p class="note">支出參考：旅館依等級 50–150／次、帳篷 80／個——高等級玩家的恢復成本明顯上升，行動力要花在刀口上。</p>
       </div>
     </section>
 
     <section id="shop">
-      <h2 style="color:var(--accent);font-size:1.1rem;margin-bottom:1rem;">🛒 商店分類</h2>
-      <div class="card-grid">
-        <div class="card">
-          <p style="font-weight:600;margin-bottom:0.5rem;">⚔ 裝備</p>
-          <p style="color:var(--text-secondary);font-size:0.9rem;">武器、防具等戰鬥用品</p>
-          <p style="color:var(--text-secondary);font-size:0.85rem;margin-top:0.5rem;">例：旅人短靴 70魂晶</p>
-        </div>
-        <div class="card">
-          <p style="font-weight:600;margin-bottom:0.5rem;">🧪 補給品</p>
-          <p style="color:var(--text-secondary);font-size:0.9rem;">回復道具、消耗品</p>
-          <p style="color:var(--text-secondary);font-size:0.85rem;margin-top:0.5rem;">例：小型回復藥、簡易繃帶</p>
-        </div>
-        <div class="card">
-          <p style="font-weight:600;margin-bottom:0.5rem;">🌿 生活素材</p>
-          <p style="color:var(--text-secondary);font-size:0.9rem;">製作、交易用材料</p>
-          <p style="color:var(--text-secondary);font-size:0.85rem;margin-top:0.5rem;">例：乾淨空瓶、乾糧</p>
-        </div>
+      <h2 class="section-h">🛒 商店分類</h2>
+      <div class="table-wrap">
+        <table class="data-table">
+          <thead>
+            <tr><th>分類</th><th>內容</th><th>例</th></tr>
+          </thead>
+          <tbody>
+            <tr><td class="name-cell">⚔ 裝備</td><td class="desc-cell">武器、防具等戰鬥用品（LV1–10 共 24+ 項）</td><td class="desc-cell">旅人短靴 70、見習劍士長劍 360</td></tr>
+            <tr><td class="name-cell">🧪 補給品</td><td class="desc-cell">回復道具、狀態解除、消耗品</td><td class="desc-cell">小型回復藥 25、蜂蜜麵包 30</td></tr>
+            <tr><td class="name-cell">🌿 生活素材</td><td class="desc-cell">製作、交易用材料</td><td class="desc-cell">乾淨空瓶、乾糧</td></tr>
+          </tbody>
+        </table>
       </div>
+      <p class="note">完整價目與屬性見<a href="items.html" style="color:var(--accent);">道具資料庫</a>。販售指令 <span class="cmd">/販售</span>；收購功能部分待開放。</p>
     </section>
+
+    <div class="callout">
+      <strong>🔮 版本預告（開發者確認）：</strong>戰鬥系統將改為回合制（目前是直接顯示結果）；懸賞聲望系統、採集行動待開放。時程未定。
+    </div>
   </main>
 
   <footer class="site-footer">

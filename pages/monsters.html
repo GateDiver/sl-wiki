@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>怪物一覽 — SoulLine Wiki</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💎</text></svg>">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/style.css">
@@ -15,8 +16,9 @@
       <a href="locations.html">地點</a>
       <a href="items.html">道具</a>
       <a href="jobs.html">職業</a>
-      <a href="monsters.html">怪物</a>
+      <a href="monsters.html" aria-current="page">怪物</a>
       <a href="guide.html">攻略</a>
+      <a href="commands.html">指令</a>
     </nav>
     <button class="theme-toggle" id="theme-toggle">☀ 亮色</button>
   </header>
@@ -93,19 +95,32 @@
           </thead>
           <tbody>
             <tr><td class="name-cell">🦇 礦晶蝙蝠<br><span class="risk-warn" style="font-size:0.75rem;">⚠ 危險</span></td><td class="num-cell">7</td><td class="num-cell">每回合19（6次共114）</td><td class="num-cell">14 / 6</td><td class="desc-cell">發光石、蝙蝠翼膜</td></tr>
-            <tr style="opacity:0.7;"><td class="name-cell">🪨 迴聲岩靈<br><span class="risk-warn" style="font-size:0.75rem;">⚠ 高危</span></td><td class="num-cell" colspan="3"><em>資料更新中（洞穴數值已調整）</em></td><td class="desc-cell">待確認</td></tr>
+            <tr style="opacity:0.7;"><td class="name-cell">🪨 迴聲岩靈<br><span class="risk-warn" style="font-size:0.75rem;">⚠ 高危</span></td><td class="num-cell" colspan="3"><em>資料更新中（洞穴數值已調整）</em></td><td class="desc-cell">空鳴岩心、岩靈碎片</td></tr>
             <tr style="opacity:0.7;"><td class="name-cell">💠 晶簇守衛<br><span class="risk-warn" style="font-size:0.75rem;">⚠ 高危</span></td><td class="num-cell" colspan="3"><em>資料更新中（洞穴數值已調整）</em></td><td class="desc-cell">晶簇碎片</td></tr>
+            <tr><td class="name-cell">🌑 失光礦影<br><span class="risk-warn" style="font-size:0.75rem;">⚠ 危險</span></td><td class="num-cell">5</td><td class="num-cell">每回合16（共80）</td><td class="num-cell">— / —</td><td class="desc-cell">失光礦片、暗淡羽光　<span style="opacity:0.7;">HP約145（攻擊力29實測）</span></td></tr>
+            <tr><td class="name-cell">🗿 沉眠石靈<br><span class="risk-warn" style="font-size:0.75rem;">⚠ 高危</span></td><td class="num-cell">7</td><td class="num-cell">每回合20（共140）</td><td class="num-cell">— / —</td><td class="desc-cell">沉眠石核　<span class="risk-warn" style="font-size:0.78rem;">總傷140，血量不滿別碰</span></td></tr>
+            <tr><td class="name-cell">🦋 琥珀守礦蝶<br><span class="risk-warn" style="font-size:0.75rem;">⚠ 高危</span></td><td class="num-cell">5+</td><td class="num-cell">每回合18</td><td class="num-cell">— / —</td><td class="desc-cell">琥星珀礦（推測）　<span class="risk-warn" style="font-size:0.78rem;">HP未知，5回合未擊倒紀錄，滿血再挑戰</span></td></tr>
           </tbody>
         </table>
       </div>
-      <p style="color:var(--text-secondary);font-size:0.82rem;margin-top:0.75rem;">※ 洞穴怪物數值近期調整，部分資料待更新</p>
+      <p style="color:var(--text-secondary);font-size:0.82rem;margin-top:0.75rem;">※ 洞穴怪物數值近期調整，部分資料待更新；失光礦影／沉眠石靈／琥珀守礦蝶為裝備攻擊力29的角色實測</p>
+    </section>
+
+    <section>
+      <h2 style="color:var(--accent);font-size:1rem;margin-bottom:1rem;">🌧️ 翎雨靜森 <span style="font-size:0.8rem;color:var(--text-secondary);">（LV4-12，2026-07-11 開放）</span></h2>
+      <div class="card">
+        <p style="font-size:0.9rem;color:var(--text-secondary);line-height:1.9;">
+          目前實測為<strong style="color:var(--text-primary);">純探索型地圖</strong>——探索事件均為拾取、觀察與安撫類（迷霧絮靈、迷途羽影、夜行小獸的腳印），
+          尚未記錄到任何戰鬥遭遇。低靈思時會觸發照顧型事件。若後續版本加入怪物再更新此區。
+        </p>
+      </div>
     </section>
 
     <div class="card" style="margin-top:2rem;background:var(--bg-secondary);">
       <p style="font-size:0.85rem;color:var(--text-secondary);">
         ⚔ <strong style="color:var(--text-primary);">戰鬥注意事項：</strong>
-        道具無法在戰鬥中使用；補血靠帳篷（僅野外地圖）或旅館。
-        初始之森被判定為城鎮，帳篷不可用。星露湖畔是野外，帳篷可用。
+        道具無法在戰鬥中使用；補血靠帳篷（野外地圖）或旅館（城內）。
+        初始之森、悠悠草原、星露湖畔、靈礦洞穴等野外地圖皆可露宿。
       </p>
     </div>
   </main>

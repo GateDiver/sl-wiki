@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>道具資料庫 — SoulLine Wiki</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💎</text></svg>">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/style.css">
@@ -13,10 +14,11 @@
     <a href="../index.html" class="site-logo">SoulLine Wiki</a>
     <nav class="site-nav">
       <a href="locations.html">地點</a>
-      <a href="items.html">道具</a>
+      <a href="items.html" aria-current="page">道具</a>
       <a href="jobs.html">職業</a>
       <a href="monsters.html">怪物</a>
       <a href="guide.html">攻略</a>
+      <a href="commands.html">指令</a>
     </nav>
     <button class="theme-toggle" id="theme-toggle">☀ 亮色</button>
   </header>
@@ -104,6 +106,7 @@
             <tr class="item-row" data-name="小瓶魔力水"><td class="name-cell">小瓶魔力水</td><td class="desc-cell">回復 MP 25</td><td class="num-cell">35</td><td class="desc-cell">顏色很淡，初學者也能安全飲用</td></tr>
             <tr class="item-row" data-name="安神香包"><td class="name-cell">安神香包</td><td class="desc-cell">降低輕微害怕／混亂影響</td><td class="num-cell">40</td><td class="desc-cell">小小的布香包，能讓呼吸慢下來</td></tr>
             <tr class="item-row" data-name="基礎料理包"><td class="name-cell">基礎料理包</td><td class="desc-cell">戰鬥外回復 HP 35、MP 15</td><td class="num-cell">55</td><td class="desc-cell">簡單但完整的一份餐包，適合出城前帶著</td></tr>
+            <tr class="item-row" data-name="破舊小帳篷 帳篷"><td class="name-cell">破舊小帳篷</td><td class="desc-cell">野外露宿：行動力 +1、小幅回復 HP/MP，可重複使用</td><td class="num-cell">80</td><td class="desc-cell">商店版耐久 10 次、每日限購 5 個；任務贈送版無耐久限制</td></tr>
           </tbody>
         </table>
         <p style="color:var(--text-secondary);font-size:0.8rem;margin-top:0.5rem;">※ 戰鬥中無法使用道具（功能尚未實裝）；價格單位皆為魂晶，全部來源皆為商店除另有標註</p>
@@ -148,13 +151,22 @@
             <tr class="item-row" data-name="洞穴黏液"><td class="name-cell">洞穴黏液</td><td class="desc-cell">靈礦洞穴探索</td></tr>
             <tr class="item-row" data-name="紅線繩結 紅線小餅乾 紅線小鈴鐺"><td class="name-cell">紅線繩結 / 紅線小餅乾</td><td class="desc-cell">愛神神殿探索（紅線主題事件）</td></tr>
             <tr class="item-row" data-name="晨光芽 銀葉花 月息花 霧光藤"><td class="name-cell">晨光芽 / 銀葉花 / 月息花 / 霧光藤</td><td class="desc-cell">每日神秘種籽收成可得，稀有度影響結果，用途待確認</td></tr>
+            <tr class="item-row" data-name="曙光白玫瑰"><td class="name-cell">曙光白玫瑰 🌹</td><td class="desc-cell">傳說級種籽開花的結果（目前已知僅一例），植物分類收藏品</td></tr>
             <tr class="item-row" data-name="樹皮碎片"><td class="name-cell">樹皮碎片</td><td class="desc-cell">初始之森／悠悠草原</td></tr>
+            <tr class="item-row" data-name="森林露水"><td class="name-cell">森林露水</td><td class="desc-cell">初始之森「苔地的森林露水」事件</td></tr>
+            <tr class="item-row" data-name="微光菌核"><td class="name-cell">微光菌核</td><td class="desc-cell">初始之森「微光菌核」事件（枯木內的光點）</td></tr>
+            <tr class="item-row" data-name="小獸牙"><td class="name-cell">小獸牙</td><td class="desc-cell">初始之森「遇到受傷小獸」事件</td></tr>
+            <tr class="item-row" data-name="透明水泡核 星露螢燈 湖影牙"><td class="name-cell">透明水泡核 / 星露螢燈 / 湖影牙</td><td class="desc-cell">星露湖畔探索（水泡拍岸／螢群停在欄杆／漂來的湖影牙）</td></tr>
+            <tr class="item-row" data-name="記憶星砂"><td class="name-cell">記憶星砂</td><td class="desc-cell">翎雨靜森「記憶殘星映路」事件</td></tr>
+            <tr class="item-row" data-name="絮靈棉 微光粉塵"><td class="name-cell">絮靈棉 / 微光粉塵</td><td class="desc-cell">翎雨靜森（迷霧絮靈探頭／失序星砂亂流）</td></tr>
+            <tr class="item-row" data-name="靜森露珠 迷途靈思 羽光碎片"><td class="name-cell">靜森露珠 / 迷途靈思 / 羽光碎片</td><td class="desc-cell">翎雨靜森（被等待的樹根／迷途羽影安撫／發光羽毛落下）</td></tr>
+            <tr class="item-row" data-name="小翎短箋 小翎觀測筆記 黏糕短箋"><td class="name-cell">小翎短箋 / 小翎觀測筆記 / 黏糕短箋</td><td class="desc-cell">翎雨靜森（漂浮羽毛短箋／觀星台桌上／靈思過低的安撫）——短箋寫著「你不是孤單地長大」</td></tr>
           </tbody>
         </table>
       </div>
     </section>
 
-    <p style="color:var(--text-secondary);font-size:0.85rem;margin-top:2rem;">※ 道具數值、取得方式持續補充中　|　最後更新：2026-07-05</p>
+    <p style="color:var(--text-secondary);font-size:0.85rem;margin-top:2rem;">※ 道具數值、取得方式持續補充中　|　最後更新：2026-07-12</p>
   </main>
 
   <footer class="site-footer">

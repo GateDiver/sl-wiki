@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>地點圖鑑 — SoulLine Wiki</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💎</text></svg>">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/style.css">
@@ -12,91 +13,192 @@
   <header class="site-header">
     <a href="../index.html" class="site-logo">SoulLine Wiki</a>
     <nav class="site-nav">
-      <a href="locations.html">地點</a>
+      <a href="locations.html" aria-current="page">地點</a>
       <a href="items.html">道具</a>
       <a href="jobs.html">職業</a>
       <a href="monsters.html">怪物</a>
       <a href="guide.html">攻略</a>
+      <a href="commands.html">指令</a>
     </nav>
     <button class="theme-toggle" id="theme-toggle">☀ 亮色</button>
   </header>
 
   <main>
     <div class="page-title">地點圖鑑</div>
-    <div class="page-desc">SoulLine 世界的各個地點</div>
+    <div class="page-desc">宸光大陸與失落群島——SoulLine 世界的各個地點</div>
+
+    <nav class="quick-jump">
+      <span class="quick-jump-label">跳到</span>
+      <a href="#city">稚匯之城</a>
+      <a href="#temple">愛神神殿</a>
+      <a href="#wilds">野外地圖</a>
+      <a href="#lingyu">翎雨靜森</a>
+      <a href="#islands">失落群島</a>
+      <a href="#upcoming">開發中</a>
+    </nav>
+
     <hr class="divider">
 
-    <div class="card" style="margin-bottom:1.5rem;">
-      <p style="font-weight:700;font-size:1.05rem;margin-bottom:0.4rem;">🏰 稚匯之城</p>
-      <span class="tag">主城</span>
-      <span class="tag">初始</span>
-      <p style="color:var(--text-secondary);font-size:0.9rem;margin-top:0.6rem;">
-        這裡是靈魂初醒之地，也是萬千意念交會的起始之城。<br>
-        城中設有補給攤、交換所與短暫歇息的角落，供旅人整理狀態、購買所需、準備下一段探索。<br>
-        <em style="color:var(--text-primary);">每一次出發之前，都別忘了先在這裡確認自己的心與行囊。</em>
+    <section id="city">
+      <div class="card" style="margin-bottom:1.5rem;">
+        <p style="font-weight:700;font-size:1.05rem;margin-bottom:0.4rem;">🏰 稚匯之城</p>
+        <span class="tag">主城</span>
+        <span class="tag">初始</span>
+        <p style="color:var(--text-secondary);font-size:0.9rem;margin-top:0.6rem;">
+          這裡是靈魂初醒之地，也是萬千意念交會的起始之城。<br>
+          城中設有補給攤、交換所與短暫歇息的角落，供旅人整理狀態、購買所需、準備下一段探索。<br>
+          <em style="color:var(--text-primary);">每一次出發之前，都別忘了先在這裡確認自己的心與行囊。</em>
+        </p>
+        <p class="note">設施：商店、旅館、愛神神殿、懸賞公會、各類打工（新手打工全部在此）</p>
+        <p class="note">旅館費用依角色等級調整（實測：LV2 約 50 魂晶、LV5 前後約 100、LV11 約 150），每日最多 3 次，回滿 HP／MP／行動力（含裝備加成）。</p>
+        <figure class="map-figure">
+          <img src="../assets/starter-city.png" alt="稚匯之城 城門">
+          <figcaption>▲ 稚匯之城——石橋通向藍白城門，瀑布從兩側流下，水晶燈柱引路</figcaption>
+        </figure>
+        <figure class="map-figure">
+          <img src="../assets/central-plaza.png" alt="稚匯之城 中央廣場">
+          <figcaption>▲ 中央廣場——創角後踏入 SoulLine 的第一眼，藍色寶石噴泉佇立其中（設計概念圖）</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="temple">
+      <div class="card" style="margin-bottom:1.5rem;">
+        <p style="font-weight:700;font-size:1.05rem;margin-bottom:0.4rem;">🏛️ 愛神神殿-宸光分殿</p>
+        <span class="tag">聖地</span>
+        <span class="tag">稚匯之城內</span>
+        <span class="tag tag-buff">每日祈禱</span>
+        <p style="color:var(--text-secondary);font-size:0.9rem;margin-top:0.6rem;">
+          紅線垂落、神諭低語，命運與情感在此交纏。<br>
+          向神殿獻上祈願後，將得到祝福，或承擔代價。<br>
+          <em style="color:var(--text-primary);">愛從來不是毫無波瀾的恩賜。</em>
+        </p>
+        <p class="note">復活點 ｜ 低機率掉落：紅線小鈴鐺（幸運+1）、紅線繩結、紅線小餅乾</p>
+        <div class="callout">
+          <strong>🌹 每日祈禱（2026-07-12 新功能）：</strong>在神殿使用 <span class="cmd">SL 祈禱</span>，每日一次、消耗 1 行動力，隨機獲得當日 Buff 或 Debuff。已知 Buff：<span class="buff-text">玫瑰護佑</span>（防禦 +20%）、<span class="buff-text">誠心勞作</span>（打工報酬 +25%）、<span class="buff-text">星戀專注</span>（暴擊率 +12%）。想吃打工加成的話，記得先祈禱再打工。
+        </div>
+        <p class="note">⚠ 移動指令必須打全名 <span class="cmd">SL 前往 愛神神殿-宸光分殿</span>——只打「愛神神殿」會被系統拒絕。</p>
+        <figure class="map-figure">
+          <img src="../assets/love-temple.png" alt="愛神神殿">
+          <figcaption>▲ 愛神神殿——白色圓頂聖殿，水晶尖塔環繞，藍光從拱門深處透出</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="wilds">
+      <h2 class="section-h">🗺️ 野外地圖<span class="section-sub">宸光大陸</span></h2>
+      <div class="table-wrap">
+        <table class="data-table">
+          <thead>
+            <tr><th>地圖</th><th class="num-cell">建議等級</th><th class="num-cell">可露宿</th><th>怪物 / 素材</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="name-cell">☘️ 悠悠草原</td>
+              <td class="num-cell">LV1-3</td>
+              <td class="num-cell">可</td>
+              <td class="desc-cell">小葉蟲、風滾史萊姆、草原角兔　｜　風滾草、乾糧、史萊姆膠、羽毛、舊布包、種籽</td>
+            </tr>
+            <tr>
+              <td class="name-cell">🌲 初始之森</td>
+              <td class="num-cell">LV1-5</td>
+              <td class="num-cell">可</td>
+              <td class="desc-cell">草籽雀、小葉蟲、林間史萊姆、樹皮蟲、藤蔓鼠、迷路小狼、夜光菇怪　｜　森林露水、微光菌核、小獸牙、樹皮碎片</td>
+            </tr>
+            <tr>
+              <td class="name-cell">🌧️ 翎雨靜森</td>
+              <td class="num-cell">LV4-12</td>
+              <td class="num-cell">待確認</td>
+              <td class="desc-cell">探索型地圖（目前無戰鬥資料）　｜　記憶星砂、絮靈棉、微光粉塵、靜森露珠、迷途靈思、羽光碎片、小翎短箋</td>
+            </tr>
+            <tr>
+              <td class="name-cell">⛵️ 星露湖畔</td>
+              <td class="num-cell">LV6-9</td>
+              <td class="num-cell">可</td>
+              <td class="desc-cell">水泡史萊姆、湖畔小怪魚、星露螢群、湖草蟹、<span class="risk-warn">湖影水蛇（高危）</span>　｜　星露粉、湖水露珠、水蛇鱗、湖影牙</td>
+            </tr>
+            <tr>
+              <td class="name-cell">💎 靈礦洞穴<br><span class="risk-warn" style="font-size:0.75rem;">高危高收益</span></td>
+              <td class="num-cell">LV9+</td>
+              <td class="num-cell">可</td>
+              <td class="desc-cell">礦晶蝙蝠、迴聲岩靈、晶簇守衛、失光礦影、沉眠石靈、琥珀守礦蝶　｜　各類礦石素材</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="lingyu">
+      <div class="card">
+        <p style="font-weight:700;font-size:1.05rem;margin-bottom:0.4rem;">🌧️ 翎雨靜森</p>
+        <span class="tag">LV4-12</span>
+        <span class="tag">2026-07-11 開放</span>
+        <span class="tag">⚠️ 特殊條件</span>
+        <p style="color:var(--text-secondary);font-size:0.9rem;margin-top:0.6rem;">
+          細雨落個不停的靜謐森林，文字氛圍與愛神神殿同樣細膩。目前實測探索不會觸發戰鬥，
+          事件多為溫柔的拾取與相遇：分岔口的羽印、記憶殘星映路、迷途羽影安撫、小翎觀測筆記、
+          被等待的樹根、羽燈巡查……觀測筆記裡留著一句旁白——
+          <em style="color:var(--text-primary);">「有些光不是用來照路，是用來證明你還看得見。」</em>
+        </p>
+        <div class="callout">
+          <strong>🌱 隱藏區域伏筆：</strong>「羽光入口一閃」事件明講「若你曾經好好照顧過神秘種籽，也許下次能真的走進去」——這張地圖藏著要靠<a href="guide.html#intro" style="color:var(--accent);">種籽系統</a>養成解鎖的隱藏區域，認真照顧種籽後值得回來試試。
+        </div>
+        <p class="note">低靈思時探索會觸發「靈思過低的安撫」照顧事件——這張地圖會注意到你的狀態。</p>
+      </div>
+    </section>
+
+    <section id="islands">
+      <h2 class="section-h">🏝️ 失落群島<span class="section-sub">單向探索路線</span></h2>
+      <p style="color:var(--text-secondary);font-size:0.9rem;margin-bottom:0.5rem;">
+        從大陸港口出發的單向路線——不能像大陸地圖那樣自由跳轉，要照順序推進。
+        用移動指令選擇失落群島為目的地時，系統自動收取 <strong style="color:var(--text-primary);">150 魂晶</strong> 船資（不需另外購票）。
       </p>
-      <p style="color:var(--text-secondary);font-size:0.85rem;margin-top:0.5rem;">設施：商店、旅館（50魂晶/次，每日3次）、愛神神殿、懸賞公會、各類打工</p>
-      <div style="margin-top:0.8rem;">
-        <img src="../assets/starter-city.png" alt="稚匯之城 城門" style="width:100%;border-radius:8px;display:block;">
-        <p style="color:var(--text-secondary);font-size:0.78rem;margin-top:0.3rem;text-align:center;">▲ 稚匯之城——石橋通向藍白城門，瀑布從兩側流下，水晶燈柱引路</p>
+      <div class="route-flow">
+        <div class="route-stop">
+          <div class="route-name">🏖️ 潮光海岸</div>
+          <div class="route-lv">LV10-18・大陸港口</div>
+        </div>
+        <span class="route-arrow">➜</span>
+        <div class="route-stop">
+          <div class="route-name">🛶 沈船灣</div>
+          <div class="route-lv">LV18-26・群島①</div>
+        </div>
+        <span class="route-arrow">➜</span>
+        <div class="route-stop">
+          <div class="route-name">🌫️ 迷霧沼澤</div>
+          <div class="route-lv">LV20-28・群島②</div>
+        </div>
+        <span class="route-arrow">➜</span>
+        <div class="route-stop">
+          <div class="route-name">🏟️ 失落古城</div>
+          <div class="route-lv">LV28-36・群島③終點</div>
+        </div>
       </div>
-      <div style="margin-top:0.6rem;">
-        <img src="../assets/central-plaza.png" alt="稚匯之城 中央廣場" style="width:100%;border-radius:8px;display:block;">
-        <p style="color:var(--text-secondary);font-size:0.78rem;margin-top:0.3rem;text-align:center;">▲ 中央廣場——創角後踏入 SoulLine 的第一眼，藍色寶石噴泉佇立其中（設計概念圖）</p>
-      </div>
-    </div>
-
-    <div class="card" style="margin-bottom:1.5rem;">
-      <p style="font-weight:700;font-size:1.05rem;margin-bottom:0.4rem;">🏛️ 愛神神殿</p>
-      <span class="tag">聖地</span>
-      <span class="tag">稚匯之城內</span>
-      <p style="color:var(--text-secondary);font-size:0.9rem;margin-top:0.6rem;">
-        紅線垂落、神諭低語，命運與情感在此交纏。<br>
-        向神殿獻上祈願後，將得到祝福，或承擔代價。<br>
-        <em style="color:var(--text-primary);">愛從來不是毫無波瀾的恩賜。</em>
+      <p style="color:var(--text-secondary);font-size:0.9rem;line-height:1.9;">
+        潮光海岸的舊燈塔在夜裡忽明忽暗，替迷路的船影指路；沈船灣有打不開的船箱，
+        迷霧沼澤的失落螢火繞著祭壇飛，失落古城則迴盪著沒有人的問答聲——
+        牆上發光的殘句、地面的星紋，跟世界地圖上那首詩是同一個調性：
+        <em style="color:var(--text-primary);">「光與靈的指引，只照耀已知之地。」</em>
       </p>
-      <p style="color:var(--text-secondary);font-size:0.85rem;margin-top:0.5rem;">復活點 ｜ 低機率掉落：紅線小鈴鐺（幸運+1）、紅線繩結、紅線小餅乾</p>
-      <div style="margin-top:0.8rem;">
-        <img src="../assets/love-temple.png" alt="愛神神殿" style="width:100%;border-radius:8px;display:block;">
-        <p style="color:var(--text-secondary);font-size:0.78rem;margin-top:0.3rem;text-align:center;">▲ 愛神神殿——白色圓頂聖殿，水晶尖塔環繞，藍光從拱門深處透出</p>
+      <p class="note">※ 建議等級遠高於新手範圍，貿然闖入會被血虐；整條路線的怪物資料仍在收集中。</p>
+    </section>
+
+    <section id="upcoming">
+      <h2 class="section-h">🚧 開發中地圖</h2>
+      <div class="table-wrap">
+        <table class="data-table">
+          <thead>
+            <tr><th>地圖</th><th>狀態</th></tr>
+          </thead>
+          <tbody>
+            <tr><td class="name-cell">🐱 暮暉貓村</td><td class="desc-cell">開發中，預計近期上線</td></tr>
+            <tr><td class="name-cell">🐉 龍息幽谷</td><td class="desc-cell">地圖本體開發中，頻道尚未對任何玩家開放（移動指令可到達但看不到頻道，屬正常狀態不是 bug）</td></tr>
+          </tbody>
+        </table>
       </div>
-    </div>
+    </section>
 
-    <div style="overflow-x:auto;">
-      <table class="data-table">
-        <thead>
-          <tr><th>野外地圖</th><th class="num-cell">建議等級</th><th>可露宿</th><th>怪物 / 素材</th></tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td class="name-cell">☘️ 悠悠草原</td>
-            <td class="num-cell">LV1-3</td>
-            <td class="num-cell">可</td>
-            <td class="desc-cell">小葉蟲、風滾史萊姆、草原角兔　｜　風滾草、乾糧、史萊姆膠、羽毛</td>
-          </tr>
-          <tr>
-            <td class="name-cell">🌲 初始之森</td>
-            <td class="num-cell">LV1-5</td>
-            <td class="num-cell">否（判定為城鎮）</td>
-            <td class="desc-cell">草籽雀、小葉蟲、林間史萊姆、樹皮蟲、藤蔓鼠、迷路小狼、夜光菇怪</td>
-          </tr>
-          <tr>
-            <td class="name-cell">⛵️ 星露湖畔</td>
-            <td class="num-cell">LV6-9</td>
-            <td class="num-cell">可</td>
-            <td class="desc-cell">水泡史萊姆、湖畔小怪魚、星露螢群、湖草蟹、<span class="risk-warn">湖影水蛇（高危）</span></td>
-          </tr>
-          <tr>
-            <td class="name-cell">💎 靈礦洞穴<br><span class="risk-warn" style="font-size:0.75rem;">高危高收益</span></td>
-            <td class="num-cell">LV9+</td>
-            <td class="num-cell">可</td>
-            <td class="desc-cell">礦晶蝙蝠、迴聲岩靈（高危）、晶簇守衛（高危）</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-
-    <p style="color:var(--text-secondary);font-size:0.85rem;margin-top:1.5rem;">※ 地點詳細資訊、NPC、事件補充中；各地圖氛圍文字與怪物詳細數值見<a href="monsters.html" style="color:var(--accent);">怪物一覽</a></p>
+    <p class="note">※ 各地圖氛圍文字與怪物詳細數值見<a href="monsters.html" style="color:var(--accent);">怪物一覽</a>；移動與探索指令見<a href="commands.html" style="color:var(--accent);">指令大全</a></p>
   </main>
 
   <footer class="site-footer">
