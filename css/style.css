@@ -165,18 +165,19 @@ main {
 
 /* ── Homepage index — ledger-style table of contents ── */
 .wiki-index {
-  max-width: 720px;
+  max-width: 860px;
   margin: 0 auto;
   border-top: 2px solid var(--accent);
   border-bottom: 2px solid var(--accent);
+  text-align: left; /* .hero 的置中不往下滲 */
 }
 
 .wiki-index-row {
   display: grid;
-  grid-template-columns: 3rem 1fr auto;
+  grid-template-columns: 3.5rem 1fr auto;
   align-items: baseline;
-  gap: 1rem;
-  padding: 0.9rem 0.5rem;
+  gap: 1.25rem;
+  padding: 1.15rem 0.75rem;
   border-bottom: 1px solid var(--border);
   text-decoration: none;
   color: var(--text-primary);
@@ -187,39 +188,40 @@ main {
 
 .wiki-index-row:hover {
   background: var(--bg-card);
-  padding-left: 0.9rem;
+  padding-left: 1.15rem;
 }
 
 .wiki-index-num {
   font-family: var(--font-display);
   color: var(--accent-dim);
-  font-size: 0.85rem;
+  font-size: 0.95rem;
   text-align: right;
 }
 
 .wiki-index-name {
   font-weight: 600;
-  font-size: 1.05rem;
+  font-size: 1.2rem;
+  text-align: left;
 }
 
 .wiki-index-name .wiki-index-en {
   display: block;
   font-weight: 400;
-  font-size: 0.75rem;
+  font-size: 0.8rem;
   color: var(--text-secondary);
-  letter-spacing: 0.08em;
-  margin-top: 0.15rem;
+  letter-spacing: 0.1em;
+  margin-top: 0.2rem;
 }
 
 .wiki-index-desc {
-  font-size: 0.85rem;
+  font-size: 0.92rem;
   color: var(--text-secondary);
   text-align: right;
   white-space: nowrap;
 }
 
 @media (max-width: 600px) {
-  .wiki-index-row { grid-template-columns: 2.2rem 1fr; }
+  .wiki-index-row { grid-template-columns: 2.5rem 1fr; }
   .wiki-index-desc { display: none; }
 }
 
@@ -558,6 +560,58 @@ section { margin-bottom: 2.25rem; }
   transform: translateX(-50%);
   color: var(--text-secondary);
   font-size: 0.8rem;
+}
+
+/* ── Spoiler / 防雷元件 ─────────────────────────────── */
+.spoiler {
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--risk-caution);
+  border-radius: 0 6px 6px 0;
+  margin: 0.6rem 0;
+  background: var(--bg-card);
+}
+
+.spoiler summary {
+  cursor: pointer;
+  padding: 0.7rem 1rem;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  list-style: none;
+  user-select: none;
+  transition: color 0.15s;
+}
+
+.spoiler summary::-webkit-details-marker { display: none; }
+
+.spoiler summary::before {
+  content: "⚠ ";
+  color: var(--risk-caution);
+}
+
+.spoiler summary::after {
+  content: "（點擊展開）";
+  opacity: 0.55;
+  font-size: 0.8rem;
+  margin-left: 0.4rem;
+}
+
+.spoiler[open] summary::after { content: "（點擊收合）"; }
+
+.spoiler summary:hover { color: var(--text-primary); }
+
+.spoiler .spoiler-body {
+  padding: 0 1rem 0.9rem;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 2;
+}
+
+.spoiler .spoiler-body em { color: var(--text-primary); }
+
+.spoiler .spoiler-drop {
+  margin-top: 0.4rem;
+  font-size: 0.82rem;
+  color: var(--accent);
 }
 
 /* ── Footer ─────────────────────────────────────────── */

@@ -95,7 +95,7 @@
             <tr><th>怪物</th><th class="num-cell">回合</th><th class="num-cell">反擊傷害</th><th class="num-cell">靈思/魂晶</th><th>掉落</th></tr>
           </thead>
           <tbody>
-            <tr><td class="name-cell">🦇 礦晶蝙蝠<br><span class="risk-warn" style="font-size:0.75rem;">⚠ 危險</span></td><td class="num-cell">7</td><td class="num-cell">每回合19（6次共114）</td><td class="num-cell">14 / 6</td><td class="desc-cell">發光石、蝙蝠翼膜</td></tr>
+            <tr><td class="name-cell">🦇 礦晶蝙蝠<br><span class="risk-warn" style="font-size:0.75rem;">⚠ 高危</span></td><td class="num-cell">7+</td><td class="num-cell">每回合21</td><td class="num-cell">14 / 6</td><td class="desc-cell">發光石、蝙蝠翼膜　<span class="risk-warn" style="font-size:0.78rem;">2026-07-13實測：LV9攻擊22打7回合未擊倒（HP&gt;154），反被磨死——HP不滿170以上別碰</span></td></tr>
             <tr style="opacity:0.7;"><td class="name-cell">🪨 迴聲岩靈<br><span class="risk-warn" style="font-size:0.75rem;">⚠ 高危</span></td><td class="num-cell" colspan="3"><em>資料更新中（洞穴數值已調整）</em></td><td class="desc-cell">空鳴岩心、岩靈碎片</td></tr>
             <tr style="opacity:0.7;"><td class="name-cell">💠 晶簇守衛<br><span class="risk-warn" style="font-size:0.75rem;">⚠ 高危</span></td><td class="num-cell" colspan="3"><em>資料更新中（洞穴數值已調整）</em></td><td class="desc-cell">晶簇碎片</td></tr>
             <tr><td class="name-cell">🌑 失光礦影<br><span class="risk-warn" style="font-size:0.75rem;">⚠ 危險</span></td><td class="num-cell">5</td><td class="num-cell">每回合16（共80）</td><td class="num-cell">— / —</td><td class="desc-cell">失光礦片、暗淡羽光　<span style="opacity:0.7;">HP約145（攻擊力29實測）</span></td></tr>
@@ -120,8 +120,14 @@
     <div class="card" style="margin-top:2rem;background:var(--bg-secondary);">
       <p style="font-size:0.85rem;color:var(--text-secondary);">
         ⚔ <strong style="color:var(--text-primary);">戰鬥注意事項：</strong>
-        道具無法在戰鬥中使用；補血靠帳篷（野外地圖）或旅館（城內）。
-        初始之森、悠悠草原、星露湖畔、靈礦洞穴等野外地圖皆可露宿。
+        道具無法在戰鬥中使用；戰鬥一旦開始無法中途撤退，會打到一方倒下為止。
+        補血靠帳篷（野外地圖）或旅館（城內）。初始之森、悠悠草原、星露湖畔、靈礦洞穴等野外地圖皆可露宿。
+      </p>
+      <p style="font-size:0.85rem;color:var(--text-secondary);margin-top:0.6rem;">
+        💀 <strong style="color:var(--text-primary);">死亡機制（2026-07-13 實測）：</strong>
+        HP 歸零時，紅線會把靈魂牽回復活點「愛神神殿-宸光分殿」——HP／MP 僅恢復至最大值的
+        <span class="risk-warn">5%</span>、行動力歸零，需先休息或使用補給品才能再出發。
+        接戰前先確認自己扛得住整場的累積反擊傷害（回合數 × 每回合反擊）。
       </p>
     </div>
   </main>
