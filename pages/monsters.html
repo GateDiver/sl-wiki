@@ -20,50 +20,56 @@
       <a href="monsters.html" aria-current="page">怪物</a>
       <a href="guide.html">攻略</a>
       <a href="commands.html">指令</a>
+      <a href="fanart.html">粉絲二創</a>
     </nav>
     <button class="theme-toggle" id="theme-toggle">☀ 亮色</button>
   </header>
 
   <main>
     <div class="page-title">怪物一覽</div>
-    <div class="page-desc">出沒地點、攻防資訊、掉落物</div>
+    <div class="page-desc">出沒地點、等級/HP、掉落物</div>
     <div class="card" style="margin-bottom:1rem;font-size:0.85rem;color:var(--text-secondary);">
       ⚠ 怪物數值會隨版本調整，以下資料僅供參考。最新數值以實際遊戲為準。
+    </div>
+    <div class="card" style="margin-bottom:1rem;font-size:0.85rem;color:var(--text-secondary);">
+      💡 戰鬥小知識：普通攻擊傷害有小幅隨機浮動，也會暴擊（實測約平常的1.45倍）；<code>/防禦</code>降低本回合受到傷害35%；每隻怪固定有兩種技能（一種攻擊、一種可能是防禦/自身buff），少數幾場戰鬥不一定兩種都遇得到。用<code>/戰鬥 &lt;怪物名&gt;</code>可以直接指定目標開戰，不用靠探索碰運氣。
+    </div>
+    <div class="card" style="margin-bottom:1rem;font-size:0.85rem;color:var(--text-secondary);">
+      ⚠ 2026-07-18欄位改版：舊版「回合數／反擊傷害」是真正的回合制戰鬥上線前的舊資料，已經跟現在的機制對不上，全部移除。現在欄位改成「LV／HP／技能傷害」，技能傷害沒實測到的老實標「待實測」，不用面板顯示的「攻擊」數值去湊——那個不一定等於技能實際傷害。
     </div>
     <hr class="divider">
 
     <section style="margin-bottom:2rem;">
-      <h2 style="color:var(--accent);font-size:1rem;margin-bottom:1rem;">🌲 初始之森</h2>
+      <h2 style="color:var(--accent);font-size:1rem;margin-bottom:1rem;">🌿 悠悠草原 <span style="font-size:0.8rem;color:var(--text-secondary);">（建議LV1-3）</span></h2>
       <div style="overflow-x:auto;">
         <table class="data-table">
           <thead>
-            <tr><th>怪物</th><th class="num-cell">回合</th><th class="num-cell">反擊傷害</th><th class="num-cell">靈思/魂晶</th><th>掉落</th></tr>
+            <tr><th>怪物</th><th class="num-cell">LV</th><th class="num-cell">HP</th><th>技能傷害</th><th class="num-cell">靈思/魂晶</th><th>掉落</th></tr>
           </thead>
           <tbody>
-            <tr><td class="name-cell">🐦 草籽雀</td><td class="num-cell">—</td><td class="num-cell">—</td><td class="num-cell">—</td><td class="desc-cell">羽毛（確認）　<span style="opacity:0.7;">低階，初學者練習對象</span></td></tr>
-            <tr><td class="name-cell">🌿 小葉蟲</td><td class="num-cell">2</td><td class="num-cell">每回合2</td><td class="num-cell">2 / 1</td><td class="desc-cell">蟲殼碎片</td></tr>
-            <tr><td class="name-cell">🌿 林間史萊姆</td><td class="num-cell">2</td><td class="num-cell">每回合2</td><td class="num-cell">3 / 2</td><td class="desc-cell">無</td></tr>
-            <tr><td class="name-cell">🪵 樹皮蟲</td><td class="num-cell">2</td><td class="num-cell">每回合2</td><td class="num-cell">3 / 2</td><td class="desc-cell">樹皮碎片、蟲殼</td></tr>
-            <tr><td class="name-cell">🐀 藤蔓鼠</td><td class="num-cell">2</td><td class="num-cell">每回合3</td><td class="num-cell">4 / 2</td><td class="desc-cell">藤蔓纖維</td></tr>
-            <tr><td class="name-cell">🐺 迷路小狼<br><span class="risk-caution" style="font-size:0.75rem;">⚠ 注意</span></td><td class="num-cell">3</td><td class="num-cell">每回合4（共8）</td><td class="num-cell">5 / 3</td><td class="desc-cell">無　<span style="opacity:0.7;">低等玩家注意血量</span></td></tr>
-            <tr><td class="name-cell">🍄 夜光菇怪</td><td class="num-cell">2</td><td class="num-cell">每回合3</td><td class="num-cell">5 / 3</td><td class="desc-cell">夜光孢子（隨機）</td></tr>
+            <tr><td class="name-cell">🌿 小葉蟲</td><td class="num-cell">1</td><td class="num-cell">15</td><td class="desc-cell">葉片拍打3（攻擊）／躲進草叢（防禦buff，下回合少受1點傷害，不攻擊）</td><td class="num-cell">2 / 1</td><td class="desc-cell">蟲殼碎片（不保證每場都掉）</td></tr>
+            <tr><td class="name-cell">💨 風滾史萊姆</td><td class="num-cell">1</td><td class="num-cell">18</td><td class="desc-cell">彈跳撞擊2／滾動衝撞3</td><td class="num-cell">2 / 1</td><td class="desc-cell">風滾草、乾糧、史萊姆膠、透明膠核（隨機）　<span style="opacity:0.7;">打怪價值在素材不在練等</span></td></tr>
+            <tr><td class="name-cell">🐦 草籽雀</td><td class="num-cell">3</td><td class="num-cell">27</td><td class="desc-cell">亂羽拍打6／啄擊5</td><td class="num-cell">4 / 2</td><td class="desc-cell">柔軟羽毛　<span style="opacity:0.7;">比初始之森的更硬，注意血量</span></td></tr>
+            <tr><td class="name-cell">🐇 草原角兔<br><span style="font-size:0.75rem;opacity:0.7;">稀有</span></td><td class="num-cell">2</td><td class="num-cell">30</td><td class="desc-cell">驚慌亂撞5／撞擊3</td><td class="num-cell">3 / 1</td><td class="desc-cell">軟兔毛、青草（隨機）　<span style="opacity:0.7;">有機率中途逃跑不留戰利品，會暴擊（實測1.45倍）</span></td></tr>
           </tbody>
         </table>
       </div>
     </section>
 
     <section style="margin-bottom:2rem;">
-      <h2 style="color:var(--accent);font-size:1rem;margin-bottom:1rem;">🌿 悠悠草原</h2>
+      <h2 style="color:var(--accent);font-size:1rem;margin-bottom:1rem;">🌲 初始之森 <span style="font-size:0.8rem;color:var(--text-secondary);">（建議LV3-6）</span></h2>
       <div style="overflow-x:auto;">
         <table class="data-table">
           <thead>
-            <tr><th>怪物</th><th class="num-cell">回合</th><th class="num-cell">反擊傷害</th><th class="num-cell">靈思/魂晶</th><th>掉落</th></tr>
+            <tr><th>怪物</th><th class="num-cell">LV</th><th class="num-cell">HP</th><th>技能傷害</th><th class="num-cell">靈思/魂晶</th><th>掉落</th></tr>
           </thead>
           <tbody>
-            <tr><td class="name-cell">🌿 小葉蟲</td><td class="num-cell">2</td><td class="num-cell">共1</td><td class="num-cell">2 / 1</td><td class="desc-cell">無</td></tr>
-            <tr><td class="name-cell">💨 風滾史萊姆</td><td class="num-cell">—</td><td class="num-cell">—</td><td class="num-cell">2 / 1</td><td class="desc-cell">風滾草、乾糧、史萊姆膠、透明膠核（隨機）　<span style="opacity:0.7;">打怪價值在素材不在練等</span></td></tr>
-            <tr><td class="name-cell">🐦 草籽雀（三級）</td><td class="num-cell">—</td><td class="num-cell">—</td><td class="num-cell">—</td><td class="desc-cell">待確認　<span style="opacity:0.7;">比初始之森的更硬，注意血量</span></td></tr>
-            <tr><td class="name-cell">🐇 草原角兔</td><td class="num-cell">2</td><td class="num-cell">每回合2</td><td class="num-cell">3 / 1</td><td class="desc-cell">無</td></tr>
+            <tr><td class="name-cell">🌿 小葉蟲</td><td class="num-cell">1</td><td class="num-cell">15</td><td class="desc-cell"><em>待實測</em></td><td class="num-cell">2 / 1</td><td class="desc-cell">蟲殼碎片</td></tr>
+            <tr><td class="name-cell">🌿 林間史萊姆</td><td class="num-cell">3</td><td class="num-cell">27</td><td class="desc-cell"><em>待實測</em></td><td class="num-cell">3 / 2</td><td class="desc-cell">無</td></tr>
+            <tr><td class="name-cell">🪵 樹皮蟲</td><td class="num-cell">3</td><td class="num-cell">24</td><td class="desc-cell"><em>待實測</em></td><td class="num-cell">3 / 2</td><td class="desc-cell">樹皮碎片、蟲殼</td></tr>
+            <tr><td class="name-cell">🐀 藤蔓鼠</td><td class="num-cell">4</td><td class="num-cell">33</td><td class="desc-cell"><em>待實測</em></td><td class="num-cell">4 / 2</td><td class="desc-cell">藤蔓纖維</td></tr>
+            <tr><td class="name-cell">🐺 迷路小狼<br><span class="risk-caution" style="font-size:0.75rem;">⚠ 注意</span></td><td class="num-cell">5</td><td class="num-cell">42</td><td class="desc-cell"><em>待實測</em></td><td class="num-cell">5 / 3</td><td class="desc-cell">無　<span style="opacity:0.7;">低等玩家注意血量</span></td></tr>
+            <tr><td class="name-cell">🍄 夜光菇怪</td><td class="num-cell">6</td><td class="num-cell">60</td><td class="desc-cell"><em>待實測</em></td><td class="num-cell">5 / 3</td><td class="desc-cell">夜光孢子（隨機）</td></tr>
           </tbody>
         </table>
       </div>
@@ -74,46 +80,175 @@
       <div style="overflow-x:auto;">
         <table class="data-table">
           <thead>
-            <tr><th>怪物</th><th class="num-cell">回合</th><th class="num-cell">反擊傷害</th><th class="num-cell">靈思/魂晶</th><th>掉落</th></tr>
+            <tr><th>怪物</th><th class="num-cell">LV</th><th class="num-cell">HP</th><th>技能傷害</th><th class="num-cell">靈思/魂晶</th><th>掉落</th></tr>
           </thead>
           <tbody>
-            <tr><td class="name-cell">💧 水泡史萊姆</td><td class="num-cell">4</td><td class="num-cell">每回合9（共27）</td><td class="num-cell">7 / 3</td><td class="desc-cell">湖水露珠（低機率）</td></tr>
-            <tr><td class="name-cell">🐟 湖畔小怪魚</td><td class="num-cell">3</td><td class="num-cell">每回合6（共12）</td><td class="num-cell">7 / 3</td><td class="desc-cell">小魚鱗、湖畔魚肉</td></tr>
-            <tr><td class="name-cell">🐍 湖影水蛇<br><span class="risk-warn" style="font-size:0.75rem;">⚠ 高危</span></td><td class="num-cell">6</td><td class="num-cell">每回合9（共45）</td><td class="num-cell">11 / 5</td><td class="desc-cell">無　<span class="risk-warn" style="font-size:0.78rem;">LV4 HP115打完僅剩5，建議LV8+挑戰</span></td></tr>
-            <tr><td class="name-cell">✨ 星露螢群</td><td class="num-cell">4</td><td class="num-cell">每回合5（共15）</td><td class="num-cell">9 / 4</td><td class="desc-cell">星露粉、螢光翅粉</td></tr>
-            <tr><td class="name-cell">🦀 湖草蟹<br><span class="risk-caution" style="font-size:0.75rem;">⚠ 注意</span></td><td class="num-cell">6</td><td class="num-cell">每回合13（共65）</td><td class="num-cell">9 / 4</td><td class="desc-cell">蟹殼、湖草（低機率）</td></tr>
+            <tr><td class="name-cell">💧 水泡史萊姆</td><td class="num-cell">6</td><td class="num-cell">90</td><td class="desc-cell"><em>待實測</em>　<span style="opacity:0.7;">面板攻擊15</span></td><td class="num-cell">7 / 3</td><td class="desc-cell">湖水露珠（低機率）</td></tr>
+            <tr><td class="name-cell">🐟 湖畔小怪魚</td><td class="num-cell">6</td><td class="num-cell">80</td><td class="desc-cell"><em>待實測</em>　<span style="opacity:0.7;">面板攻擊17</span></td><td class="num-cell">7 / 3</td><td class="desc-cell">小魚鱗、湖畔魚肉</td></tr>
+            <tr><td class="name-cell">🐍 湖影水蛇<br><span class="risk-warn" style="font-size:0.75rem;">⚠ 高危</span></td><td class="num-cell">9</td><td class="num-cell">155</td><td class="desc-cell"><em>待實測</em>　<span style="opacity:0.7;">面板攻擊25</span></td><td class="num-cell">11 / 5</td><td class="desc-cell">無　<span class="risk-warn" style="font-size:0.78rem;">HP最高，建議LV8+挑戰</span></td></tr>
+            <tr><td class="name-cell">✨ 星露螢群</td><td class="num-cell">7</td><td class="num-cell">100</td><td class="desc-cell"><em>待實測</em>　<span style="opacity:0.7;">面板攻擊15</span></td><td class="num-cell">9 / 4</td><td class="desc-cell">星露粉、螢光翅粉</td></tr>
+            <tr><td class="name-cell">🦀 湖草蟹<br><span class="risk-caution" style="font-size:0.75rem;">⚠ 注意</span></td><td class="num-cell">8</td><td class="num-cell">130</td><td class="desc-cell"><em>待實測</em>　<span style="opacity:0.7;">面板攻擊20</span></td><td class="num-cell">9 / 4</td><td class="desc-cell">蟹殼、湖草（低機率）</td></tr>
           </tbody>
         </table>
       </div>
+      <p style="color:var(--text-secondary);font-size:0.82rem;margin-top:0.75rem;">※「面板攻擊」是選怪面板顯示的數值，不一定等於實戰技能傷害，見上方說明。</p>
     </section>
 
-    <section>
-      <h2 style="color:var(--accent);font-size:1rem;margin-bottom:1rem;">💎 靈礦洞穴 <span style="font-size:0.8rem;color:var(--text-secondary);">（建議LV9+，高危高收益）</span></h2>
+    <section style="margin-bottom:2rem;">
+      <h2 style="color:var(--accent);font-size:1rem;margin-bottom:1rem;">💎 靈礦洞穴 <span style="font-size:0.8rem;color:var(--text-secondary);">（建議LV9-14，高危高收益）</span></h2>
       <div style="overflow-x:auto;">
         <table class="data-table">
           <thead>
-            <tr><th>怪物</th><th class="num-cell">回合</th><th class="num-cell">反擊傷害</th><th class="num-cell">靈思/魂晶</th><th>掉落</th></tr>
+            <tr><th>怪物</th><th class="num-cell">LV</th><th class="num-cell">HP</th><th>技能傷害</th><th class="num-cell">靈思/魂晶</th><th>掉落</th></tr>
           </thead>
           <tbody>
-            <tr><td class="name-cell">🦇 礦晶蝙蝠<br><span class="risk-warn" style="font-size:0.75rem;">⚠ 高危</span></td><td class="num-cell">7+</td><td class="num-cell">每回合21</td><td class="num-cell">14 / 6</td><td class="desc-cell">發光石、蝙蝠翼膜　<span class="risk-warn" style="font-size:0.78rem;">2026-07-13實測：LV9攻擊22打7回合未擊倒（HP&gt;154），反被磨死——HP不滿170以上別碰</span></td></tr>
-            <tr style="opacity:0.7;"><td class="name-cell">🪨 迴聲岩靈<br><span class="risk-warn" style="font-size:0.75rem;">⚠ 高危</span></td><td class="num-cell" colspan="3"><em>資料更新中（洞穴數值已調整）</em></td><td class="desc-cell">空鳴岩心、岩靈碎片</td></tr>
-            <tr style="opacity:0.7;"><td class="name-cell">💠 晶簇守衛<br><span class="risk-warn" style="font-size:0.75rem;">⚠ 高危</span></td><td class="num-cell" colspan="3"><em>資料更新中（洞穴數值已調整）</em></td><td class="desc-cell">晶簇碎片</td></tr>
-            <tr><td class="name-cell">🌑 失光礦影<br><span class="risk-warn" style="font-size:0.75rem;">⚠ 危險</span></td><td class="num-cell">5</td><td class="num-cell">每回合16（共80）</td><td class="num-cell">— / —</td><td class="desc-cell">失光礦片、暗淡羽光　<span style="opacity:0.7;">HP約145（攻擊力29實測）</span></td></tr>
-            <tr><td class="name-cell">🗿 沉眠石靈<br><span class="risk-warn" style="font-size:0.75rem;">⚠ 高危</span></td><td class="num-cell">7</td><td class="num-cell">每回合20（共140）</td><td class="num-cell">— / —</td><td class="desc-cell">沉眠石核　<span class="risk-warn" style="font-size:0.78rem;">總傷140，血量不滿別碰</span></td></tr>
-            <tr><td class="name-cell">🦋 琥珀守礦蝶<br><span class="risk-warn" style="font-size:0.75rem;">⚠ 高危</span></td><td class="num-cell">5+</td><td class="num-cell">每回合18</td><td class="num-cell">— / —</td><td class="desc-cell">琥星珀礦（推測）　<span class="risk-warn" style="font-size:0.78rem;">HP未知，5回合未擊倒紀錄，滿血再挑戰</span></td></tr>
+            <tr><td class="name-cell">⛏️ 裂石蟲</td><td class="num-cell">9</td><td class="num-cell">145</td><td class="desc-cell"><em>待實測</em>　<span style="opacity:0.7;">面板攻擊22</span></td><td class="num-cell">—</td><td class="desc-cell">待實測</td></tr>
+            <tr><td class="name-cell">🕳️ 洞穴史萊姆</td><td class="num-cell">10</td><td class="num-cell">160</td><td class="desc-cell"><em>待實測</em>　<span style="opacity:0.7;">面板攻擊25</span></td><td class="num-cell">—</td><td class="desc-cell">待實測</td></tr>
+            <tr><td class="name-cell">🦇 礦晶蝙蝠<br><span class="risk-warn" style="font-size:0.75rem;">⚠ 高危</span></td><td class="num-cell">11</td><td class="num-cell">175</td><td class="desc-cell"><em>待實測</em>　<span style="opacity:0.7;">面板攻擊27</span></td><td class="num-cell">14 / 6</td><td class="desc-cell">發光石、蝙蝠翼膜　<span class="risk-warn" style="font-size:0.78rem;">HP不滿170以上別碰</span></td></tr>
+            <tr><td class="name-cell">🐛 靈礦幼蟲</td><td class="num-cell">12</td><td class="num-cell">190</td><td class="desc-cell"><em>待實測</em>　<span style="opacity:0.7;">面板攻擊30</span></td><td class="num-cell">—</td><td class="desc-cell">待實測</td></tr>
+            <tr><td class="name-cell">💠 晶簇守衛<br><span class="risk-warn" style="font-size:0.75rem;">⚠ 高危</span></td><td class="num-cell">13</td><td class="num-cell">275</td><td class="desc-cell"><em>待實測</em>　<span style="opacity:0.7;">面板攻擊49（本區最高）</span></td><td class="num-cell">—</td><td class="desc-cell">晶簇碎片</td></tr>
+            <tr><td class="name-cell">🪨 迴聲岩靈<br><span class="risk-warn" style="font-size:0.75rem;">⚠ 高危</span></td><td class="num-cell">14</td><td class="num-cell">200</td><td class="desc-cell"><em>待實測</em>　<span style="opacity:0.7;">面板攻擊32</span></td><td class="num-cell">—</td><td class="desc-cell">空鳴岩心、岩靈碎片</td></tr>
+            <tr><td class="name-cell">🪲 晶殼蟲</td><td class="num-cell">15</td><td class="num-cell">120</td><td class="desc-cell"><em>待實測</em>　<span style="opacity:0.7;">面板攻擊20</span></td><td class="num-cell">—</td><td class="desc-cell">待實測</td></tr>
+            <tr><td class="name-cell">🌑 失光礦影<br><span class="risk-warn" style="font-size:0.75rem;">⚠ 危險</span></td><td class="num-cell">18</td><td class="num-cell">144</td><td class="desc-cell"><em>待實測</em>　<span style="opacity:0.7;">面板攻擊25</span></td><td class="num-cell">— / —</td><td class="desc-cell">失光礦片、暗淡羽光</td></tr>
+            <tr><td class="name-cell">🗿 沉眠石靈<br><span class="risk-warn" style="font-size:0.75rem;">⚠ 高危</span></td><td class="num-cell">22</td><td class="num-cell">195</td><td class="desc-cell"><em>待實測</em>　<span style="opacity:0.7;">面板攻擊30</span></td><td class="num-cell">— / —</td><td class="desc-cell">沉眠石核　<span class="risk-warn" style="font-size:0.78rem;">血量不滿別碰</span></td></tr>
+            <tr><td class="name-cell">🦋 琥珀守礦蝶<br><span class="risk-warn" style="font-size:0.75rem;">⚠ 高危</span></td><td class="num-cell">25</td><td class="num-cell">275</td><td class="desc-cell"><em>待實測</em>　<span style="opacity:0.7;">面板攻擊31</span></td><td class="num-cell">— / —</td><td class="desc-cell">琥星珀礦（推測）　<span class="risk-warn" style="font-size:0.78rem;">滿血再挑戰</span></td></tr>
           </tbody>
         </table>
       </div>
-      <p style="color:var(--text-secondary);font-size:0.82rem;margin-top:0.75rem;">※ 洞穴怪物數值近期調整，部分資料待更新；失光礦影／沉眠石靈／琥珀守礦蝶為裝備攻擊力29的角色實測</p>
+      <p style="color:var(--text-secondary);font-size:0.82rem;margin-top:0.75rem;">※ LV/HP/面板攻擊已由歐瑟爾截圖確認（2026-07-18），技能實際傷害還沒人實測過，待補</p>
     </section>
 
-    <section>
+    <section style="margin-bottom:2rem;">
       <h2 style="color:var(--accent);font-size:1rem;margin-bottom:1rem;">🌧️ 翎雨靜森 <span style="font-size:0.8rem;color:var(--text-secondary);">（LV4-12，2026-07-11 開放）</span></h2>
-      <div class="card">
-        <p style="font-size:0.9rem;color:var(--text-secondary);line-height:1.9;">
-          目前實測為<strong style="color:var(--text-primary);">純探索型地圖</strong>——探索事件均為拾取、觀察與安撫類（迷霧絮靈、迷途羽影、夜行小獸的腳印），
-          尚未記錄到任何戰鬥遭遇。低靈思時會觸發照顧型事件。若後續版本加入怪物再更新此區。
+      <div class="card" style="margin-bottom:1rem;">
+        <p style="font-size:0.85rem;color:var(--text-secondary);">
+          ⚠ 更正：先前記錄「純探索無戰鬥」是舊資料。皊鴉官方地圖頻道已列出完整怪物名單，代表這裡其實有戰鬥遭遇，只是實測樣本還沒收集到——探索時仍常見拾取/觀察/安撫類事件（迷霧絮靈、迷途羽影等），但不代表不會打怪。
         </p>
+      </div>
+      <div style="overflow-x:auto;">
+        <table class="data-table">
+          <thead>
+            <tr><th>怪物</th><th class="num-cell">LV</th><th class="num-cell">HP</th><th>技能傷害</th><th class="num-cell">靈思/魂晶</th><th>掉落</th></tr>
+          </thead>
+          <tbody>
+            <tr><td class="name-cell">🌫️ 迷霧絮靈</td><td class="num-cell">1</td><td class="num-cell">12</td><td class="desc-cell"><em>待實測</em>　<span style="opacity:0.7;">面板攻擊2</span></td><td class="num-cell">—</td><td class="desc-cell">待實測</td></tr>
+            <tr><td class="name-cell">🎐 雨聲殘響</td><td class="num-cell">2</td><td class="num-cell">18</td><td class="desc-cell"><em>待實測</em>　<span style="opacity:0.7;">面板攻擊2</span></td><td class="num-cell">—</td><td class="desc-cell">待實測</td></tr>
+            <tr><td class="name-cell">🕊️ 濕羽小影</td><td class="num-cell">3</td><td class="num-cell">24</td><td class="desc-cell"><em>待實測</em>　<span style="opacity:0.7;">面板攻擊4</span></td><td class="num-cell">—</td><td class="desc-cell">待實測</td></tr>
+            <tr><td class="name-cell">🕊️ 迷途羽影</td><td class="num-cell">4</td><td class="num-cell">42</td><td class="desc-cell"><em>待實測</em>　<span style="opacity:0.7;">面板攻擊8</span></td><td class="num-cell">—</td><td class="desc-cell">待實測</td></tr>
+            <tr><td class="name-cell">🌿 低語藤靈</td><td class="num-cell">5</td><td class="num-cell">52</td><td class="desc-cell"><em>待實測</em>　<span style="opacity:0.7;">面板攻擊6</span></td><td class="num-cell">—</td><td class="desc-cell">待實測</td></tr>
+            <tr><td class="name-cell">🕊️ 失光羽影</td><td class="num-cell">6</td><td class="num-cell">57</td><td class="desc-cell"><em>待實測</em>　<span style="opacity:0.7;">面板攻擊10</span></td><td class="num-cell">—</td><td class="desc-cell">待實測</td></tr>
+            <tr><td class="name-cell">🦌 霧燈鹿<br><span style="font-size:0.75rem;opacity:0.7;">稀有</span></td><td class="num-cell">8</td><td class="num-cell">75</td><td class="desc-cell">「引路微光」不攻擊，疑似不攻擊也能拿靈思（2026-07-15實測疑似無效，待確認）　<span style="opacity:0.7;">面板攻擊4</span></td><td class="num-cell">—</td><td class="desc-cell">待實測</td></tr>
+            <tr><td class="name-cell">✨ 星圖偏影</td><td class="num-cell">8</td><td class="num-cell">63</td><td class="desc-cell"><em>待實測</em>　<span style="opacity:0.7;">面板攻擊10</span></td><td class="num-cell">—</td><td class="desc-cell">待實測</td></tr>
+            <tr><td class="name-cell">☄️ 記憶殘星</td><td class="num-cell">10</td><td class="num-cell">82</td><td class="desc-cell"><em>待實測</em>　<span style="opacity:0.7;">面板攻擊12</span></td><td class="num-cell">—</td><td class="desc-cell">待實測</td></tr>
+            <tr><td class="name-cell">🌌 失序星砂</td><td class="num-cell">12</td><td class="num-cell">162</td><td class="desc-cell"><em>待實測</em>　<span style="opacity:0.7;">面板攻擊21</span></td><td class="num-cell">—</td><td class="desc-cell">待實測</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section style="margin-bottom:2rem;">
+      <h2 style="color:var(--accent);font-size:1rem;margin-bottom:1rem;">🏖️ 潮光海岸 <span style="font-size:0.8rem;color:var(--text-secondary);">（建議LV10-18）</span></h2>
+      <div style="overflow-x:auto;">
+        <table class="data-table">
+          <thead>
+            <tr><th>怪物</th><th class="num-cell">LV</th><th class="num-cell">HP</th><th>技能傷害</th><th class="num-cell">靈思/魂晶</th><th>掉落</th></tr>
+          </thead>
+          <tbody>
+            <tr><td class="name-cell">🌊 海風史萊姆</td><td class="num-cell">10</td><td class="num-cell">135</td><td class="desc-cell"><em>待實測</em>　<span style="opacity:0.7;">面板攻擊24</span></td><td class="num-cell">—</td><td class="desc-cell">待實測</td></tr>
+            <tr><td class="name-cell">🦀 潮貝蟹</td><td class="num-cell">11</td><td class="num-cell">155</td><td class="desc-cell"><em>待實測</em>　<span style="opacity:0.7;">面板攻擊26</span></td><td class="num-cell">—</td><td class="desc-cell">待實測</td></tr>
+            <tr><td class="name-cell">🐠 礁池小魚怪</td><td class="num-cell">12</td><td class="num-cell">170</td><td class="desc-cell"><em>待實測</em>　<span style="opacity:0.7;">面板攻擊28</span></td><td class="num-cell">—</td><td class="desc-cell">待實測</td></tr>
+            <tr><td class="name-cell">🫧 鹽泡史萊姆</td><td class="num-cell">13</td><td class="num-cell">185</td><td class="desc-cell"><em>待實測</em>　<span style="opacity:0.7;">面板攻擊30</span></td><td class="num-cell">—</td><td class="desc-cell">待實測</td></tr>
+            <tr><td class="name-cell">🦇 海霧蝙蝠</td><td class="num-cell">15</td><td class="num-cell">205</td><td class="desc-cell"><em>待實測</em>　<span style="opacity:0.7;">面板攻擊33</span></td><td class="num-cell">—</td><td class="desc-cell">待實測</td></tr>
+            <tr><td class="name-cell">🏮 燈影殘響</td><td class="num-cell">15</td><td class="num-cell">210</td><td class="desc-cell"><em>待實測</em>　<span style="opacity:0.7;">面板攻擊34</span></td><td class="num-cell">—</td><td class="desc-cell">待實測</td></tr>
+            <tr><td class="name-cell">🦀 黑礁蟹</td><td class="num-cell">16</td><td class="num-cell">230</td><td class="desc-cell"><em>待實測</em>　<span style="opacity:0.7;">面板攻擊36</span></td><td class="num-cell">—</td><td class="desc-cell">待實測</td></tr>
+            <tr><td class="name-cell">🐍 月潮水蛇</td><td class="num-cell">18</td><td class="num-cell">270</td><td class="desc-cell"><em>待實測</em>　<span style="opacity:0.7;">面板攻擊42</span></td><td class="num-cell">—</td><td class="desc-cell">待實測</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section style="margin-bottom:2rem;">
+      <h2 style="color:var(--accent);font-size:1rem;margin-bottom:1rem;">🌆 暮暉貓村 <span style="font-size:0.8rem;color:var(--text-secondary);">（隱藏地圖）</span></h2>
+      <div class="card" style="margin-bottom:1rem;">
+        <p style="font-size:0.9rem;color:var(--text-secondary);line-height:1.9;">
+          只在黃昏後真正醒來的村落。屋頂、欄杆與窄巷裡總有黑貓出沒，夕陽把牆面染成金色，遠處偶爾傳來小提琴聲。這裡像有人一直在等旅人回家。
+        </p>
+      </div>
+      <div style="overflow-x:auto;">
+        <table class="data-table">
+          <thead>
+            <tr><th>怪物</th><th class="num-cell">LV</th><th class="num-cell">HP</th><th>技能傷害</th><th class="num-cell">靈思/魂晶</th><th>掉落</th></tr>
+          </thead>
+          <tbody>
+            <tr style="opacity:0.7;"><td class="name-cell">🐈‍⬛ 暮影毛球</td><td class="num-cell"><em>待實測</em></td><td class="num-cell"><em>待實測</em></td><td class="desc-cell"><em>待實測</em></td><td class="num-cell">—</td><td class="desc-cell">待實測</td></tr>
+            <tr style="opacity:0.7;"><td class="name-cell">🦋 黃昏燈蛾</td><td class="num-cell"><em>待實測</em></td><td class="num-cell"><em>待實測</em></td><td class="desc-cell"><em>待實測</em></td><td class="num-cell">—</td><td class="desc-cell">待實測</td></tr>
+            <tr style="opacity:0.7;"><td class="name-cell">🌙 迷路的夢影</td><td class="num-cell"><em>待實測</em></td><td class="num-cell"><em>待實測</em></td><td class="desc-cell"><em>待實測</em></td><td class="num-cell">—</td><td class="desc-cell">待實測</td></tr>
+            <tr style="opacity:0.7;"><td class="name-cell">🐈‍⬛ 夜巡影貓</td><td class="num-cell"><em>待實測</em></td><td class="num-cell"><em>待實測</em></td><td class="desc-cell"><em>待實測</em></td><td class="num-cell">—</td><td class="desc-cell">待實測</td></tr>
+            <tr style="opacity:0.7;"><td class="name-cell">🎻 失序琴影</td><td class="num-cell"><em>待實測</em></td><td class="num-cell"><em>待實測</em></td><td class="desc-cell"><em>待實測</em></td><td class="num-cell">—</td><td class="desc-cell">待實測</td></tr>
+            <tr style="opacity:0.7;"><td class="name-cell">🔔 暮鐘殘響</td><td class="num-cell"><em>待實測</em></td><td class="num-cell"><em>待實測</em></td><td class="desc-cell"><em>待實測</em></td><td class="num-cell">—</td><td class="desc-cell">待實測</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section style="margin-bottom:2rem;">
+      <h2 style="color:var(--accent);font-size:1rem;margin-bottom:1rem;">🛶 沈船灣 <span style="font-size:0.8rem;color:var(--text-secondary);">（失落群島①，建議LV18-26）</span></h2>
+      <div style="overflow-x:auto;">
+        <table class="data-table">
+          <thead>
+            <tr><th>怪物</th><th class="num-cell">LV</th><th class="num-cell">HP</th><th>技能傷害</th><th class="num-cell">靈思/魂晶</th><th>掉落</th></tr>
+          </thead>
+          <tbody>
+            <tr><td class="name-cell">🪵 漂流木靈</td><td class="num-cell">18</td><td class="num-cell">285</td><td class="desc-cell"><em>待實測</em>　<span style="opacity:0.7;">面板攻擊44</span></td><td class="num-cell">—</td><td class="desc-cell">待實測</td></tr>
+            <tr><td class="name-cell">🦀 破帆蟹</td><td class="num-cell">18</td><td class="num-cell">310</td><td class="desc-cell"><em>待實測</em>　<span style="opacity:0.7;">面板攻擊46</span></td><td class="num-cell">—</td><td class="desc-cell">待實測</td></tr>
+            <tr><td class="name-cell">🪱 船蛀蟲</td><td class="num-cell">20</td><td class="num-cell">335</td><td class="desc-cell"><em>待實測</em>　<span style="opacity:0.7;">面板攻擊50</span></td><td class="num-cell">—</td><td class="desc-cell">待實測</td></tr>
+            <tr><td class="name-cell">🌊 濕木殘影</td><td class="num-cell">21</td><td class="num-cell">360</td><td class="desc-cell"><em>待實測</em>　<span style="opacity:0.7;">面板攻擊54</span></td><td class="num-cell">—</td><td class="desc-cell">待實測</td></tr>
+            <tr><td class="name-cell">⚫ 黑水史萊姆</td><td class="num-cell">22</td><td class="num-cell">385</td><td class="desc-cell"><em>待實測</em>　<span style="opacity:0.7;">面板攻擊58</span></td><td class="num-cell">—</td><td class="desc-cell">待實測</td></tr>
+            <tr><td class="name-cell">⛓️ 鎖鏈殘影</td><td class="num-cell">23</td><td class="num-cell">410</td><td class="desc-cell"><em>待實測</em>　<span style="opacity:0.7;">面板攻擊62</span></td><td class="num-cell">—</td><td class="desc-cell">待實測</td></tr>
+            <tr><td class="name-cell">🏴‍☠️ 船長殘響</td><td class="num-cell">25</td><td class="num-cell">520</td><td class="desc-cell"><em>待實測</em>　<span style="opacity:0.7;">面板攻擊76（本區最高）</span></td><td class="num-cell">—</td><td class="desc-cell">待實測</td></tr>
+            <tr><td class="name-cell">🧭 羅盤幽影</td><td class="num-cell">26</td><td class="num-cell">470</td><td class="desc-cell"><em>待實測</em>　<span style="opacity:0.7;">面板攻擊72</span></td><td class="num-cell">—</td><td class="desc-cell">待實測</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section style="margin-bottom:2rem;">
+      <h2 style="color:var(--accent);font-size:1rem;margin-bottom:1rem;">🌫️ 迷霧沼澤 <span style="font-size:0.8rem;color:var(--text-secondary);">（失落群島②，建議LV20-28）</span></h2>
+      <div style="overflow-x:auto;">
+        <table class="data-table">
+          <thead>
+            <tr><th>怪物</th><th class="num-cell">LV</th><th class="num-cell">HP</th><th>技能傷害</th><th class="num-cell">靈思/魂晶</th><th>掉落</th></tr>
+          </thead>
+          <tbody>
+            <tr><td class="name-cell">🟢 沼泥史萊姆</td><td class="num-cell">20</td><td class="num-cell">350</td><td class="desc-cell"><em>待實測</em>　<span style="opacity:0.7;">面板攻擊52</span></td><td class="num-cell">—</td><td class="desc-cell">待實測</td></tr>
+            <tr><td class="name-cell">🌿 腐根藤</td><td class="num-cell">21</td><td class="num-cell">380</td><td class="desc-cell"><em>待實測</em>　<span style="opacity:0.7;">面板攻擊55</span></td><td class="num-cell">—</td><td class="desc-cell">待實測</td></tr>
+            <tr><td class="name-cell">🐸 毒霧蛙</td><td class="num-cell">23</td><td class="num-cell">410</td><td class="desc-cell"><em>待實測</em>　<span style="opacity:0.7;">面板攻擊62</span></td><td class="num-cell">—</td><td class="desc-cell">待實測</td></tr>
+            <tr><td class="name-cell">🗿 沉石守衛</td><td class="num-cell">24</td><td class="num-cell">560</td><td class="desc-cell"><em>待實測</em>　<span style="opacity:0.7;">面板攻擊72（本區最高）</span></td><td class="num-cell">—</td><td class="desc-cell">待實測</td></tr>
+            <tr><td class="name-cell">👤 霧中祭司影</td><td class="num-cell">26</td><td class="num-cell">485</td><td class="desc-cell"><em>待實測</em>　<span style="opacity:0.7;">面板攻擊70</span></td><td class="num-cell">—</td><td class="desc-cell">待實測</td></tr>
+            <tr><td class="name-cell">🌫️ 失落螢火蟲群</td><td class="num-cell">25</td><td class="num-cell">430</td><td class="desc-cell"><em>待實測</em>　<span style="opacity:0.7;">面板攻擊65</span></td><td class="num-cell">—</td><td class="desc-cell">待實測</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section style="margin-bottom:2rem;">
+      <h2 style="color:var(--accent);font-size:1rem;margin-bottom:1rem;">🏟️ 失落古城 <span style="font-size:0.8rem;color:var(--text-secondary);">（失落群島③終點，建議LV28-36）</span></h2>
+      <div style="overflow-x:auto;">
+        <table class="data-table">
+          <thead>
+            <tr><th>怪物</th><th class="num-cell">LV</th><th class="num-cell">HP</th><th>技能傷害</th><th class="num-cell">靈思/魂晶</th><th>掉落</th></tr>
+          </thead>
+          <tbody>
+            <tr><td class="name-cell">🪨 古城石蟲</td><td class="num-cell">28</td><td class="num-cell">520</td><td class="desc-cell"><em>待實測</em>　<span style="opacity:0.7;">面板攻擊78</span></td><td class="num-cell">—</td><td class="desc-cell">待實測</td></tr>
+            <tr><td class="name-cell">🚪 門影殘兵</td><td class="num-cell">29</td><td class="num-cell">560</td><td class="desc-cell"><em>待實測</em>　<span style="opacity:0.7;">面板攻擊82</span></td><td class="num-cell">—</td><td class="desc-cell">待實測</td></tr>
+            <tr><td class="name-cell">🗿 無臉石像</td><td class="num-cell">30</td><td class="num-cell">720</td><td class="desc-cell"><em>待實測</em>　<span style="opacity:0.7;">面板攻擊92</span></td><td class="num-cell">—</td><td class="desc-cell">待實測</td></tr>
+            <tr><td class="name-cell">🕳️ 裂縫殘響</td><td class="num-cell">31</td><td class="num-cell">610</td><td class="desc-cell"><em>待實測</em>　<span style="opacity:0.7;">面板攻擊88</span></td><td class="num-cell">—</td><td class="desc-cell">待實測</td></tr>
+            <tr><td class="name-cell">📖 書頁殘靈</td><td class="num-cell">32</td><td class="num-cell">640</td><td class="desc-cell"><em>待實測</em>　<span style="opacity:0.7;">面板攻擊90</span></td><td class="num-cell">—</td><td class="desc-cell">待實測</td></tr>
+            <tr><td class="name-cell">⚫ 墨粉小影</td><td class="num-cell">32</td><td class="num-cell">610</td><td class="desc-cell"><em>待實測</em>　<span style="opacity:0.7;">面板攻擊88</span></td><td class="num-cell">—</td><td class="desc-cell">待實測</td></tr>
+            <tr><td class="name-cell">🛡️ 中樞守衛</td><td class="num-cell">35</td><td class="num-cell">940</td><td class="desc-cell"><em>待實測</em>　<span style="opacity:0.7;">面板攻擊112（全境最高）</span></td><td class="num-cell">—</td><td class="desc-cell">待實測</td></tr>
+            <tr><td class="name-cell">✨ 星圖殘響</td><td class="num-cell">36</td><td class="num-cell">880</td><td class="desc-cell"><em>待實測</em>　<span style="opacity:0.7;">面板攻擊108</span></td><td class="num-cell">—</td><td class="desc-cell">待實測</td></tr>
+          </tbody>
+        </table>
       </div>
     </section>
 
@@ -127,7 +262,7 @@
         💀 <strong style="color:var(--text-primary);">死亡機制（2026-07-13 實測）：</strong>
         HP 歸零時，紅線會把靈魂牽回復活點「愛神神殿-宸光分殿」——HP／MP 僅恢復至最大值的
         <span class="risk-warn">5%</span>、行動力歸零，需先休息或使用補給品才能再出發。
-        接戰前先確認自己扛得住整場的累積反擊傷害（回合數 × 每回合反擊）。
+        接戰前先確認自己扛得住怪物的HP跟技能傷害。
       </p>
     </div>
   </main>

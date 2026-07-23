@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <radialGradient id="glow" cx="50%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#eaffff" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#4fd8e0" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- 外圈柔光，示範用簡單放射漸層，不需要太多錨點 -->
+  <circle cx="100" cy="95" r="70" fill="url(#glow)"/>
+
+  <!-- 主體：六個錨點構成的菱形寶石，上尖下尖，中間兩側各一點 -->
+  <polygon points="100,40 130,80 115,150 85,150 70,80" fill="#38b6c2" stroke="#1c6b73" stroke-width="3"/>
+
+  <!-- 內部切面線，只用直線連錨點，模擬寶石切割感 -->
+  <polyline points="100,40 100,150" stroke="#1c6b73" stroke-width="2" fill="none" opacity="0.6"/>
+  <polyline points="70,80 130,80" stroke="#1c6b73" stroke-width="2" fill="none" opacity="0.6"/>
+  <polyline points="100,40 85,150" stroke="#1c6b73" stroke-width="1.5" fill="none" opacity="0.4"/>
+  <polyline points="100,40 115,150" stroke="#1c6b73" stroke-width="1.5" fill="none" opacity="0.4"/>
+
+  <!-- 頂端高光，一個小三角，讓寶石有反光感 -->
+  <polygon points="100,48 108,72 92,72" fill="#eaffff" opacity="0.8"/>
+</svg>

@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 220" width="200" height="220">
+  <defs>
+    <linearGradient id="potGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#8a6a4a"/>
+      <stop offset="100%" stop-color="#5a4230"/>
+    </linearGradient>
+    <linearGradient id="soilGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#3a2a20"/>
+      <stop offset="100%" stop-color="#241812"/>
+    </linearGradient>
+    <radialGradient id="glowGrad" cx="50%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#c0a0f0" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#c0a0f0" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- 光暈，稀有種籽的靈紋光 -->
+  <ellipse cx="100" cy="140" rx="70" ry="70" fill="url(#glowGrad)"/>
+
+  <!-- 陶盆 -->
+  <path d="M 60,175 L 70,215 L 130,215 L 140,175 Z" fill="url(#potGrad)" stroke="#3a2a1a" stroke-width="2"/>
+  <ellipse cx="100" cy="175" rx="40" ry="8" fill="#6a4e36" stroke="#3a2a1a" stroke-width="2"/>
+  <ellipse cx="100" cy="177" rx="34" ry="6" fill="url(#soilGrad)"/>
+
+  <!-- 進度標記：2/3，用三個小點呈現 -->
+  <circle cx="88" cy="205" r="4" fill="#c0a0f0"/>
+  <circle cx="100" cy="205" r="4" fill="#c0a0f0"/>
+  <circle cx="112" cy="205" r="4" fill="#3a2a1a" stroke="#5a4a5a" stroke-width="1"/>
+
+  <!-- 嫩莖 -->
+  <path d="M 100,177 Q 98,150 100,130" fill="none" stroke="#5a7a4a" stroke-width="4" stroke-linecap="round"/>
+
+  <!-- 兩片嫩葉，對稱伸展，帶紫色靈紋描邊 -->
+  <path d="M 100,150 Q 75,140 65,120 Q 85,122 100,140 Z" fill="#6a8a52" stroke="#c0a0f0" stroke-width="1.5"/>
+  <path d="M 100,150 Q 125,140 135,120 Q 115,122 100,140 Z" fill="#6a8a52" stroke="#c0a0f0" stroke-width="1.5"/>
+
+  <!-- 頂端一顆將展未展的小芽苞 -->
+  <path d="M 100,130 Q 94,118 100,108 Q 106,118 100,130 Z" fill="#7a9a62" stroke="#c0a0f0" stroke-width="1.5"/>
+
+  <!-- 靈紋光點，散落在葉片周圍 -->
+  <circle cx="70" cy="128" r="2" fill="#c0a0f0" opacity="0.8"/>
+  <circle cx="130" cy="126" r="1.8" fill="#c0a0f0" opacity="0.7"/>
+  <circle cx="100" cy="105" r="2" fill="#c0a0f0" opacity="0.9"/>
+  <circle cx="115" cy="140" r="1.5" fill="#c0a0f0" opacity="0.6"/>
+</svg>

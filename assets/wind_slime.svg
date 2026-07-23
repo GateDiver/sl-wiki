@@ -1,0 +1,66 @@
+<svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="一隻滾過草原的風滾史萊姆">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bfe3ff"/>
+      <stop offset="62%" stop-color="#eaf7e0"/>
+      <stop offset="100%" stop-color="#ddd096"/>
+    </linearGradient>
+    <radialGradient id="slimeBody" cx="40%" cy="35%" r="72%">
+      <stop offset="0%" stop-color="#d9f2a8" stop-opacity="0.96"/>
+      <stop offset="68%" stop-color="#9fd45c" stop-opacity="0.92"/>
+      <stop offset="100%" stop-color="#6fae3a"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="400" height="300" fill="url(#sky)"/>
+
+  <!-- far hills -->
+  <path d="M0,205 Q90,185 190,202 T400,198 L400,300 L0,300 Z" fill="#b9cf8a" opacity="0.55"/>
+  <!-- ground -->
+  <path d="M0,228 Q200,208 400,232 L400,300 L0,300 Z" fill="#c9b877" opacity="0.75"/>
+
+  <!-- wind/motion lines trailing behind (left of) the slime -->
+  <g stroke="#8a8a8a" stroke-width="2" opacity="0.35" fill="none" stroke-linecap="round">
+    <path d="M38,148 Q84,136 128,148"/>
+    <path d="M26,180 Q76,166 120,180"/>
+    <path d="M48,208 Q92,196 130,206"/>
+  </g>
+
+  <!-- dust puffs at ground contact -->
+  <g fill="#b9a565" opacity="0.5">
+    <circle cx="196" cy="242" r="7"/>
+    <circle cx="180" cy="248" r="5"/>
+    <circle cx="167" cy="244" r="3.5"/>
+  </g>
+
+  <!-- slime, right of center (rule of thirds), mid-roll -->
+  <g transform="translate(258,178) rotate(8)">
+    <ellipse cx="-2" cy="58" rx="72" ry="16" fill="#4a3c1c" opacity="0.16"/>
+    <path d="M-65,10 C-65,-45 -30,-70 0,-70 C30,-70 65,-45 65,10 C65,45 35,55 0,55 C-35,55 -65,45 -65,10 Z"
+          fill="url(#slimeBody)" stroke="#5c8f2f" stroke-width="3"/>
+    <!-- dry twigs wound through the body, tumbleweed-style -->
+    <g stroke="#8a6a3a" stroke-width="2.5" stroke-linecap="round" opacity="0.85" fill="none">
+      <path d="M-40,-10 L-58,-22 M-40,-10 L-55,2 M-40,-10 L-30,-28"/>
+      <path d="M35,-30 L50,-42 M35,-30 L48,-16 M35,-30 L22,-46"/>
+      <path d="M12,38 L22,54 M12,38 L-2,50"/>
+      <path d="M-30,30 Q-45,38 -52,30"/>
+    </g>
+    <!-- a twig silhouette faintly visible inside the translucent body -->
+    <path d="M-15,15 Q0,-5 20,8" stroke="#7a5c30" stroke-width="2" opacity="0.35" fill="none"/>
+    <!-- face -->
+    <circle cx="-18" cy="-15" r="7" fill="#2b2b2b"/>
+    <circle cx="16" cy="-18" r="7" fill="#2b2b2b"/>
+    <circle cx="-16" cy="-17" r="2.2" fill="#fff"/>
+    <circle cx="18" cy="-20" r="2.2" fill="#fff"/>
+    <path d="M-8,5 Q1,13 11,3" stroke="#2b2b2b" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+    <!-- jelly highlight -->
+    <ellipse cx="-26" cy="-42" rx="16" ry="8" fill="#ffffff" opacity="0.42" transform="rotate(-14 -26 -42)"/>
+  </g>
+
+  <!-- foreground grass, bottom-left, balances the slime -->
+  <g stroke="#6d8f3a" stroke-width="3" stroke-linecap="round">
+    <path d="M22,292 L16,270 M22,292 L27,267 M22,292 L33,276"/>
+    <path d="M62,296 L56,278 M62,296 L67,274"/>
+    <path d="M370,290 L376,272 M370,290 L364,275"/>
+  </g>
+</svg>

@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 140" width="260" height="140">
+  <defs>
+    <linearGradient id="shelfWood" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#8a6a3f"/>
+      <stop offset="100%" stop-color="#5c4326"/>
+    </linearGradient>
+  </defs>
+
+  <!-- 兩層木架，簡單的支撐結構 -->
+  <rect x="15" y="55" width="230" height="8" fill="url(#shelfWood)"/>
+  <rect x="15" y="115" width="230" height="8" fill="url(#shelfWood)"/>
+  <rect x="15" y="55" width="8" height="68" fill="url(#shelfWood)"/>
+  <rect x="237" y="55" width="8" height="68" fill="url(#shelfWood)"/>
+
+  <!-- 上層標本：記憶礦核（帶內部紋路的橢圓晶體） -->
+  <g transform="translate(55,45)">
+    <ellipse cx="0" cy="0" rx="18" ry="14" fill="#6f5aa8" stroke="#463270" stroke-width="2"/>
+    <path d="M -10,-4 Q 0,0 10,-4 M -8,4 Q 0,8 8,4" fill="none" stroke="#463270" stroke-width="1" opacity="0.6"/>
+  </g>
+
+  <!-- 上層標本：琥星珀礦（不規則多邊形，琥珀金色） -->
+  <g transform="translate(130,45)">
+    <polygon points="0,-14 12,-6 10,10 -8,12 -14,-2" fill="#e0a840" stroke="#a8752a" stroke-width="2"/>
+    <circle cx="-2" cy="-2" r="3" fill="#fff3d0" opacity="0.7"/>
+  </g>
+
+  <!-- 上層標本：空鳴岩心（圓形，中空同心圓表示共鳴） -->
+  <g transform="translate(205,45)">
+    <circle cx="0" cy="0" r="15" fill="#7a7a82" stroke="#4a4a52" stroke-width="2"/>
+    <circle cx="0" cy="0" r="9" fill="none" stroke="#4a4a52" stroke-width="1.5" opacity="0.6"/>
+    <circle cx="0" cy="0" r="4" fill="#4a4a52"/>
+  </g>
+
+  <!-- 下層標本：晶簇碎片（叢生小尖晶，堆疊三角形） -->
+  <g transform="translate(55,105)">
+    <polygon points="-10,10 -6,-10 -2,6" fill="#7de8ee" stroke="#3fa8ae" stroke-width="1.5"/>
+    <polygon points="0,10 3,-12 7,8" fill="#9defef" stroke="#3fa8ae" stroke-width="1.5"/>
+    <polygon points="8,10 11,-6 14,9" fill="#7de8ee" stroke="#3fa8ae" stroke-width="1.5"/>
+  </g>
+
+  <!-- 下層標本：失光礦片（暗色三角碎片，邊緣泛微光） -->
+  <g transform="translate(130,105)">
+    <polygon points="-12,10 0,-12 12,10" fill="#2b2b33" stroke="#55555f" stroke-width="1.5"/>
+    <polygon points="-6,4 0,-6 6,4" fill="none" stroke="#8a8a96" stroke-width="1" opacity="0.5"/>
+  </g>
+
+  <!-- 下層標本：微光礦砂（小堆砂粒） -->
+  <g transform="translate(205,105)">
+    <ellipse cx="0" cy="8" rx="16" ry="5" fill="#c9a879"/>
+    <circle cx="-6" cy="4" r="2" fill="#eaffff" opacity="0.8"/>
+    <circle cx="2" cy="2" r="1.5" fill="#eaffff" opacity="0.8"/>
+    <circle cx="8" cy="5" r="2" fill="#eaffff" opacity="0.8"/>
+  </g>
+</svg>
